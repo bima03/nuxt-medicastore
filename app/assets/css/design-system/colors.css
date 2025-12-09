@@ -1,0 +1,9 @@
+/* ============= Color custom ================ */
+
+.text-headline {
+    color: var(--neutral-oreo-darkest);
+}
+
+.text-cta {
+    color: var(--primary-base);
+}

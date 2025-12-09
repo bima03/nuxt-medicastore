@@ -187,17 +187,11 @@
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                     >
-                        <icon name="circles-three-plus" size="24" />
-                        <span class="button-lm">Jenis Produk</span>
+                        <icon name="circles-three-plus" size="24" class="text-cta" />
+                        <span class="button-lm text-cta">Jenis Produk</span>
                     </button>
 
                     <!-- Search Group -->
-                    <!-- <div class="input-group search-group w-100" data-bs-toggle="offcanvas" data-bs-target="#offCanvasSearch" aria-controls="offCanvasSearch">
-                        <input type="text" class="form-control" placeholder="Cari egoji" style="width: 365px;" readonly>
-                        <button class="btn btn-primary search-btn">
-                        <i class="bi bi-search"></i>
-                        </button>
-                    </div> -->
                     <div class="search-wrapper flex-grow-1" data-bs-toggle="offcanvas" data-bs-target="#offCanvasSearch" aria-controls="offCanvasSearch">
                         <input type="text" class="form-control search-input" placeholder="Cari egoji" readonly>
                         <button class="search-button">

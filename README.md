@@ -28,8 +28,10 @@ NUXT x MEDICASTORE
 
         Tambahkan baris ini (harusnya otomatis ditambah oleh installer):
 
+        ~~~
         export NVM_DIR="$HOME/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+        ~~~
 
         Lalu reload:
 
@@ -38,19 +40,21 @@ NUXT x MEDICASTORE
         ~~~
 
     * Step 3: Cek apakah nvm sudah terinstall
+        ~~~
         nvm --version
+        ~~~
+
         Jika muncul angka versi → sukses ✔
 
     * Step 4: Install Node versi 20 (rekomendasi untuk project ini)
-
-        Misal Node 20:
-
+        ~~~
         nvm install 20
 
         Set default:
 
         nvm use 20
         nvm alias default 20
+        ~~~
 
 2. Install NVM di Windows (PENTING! berbeda dari macOS)
 
@@ -62,7 +66,9 @@ NUXT x MEDICASTORE
         https://github.com/coreybutler/nvm-windows/releases
 
         File yang kamu cari:
+        ~~~
         nvm-setup.exe
+        ~~~
 
     * Step 2: Install seperti biasa
 
@@ -76,22 +82,32 @@ NUXT x MEDICASTORE
 
         Buka CMD / PowerShell:
 
+        ~~~
         nvm version
+        ~~~
 
     * Step 4: Install Node (versi 20 di rekomendasikan untuk project ini)
+        ~~~
         nvm install 20
         nvm use 20
+        ~~~
 
 3. Menjalankan project
 
     * Step 1: install depedencies Node
-        jalankan npm install / npm i
+        jalankan 
+        ~~~
+        npm install / npm i
+        ~~~
     * Step 2: Start Dev Server
+        ~~~
         npm run dev
-
+        ~~~
         Start the development server on `http://localhost:3000`:
     * Step 3: (Production) build project
+        ~~~
         npm run build
+        ~~~
 
 4. bootstrap grid system
 

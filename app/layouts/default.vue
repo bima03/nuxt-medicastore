@@ -119,70 +119,79 @@
             </div>
         </div>
 
-
-        <!-- TOP BAR -->
-        <div class="border-bottom py-1 small d-lg-block d-none">
-            <div class="container d-flex justify-content-between align-items-center">
-                <div>
-                    <a href="#" class="text-decoration-none text-secondary">Download aplikasi medicastore</a>
-                </div>
-                <div class="d-flex gap-3">
-                    <a href="#" class="text-decoration-none text-secondary">Konsultasi Online</a>
-                    <a href="#" class="text-decoration-none text-secondary">Layanan Informasi</a>
-                    <a href="#" class="text-decoration-none text-secondary">Tentang Medicastore</a>
-                    <a href="#" class="text-decoration-none text-secondary">FAQ</a>
-                </div>
+        <!-- off canvas profile -->
+        <div class="offcanvas offcanvas-bottom h-50" tabindex="-1" id="profileCanvas" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body small">
+                ...
             </div>
         </div>
 
-        <!-- download card -->
-        <div class="card shadow-sm border-0 p-3 rounded-3 d-flex align-items-center justify-content-between flex-row d-lg-none d-block">
-    
-            <!-- Close -->
-            <button class="btn btn-link text-muted p-0 me-2">
-                <i class="bi bi-x-lg"></i>
-            </button>
-
-            <!-- Icon + Text -->
-            <div class="d-flex align-items-center flex-grow-1">
-                <img src="https://medicastore.com/themes/blue/images/main-menu/medicapps.svg"
-                    alt="icon" class="me-2" style="width: 40px; height: 40px;">
-
-                <div class="small lh-sm">
-                    Belanja obat lebih mudah di aplikasi medicastore
+        <!-- new navbar -->
+        <nav class="navbar d-block sticky-top navbar-expand-lg bg-white p-0" style="box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);">
+            <!-- TOP BAR -->
+            <div class="border-bottom py-1 small d-lg-block d-none">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="#" class="text-decoration-none text-secondary">Download aplikasi medicastore</a>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-decoration-none text-secondary">Konsultasi Online</a>
+                        <a href="#" class="text-decoration-none text-secondary">Layanan Informasi</a>
+                        <a href="#" class="text-decoration-none text-secondary">Tentang Medicastore</a>
+                        <a href="#" class="text-decoration-none text-secondary">FAQ</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Download Button -->
-            <a href="#" class="btn btn-primary btn-sm px-3 rounded-3 ms-2">
-                Download
-            </a>
+            <!-- download card -->
+            <div class="card shadow-sm border-0 p-3 rounded-3 d-flex align-items-center justify-content-between flex-row d-lg-none d-block">
+        
+                <!-- Close -->
+                <button class="btn btn-link text-muted p-0 me-2">
+                    <i class="bi bi-x-lg"></i>
+                </button>
 
-        </div>
+                <!-- Icon + Text -->
+                <div class="d-flex align-items-center flex-grow-1">
+                    <img src="https://medicastore.com/themes/blue/images/main-menu/medicapps.svg"
+                        alt="icon" class="me-2" style="max-width: 40px; max-height: 40px;">
 
+                    <div class="small lh-sm">
+                        Belanja obat lebih mudah di aplikasi medicastore
+                    </div>
+                </div>
 
-        <nav class="navbar navbar-light bg-white px-3 py-3 border-bottom">
-            <div class="container d-flex flex-wrap align-items-center justify-content-start">
+                <!-- Download Button -->
+                <a href="#" class="btn btn-primary btn-sm px-3 rounded-3 ms-2">
+                    Download
+                </a>
 
-                <!-- LEFT: Toggler + Logo -->
+            </div>
+
+            <div class="container align-items-stretch py-3 px-3">
                 <div class="d-flex align-items-center">
                     <!-- Hamburger -->
-                    <button class="navbar-toggler navbar-toggler-sm me-2 d-lg-none w-xs-25" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <button class="navbar-toggler me-1 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <!-- Logo -->
                     <a class="navbar-brand d-flex align-items-center" href="#">
                         <!-- mobile 146x24 -- desktop 244x40 -->
-                        <img src="https://medicastore.com/themes/blue/images/logo-lite-header.png" class="img-fluid logo border" alt="logo" style="max-width: 244px; height: 35px;">
+                        <img src="/public/images/logo-medicastore.svg" class="img-fluid logo d-none d-sm-block" alt="logo" style="max-width: 244px; max-height: 35px;">
+                        <img src="/public/images/logo-medicastore-lite.png" class="img logo d-block d-sm-none" alt="logo" style="max-width: 40px; max-height: 40px; padding-left: 10px;">
                     </a>
                 </div>
-                <!-- search bar & jenis produk -->
-                <div class="d-flex align-items-center justify-content-between gap-3 d-lg-flex d-none border" style="max-width: 600px;width: 100%;">
+
+                <div class="d-flex align-items-center justify-content-between gap-3 d-lg-flex d-none" style="max-width: 600px;width: 100%;">
 
                     <!-- Tombol Kategori -->
                     <button 
-                        class="btn surface-primary d-flex align-items-center gap-2 rounded-3 py-2 w-auto"
+                        class="btn surface-primary d-flex align-items-center gap-1 rounded-3 py-2 w-auto"
                         type="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -198,13 +207,14 @@
                             <icon name="magnifying-glass" size="16" color="#FFF" />
                         </button>
                     </div>
+                    
                 </div>
 
                 <!-- icon right -->
-                <div class="d-flex align-items-center ms-auto flex-shrink-0 border">
+                <div class="d-flex align-items-center ms-auto flex-shrink-0 ps-0">
 
                     <!-- Search -->
-                    <div class="dropdown cart-dropdown pe-2">
+                    <div class="dropdown cart-dropdown pe-2 pt-1">
                         <button class="btn cart-btn position-relative gap-2 rounded-3 px-2 py-1" data-bs-toggle="dropdown" aria-expanded="false">
                             <Icon name="bell-simple" size="24" />
                             <span class="position-absolute top-10 start-70 translate-middle bg-danger rounded-circle" style="width:10px; height:10px;"></span>
@@ -223,10 +233,10 @@
                     </div>
 
                     <!-- Cart -->
-                    <div class="dropdown cart-dropdown border-start ps-2">
+                    <div class="dropdown cart-dropdown border-start ps-2 pt-1">
                         <button class="btn cart-btn gap-2 rounded-3 px-2 py-1" data-bs-toggle="dropdown" aria-expanded="false">
                             <icon name="shopping-cart-simple" size="24" />
-                            <span class="badge bg-danger position-absolute top-45 start-80 translate-middle rounded-pill">
+                            <span class="badge bg-danger position-absolute top-48 start-80 translate-middle rounded-pill">
                                 2
                             </span>
                         </button>
@@ -243,9 +253,17 @@
                         </div>
                     </div>
 
+                    <div class="d-lg-none d-block ms-2">
+
+                        <button class="btn cart-btn gap-2 rounded-3 px-2 py-2 d-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#profileCanvas" aria-controls="profileCanvas">
+                            <icon name="user-circle" size="24" />
+                            <i class="bi bi-chevron-down ms-auto"></i>
+                        </button>
+                    </div>
+                    
 
                     <!-- User -->
-                    <div class="user-menu dropdown ps-2">
+                    <div class="user-menu dropdown ps-2 d-lg-block d-none">
                         <button 
                             class="btn surface-primary d-flex align-items-center gap-2 rounded-3 px-3 py-2 border"
                             type="button"
@@ -253,7 +271,7 @@
                             aria-expanded="false"
                         >
                             <icon name="user-circle" size="24" />
-                            <span class="subtitle-2">Mason Greenwood</span>
+                            <span class="subtitle-2 d-lg-none d-xl-block">Mason Greenwood</span>
                             <i class="bi bi-chevron-down ms-auto"></i>
                         </button>
 

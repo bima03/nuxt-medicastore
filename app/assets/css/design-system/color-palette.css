@@ -1,0 +1,98 @@
+/* ================================
+    Color Palette Design System
+================================ */
+
+:root {
+    /* palette / neutral / milk */
+    --neutral-milk-lightest: #FFFFFF;
+    --neutral-milk-lighter:  #FAFAFA;
+    --neutral-milk-light:    #F5F5F5;
+    --neutral-milk-base:     #ECECEC;
+    --neutral-milk-dark:     #E6E6E6;
+    --neutral-milk-darker:   #DEDEDE;
+    --neutral-milk-darkest:  #D9D9D9;
+
+    /* palette / neutral / oreo */
+    --neutral-oreo-lightest: #CFCFCF;
+    --neutral-oreo-lighter:  #BABABA;
+    --neutral-oreo-light:    #A6A6A6;
+    --neutral-oreo-base:     #909090;
+    --neutral-oreo-dark:     #6C6C6C;
+    --neutral-oreo-darker:   #484848;
+    --neutral-oreo-darkest:  #333333;
+
+    /* ---------- PRIMARY ---------- */
+    --primary-lightest: #D2E1F2;
+    --primary-lighter:  #B5CEE9;
+    --primary-light:    #6A9CD2;
+    --primary-base:     #206BBC;
+    --primary-dark:     #15477D;
+    --primary-darker:   #10355E;
+    --primary-darkest:  #0B243F;
+
+    /* ---------- SECONDARY ---------- */
+    --secondary-lightest: #F8E3DB;
+    --secondary-lighter:  #F4D0C3;
+    --secondary-light:    #E9A186;
+    --secondary-base:     #DE724A;
+    --secondary-dark:     #944C31;
+    --secondary-darker:   #6F3925;
+    --secondary-darkest:  #4A2619;
+
+    /* ---------- TERTIARY ---------- */
+    --tertiary-lightest: #D7EBED;
+    --tertiary-lighter:  #BDDEE0;
+    --tertiary-light:    #7BBCC2;
+    --tertiary-base:     #399BA3;
+    --tertiary-dark:     #26676D;
+    --tertiary-darker:   #1C4D51;
+    --tertiary-darkest:  #133436;
+
+    /* ---------- SUCCESS ---------- */
+    --success-lightest: #D0EDDB;
+    --success-lighter:  #8AD1A4;
+    --success-light:    #3DB268;
+    --success-base:     #16A34A;
+    --success-dark:     #12883E;
+    --success-darker:   #0B5125;
+    --success-darkest:  #04210F;
+
+    /* ---------- INFO ---------- */
+    --info-lightest: #D3E0FB;
+    --info-lighter:  #92B1F5;
+    --info-light:    #497DEE;
+    --info-base:     #2563EB;
+    --info-dark:     #1F52C4;
+    --info-darker:   #123175;
+    --info-darkest:  #07142F;
+
+    /* ---------- WARNING ---------- */
+    --warning-lightest: #FDECCE;
+    --warning-lighter:  #FACE85;
+    --warning-light:    #F7AE34;
+    --warning-base:     #F59E0B;
+    --warning-dark:     #CC8409;
+    --warning-darker:   #7A4F05;
+    --warning-darkest:  #312002;
+
+    /* ---------- WARNING ---------- */
+    --danger-lightest: #F8D4D4;
+    --danger-lighter:  #ED9292;
+    --danger-light:    #E24A4A;
+    --danger-base:     #DC2626;
+    --danger-dark:     #B72020;
+    --danger-darker:   #6E1313;
+    --danger-darkest:  #2C0808;
+}
+
+/*
+    ============ CSS Class ============
+*/
+
+.text-body {
+    background-color: var(--neutral-oreo-darker);
+}
+
+.surface-primary {
+    background-color: #EDF2FA;
+}

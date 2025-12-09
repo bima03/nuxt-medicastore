@@ -1,0 +1,138 @@
+/* ================================
+    Manrope Typography System
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+    --font-family-base: "Manrope", sans-serif;
+
+  /* Font Weights */
+    --w-regular: 400;
+    --w-semibold: 600;
+    --w-bold: 700;
+}
+
+/* Base reset */
+body {
+    font-family: var(--font-family-base);
+    color: #000;
+}
+
+/* ================================
+    HEADLINES
+================================ */
+
+.headline-1 {
+    font-weight: var(--w-bold);
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.headline-2 {
+    font-weight: var(--w-bold);
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.headline-3 {
+    font-weight: var(--w-bold);
+    font-size: 24px;
+    line-height: 28px;
+}
+
+/* ================================
+    TITLES
+================================ */
+
+.title-1 {
+    font-weight: var(--w-bold);
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.title-2 {
+    font-weight: var(--w-bold);
+    font-size: 18px;
+    line-height: 24px;
+}
+
+/* ================================
+    SUBTITLES
+================================ */
+
+.subtitle-1 {
+    font-weight: var(--w-semibold);
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.subtitle-2 {
+    font-weight: var(--w-semibold);
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/* ================================
+    BODY
+================================ */
+
+.body-1 {
+    font-weight: var(--w-regular);
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.body-2 {
+    font-weight: var(--w-regular);
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/* ================================
+    LABELS
+================================ */
+
+.label {
+    font-weight: var(--w-bold);
+    font-size: 12px;
+    line-height: 16px;
+}
+
+/* ================================
+    CAPTIONS
+================================ */
+
+.caption-1 {
+    font-weight: var(--w-regular);
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.caption-2 {
+    font-weight: var(--w-regular);
+    font-size: 10px;
+    line-height: 14px;
+}
+
+/* ================================
+    BUTTON TEXT
+================================ */
+
+.button-xl {
+    font-weight: var(--w-bold);
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.button-lm {
+    font-weight: var(--w-bold);
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.button-s {
+    font-weight: var(--w-bold);
+    font-size: 12px;
+    line-height: 16px;
+}

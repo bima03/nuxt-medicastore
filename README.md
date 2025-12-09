@@ -22,7 +22,9 @@ NUXT x MEDICASTORE
 
         Untuk zsh (macOS default):
 
+        ~~~
         nano ~/.zshrc
+        ~~~
 
         Tambahkan baris ini (harusnya otomatis ditambah oleh installer):
 
@@ -31,7 +33,9 @@ NUXT x MEDICASTORE
 
         Lalu reload:
 
+        ~~~
         source ~/.zshrc
+        ~~~
 
     * Step 3: Cek apakah nvm sudah terinstall
         nvm --version

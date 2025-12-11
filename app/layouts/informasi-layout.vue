@@ -74,27 +74,37 @@
         <!-- off canvas menu -->
         <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="mobileMenu">
             <div class="offcanvas-header border-bottom">
-                <h6 class="mb-0 fw-bold">MENU</h6>
+                <!-- <h6 class="mb-0 fw-bold">MENU</h6>
 
                 <button class="btn" data-bs-dismiss="offcanvas">
                     <i class="bi bi-x-lg fs-5"></i>
-                </button>
+                </button> -->
             </div>
 
             <div class="offcanvas-body px-3">
 
                 <!-- Link: Beranda -->
-                <a href="#" class="d-flex align-items-center gap-3 py-2 fs-6 text-dark text-decoration-none">
-                    <i class="bi bi-house-door fs-5"></i>
-                    Beranda
-                </a>
+                <div class="d-flex align-items-center justify-content-between">
+                    <NuxtLink 
+                        to="/"
+                        class="btn btn-primary-base d-flex align-items-center rounded-3 px-3 border button-lm"
+                        type="button"
+                        style="height: 40px;"
+                    >
+                        Belanja Obat di Medicastore
+                    </NuxtLink>
+                    
+                    <button class="btn" data-bs-dismiss="offcanvas">
+                        <Icon name="x" />
+                    </button>
+                </div>
 
                 <small class="text-muted mt-3 d-block">Layanan Informasi</small>
 
-                <a href="#" class="d-block py-2 fs-6 text-dark text-decoration-none">Dokter & Spesialis</a>
-                <a href="#" class="d-block py-2 fs-6 text-dark text-decoration-none">Fasilitas Kesehatan</a>
-                <a href="#" class="d-block py-2 fs-6 text-dark text-decoration-none">Informasi Penyakit</a>
-                <a href="#" class="d-block py-2 fs-6 text-dark text-decoration-none">Artikel</a>
+                <NuxtLink to="/dokter" class="d-block py-2 fs-6 text-dark text-decoration-none">Dokter & Spesialis</NuxtLink>
+                <NuxtLink to="/faskes" class="d-block py-2 fs-6 text-dark text-decoration-none">Fasilitas Kesehatan</NuxtLink>
+                <NuxtLink to="/penyakit" class="d-block py-2 fs-6 text-dark text-decoration-none">Informasi Penyakit</NuxtLink>
+                <NuxtLink to="/artikel" class="d-block py-2 fs-6 text-dark text-decoration-none">Artikel</NuxtLink>
 
                 <hr>
 
@@ -135,14 +145,108 @@
             <!-- TOP BAR -->
             <div class="border-bottom py-1 small d-lg-block d-none">
                 <div class="container d-flex justify-content-between align-items-center">
-                    <div>
-                        <a href="#" class="text-decoration-none text-secondary">Download aplikasi medicastore</a>
+
+                    <!-- Download App -->
+                    <div class="dropdown cart-dropdown" style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
+                        <icon name="device-mobile" size="16" />
+                        <a href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Download Aplikasi Medicastore</a>
+                        
+
+                        <div class="dropdown-menu custom-download-app p-2">
+                            <div class="d-flex gap-3">
+                                <img src="/public/images/qrcode.svg">
+
+                            <div class="text-align-start align-content-center">
+                                <h6 class="subtitle-2" style="color: var(--neutral-oreo-darkest);">Download Aplikasi</h6>
+                                <p class="body-2 mb-3" style="color: var(--neutral-oreo-dark);">Scan QR untuk download aplikasi. 
+                                Atau download melalui:</p>
+
+                            <div class="d-flex gap-1">
+                                <div class="mt-0">
+                                    <a href="#">
+                                        <img src="https://medicastore.com/themes/blue/images/main-menu/googleplay.png" style="height:32px;">
+                                    </a>
+                                </div>
+                                <div class="mt-0">
+                                    <a href="#">
+                                        <img src="https://medicastore.com/themes/blue/images/main-menu/appstore.png" style="height:32px;">
+                                    </a>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+
                     </div>
+
                     <div class="d-flex gap-3">
-                        <a href="#" class="text-decoration-none text-secondary">Konsultasi Online</a>
-                        <a href="#" class="text-decoration-none text-secondary">Layanan Informasi</a>
-                        <a href="#" class="text-decoration-none text-secondary">Tentang Medicastore</a>
-                        <a href="#" class="text-decoration-none text-secondary">FAQ</a>
+                        <a href="#" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Konsultasi Online</a>
+
+                    <!-- Layanan Informasi -->
+                    <div class="dropdown" style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
+                        <a href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Layanan Informasi</a>
+                        <icon name="caret-down" size="16" />
+
+                        <ul class="dropdown-menu p-0 shadow-lg border-0 rounded-4 overflow-hidden" style="min-width: 220px;">
+                            
+                            <!-- MENU ITEMS -->
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
+                                    Dokter & Spesialis
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
+                                    Fasilitas Kesehatan
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
+                                    Informasi Penyakit
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Tentang Medicastore -->
+                    <div class="dropdown" style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
+                        <a href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Tentang Medicastore</a>
+                        <icon name="caret-down" size="16" />
+
+                        <ul class="dropdown-menu p-0 shadow-lg border-0 rounded-4 overflow-hidden" style="min-width: 220px;">
+                            
+                            <!-- MENU ITEMS -->
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
+                                    Tentang Kami
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
+                                    Syarat & Ketentuan
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
+                                    Kritik & Saran
+                                </a>
+                            </li>
+
+                                                        <li>
+                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
+                                    Apotek Mitra
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <a href="#" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">FAQ</a>
                     </div>
                 </div>
             </div>
@@ -182,8 +286,7 @@
                     <!-- Logo -->
                     <a class="navbar-brand d-flex align-items-center" href="#">
                         <!-- mobile 146x24 -- desktop 244x40 -->
-                        <img src="/public/images/logo-medicastore.svg" class="img-fluid logo d-none d-sm-block" alt="logo" style="max-width: 244px; max-height: 35px;">
-                        <img src="/public/images/logo-medicastore-lite.png" class="img logo d-block d-sm-none" alt="logo" style="max-width: 40px; max-height: 40px; padding-left: 10px;">
+                        <img src="/public/images/logo-medicastore.svg" class="img-fluid logo" alt="logo" style="max-width: 244px; max-height: 35px;">
                     </a>
                 </div>
 
@@ -191,16 +294,16 @@
 
                     <ul class="navbar-nav me-auto mb-2 gap-4 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link text-body-fig subtitle-2" aria-current="page" href="#">Dokter & Spesialis</a>
+                            <NuxtLink to="/dokter" class="nav-link text-body-fig subtitle-2" aria-current="page" exact-active-class="active">Dokter & Spesialis</NuxtLink>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-body-fig subtitle-2" aria-current="page" href="#">Fasilitas Kesehatan</a>
+                            <NuxtLink to="/faskes" class="nav-link text-body-fig subtitle-2" aria-current="page" exact-active-class="active">Fasilitas Kesehatan</NuxtLink>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-body-fig subtitle-2" aria-current="page" href="#">Informasi Penyakit</a>
+                            <NuxtLink to="/penyakit" class="nav-link text-body-fig subtitle-2" aria-current="page" exact-active-class="active">Informasi Penyakit</NuxtLink>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-body-fig subtitle-2" aria-current="page" href="#">Artikel</a>
+                            <NuxtLink to="/artikel" class="nav-link text-body-fig subtitle-2" aria-current="page" exact-active-class="active">Artikel</NuxtLink>
                         </li>
                     </ul>
                     
@@ -212,7 +315,7 @@
                     <!-- User -->
                     <div class="user-menu ps-2 d-lg-block d-none">
                         <button 
-                            class="btn d-flex align-items-center gap-2 rounded-3 px-3 border bg-primary-base button-lm"
+                            class="btn btn-primary-base d-flex align-items-center rounded-3 px-3 border button-lm"
                             type="button"
                             style="height: 40px;"
                         >
@@ -429,6 +532,7 @@ footer {
 </style>
 <script setup>
 import Icon from '../components/Icon.vue';
+import Footer from '../components/layout/Footer.vue';
 
 const showAlert = () => {
     alert("Hello from Bootstrap JavaScript!");

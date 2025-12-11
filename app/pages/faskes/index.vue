@@ -5,7 +5,7 @@
             <div class="container d-flex align-items-center justify-content-start gap-1">
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Artikel</a></li>
+                        <li class="breadcrumb-item"><a href="#">Faskes</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Hasil Pencarian</li>
                     </ol>
                 </nav>

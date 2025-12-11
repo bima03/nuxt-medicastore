@@ -6,6 +6,7 @@ export default {
         "phosphor-icons/src/css/icons.css",
         "~/assets/css/design-system/typography.css",
         "~/assets/css/design-system/color-palette.css",
+        "~/assets/css/design-system/colors.css",
         "~/assets/css/custom-style/style.css",
     ],
 

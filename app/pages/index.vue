@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- SHIPPING ADDRESS -->
-        <div class="border-top py-0 small">
+        <div class="py-0 small">
             <div class="container d-flex align-items-center justify-content-end gap-1">
                 <i class="bi bi-geo-alt text-primary"></i>
                 <span>Di kirim ke -</span>

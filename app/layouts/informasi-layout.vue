@@ -131,28 +131,18 @@
         </div>
 
         <!-- new navbar -->
-        <nav class="navbar border-bottom-0 d-block sticky-top navbar-expand-lg bg-white p-0" style="box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);">
+        <nav class="navbar d-block sticky-top navbar-expand-lg bg-white p-0" style="box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);">
             <!-- TOP BAR -->
             <div class="border-bottom py-1 small d-lg-block d-none">
                 <div class="container d-flex justify-content-between align-items-center">
-                    <div style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
-                        <icon name="device-mobile" size="16" />
-                        <a href="#" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Download aplikasi medicastore</a>
+                    <div>
+                        <a href="#" class="text-decoration-none text-secondary">Download aplikasi medicastore</a>
                     </div>
                     <div class="d-flex gap-3">
-                        <a href="#" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Konsultasi Online</a>
-
-                    <div style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
-                        <a href="#" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Layanan Informasi</a>
-                        <icon name="caret-down" size="16" />
-                    </div>
-
-                    <div style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
-                        <a href="#" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Tentang Medicastore</a>
-                        <icon name="caret-down" size="16" />
-                    </div>
-
-                    <a href="#" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">FAQ</a>
+                        <a href="#" class="text-decoration-none text-secondary">Konsultasi Online</a>
+                        <a href="#" class="text-decoration-none text-secondary">Layanan Informasi</a>
+                        <a href="#" class="text-decoration-none text-secondary">Tentang Medicastore</a>
+                        <a href="#" class="text-decoration-none text-secondary">FAQ</a>
                     </div>
                 </div>
             </div>
@@ -197,160 +187,49 @@
                     </a>
                 </div>
 
-                <div class="d-flex align-items-center justify-content-between gap-3 d-lg-flex d-none" style="max-width: 600px;width: 100%;">
+                <div class="d-flex align-items-center justify-content-between gap-3 d-lg-flex d-none ms-auto">
 
-                    <!-- Tombol Kategori -->
-                    <button 
-                        class="lg-btn-surface"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        <icon name="circles-three-plus" size="24" class="text-cta" />
-                        <span class="button-lm text-cta">Jenis Produk</span>
-                    </button>
-
-                    <!-- Search Group -->
-                    <div class="search-wrapper flex-grow-1" data-bs-toggle="offcanvas" data-bs-target="#offCanvasSearch" aria-controls="offCanvasSearch">
-                        <input type="text" class="form-control search-input" placeholder="Cari egoji" readonly>
-                        <button class="search-button">
-                            <icon name="magnifying-glass" size="16" color="#FFF" />
-                        </button>
-                    </div>
+                    <ul class="navbar-nav me-auto mb-2 gap-4 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-body-fig subtitle-2" aria-current="page" href="#">Dokter & Spesialis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-body-fig subtitle-2" aria-current="page" href="#">Fasilitas Kesehatan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-body-fig subtitle-2" aria-current="page" href="#">Informasi Penyakit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-body-fig subtitle-2" aria-current="page" href="#">Artikel</a>
+                        </li>
+                    </ul>
                     
                 </div>
 
                 <!-- icon right -->
                 <div class="d-flex align-items-center ms-auto flex-shrink-0 ps-0">
 
-                    <!-- Notif -->
-                    <div class="dropdown cart-dropdown pe-2 pt-1">
-                        <button class="btn cart-btn position-relative gap-2 rounded-3 px-2 py-1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <Icon name="bell-simple" size="24" />
-                            <span class="position-absolute top-10 start-70 translate-middle bg-danger rounded-circle" style="width:10px; height:10px;"></span>
-                        </button>
-
-                        <div class="dropdown-menu custom-cart-menu p-4">
-                            <div class="text-center">
-                                <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" width="150" class="mb-3" />
-
-                                <h6 class="subtitle-1" style="color: var(--neutral-oreo-darkest);">Keranjang Anda Kosong</h6>
-                                <p class="body-2 mb-3" style="color: var(--neutral-oreo-dark);">Yuk, tambahkan produk sekarang</p>
-
-                                <a href="#" class="lg-btn-primary button-lm">Belanja Sekarang</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cart -->
-                    <div class="dropdown cart-dropdown border-start ps-2 pt-1">
-                        <button class="btn cart-btn gap-2 rounded-3 px-2 py-1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <icon name="shopping-cart-simple" size="24" />
-                            <span class="badge bg-danger position-absolute top-48 start-80 translate-middle rounded-pill">
-                                2
-                            </span>
-                        </button>
-
-                        <div class="dropdown-menu custom-cart-menu p-4">
-                            <div class="text-center">
-                                <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" width="150" class="mb-3" />
-
-                                <h6 class="subtitle-1" style="color: var(--neutral-oreo-darkest);">Keranjang Anda Kosong</h6>
-                                <p class="body-2 mb-3" style="color: var(--neutral-oreo-dark);">Yuk, tambahkan produk sekarang</p>
-
-                                <a href="#" class="lg-btn-primary button-lm">Belanja Sekarang</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="d-lg-none d-block ms-2">
-
-                        <button class="btn cart-btn gap-2 rounded-3 px-2 py-2 d-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#profileCanvas" aria-controls="profileCanvas">
-                            <icon name="user-circle" size="24" />
-                            <i class="bi bi-chevron-down ms-auto"></i>
-                        </button>
-                    </div>
-                    
-
                     <!-- User -->
-                    <div class="user-menu dropdown ps-2 d-lg-block d-none">
+                    <div class="user-menu ps-2 d-lg-block d-none">
                         <button 
-                            class="user-btn-navbar"
+                            class="btn d-flex align-items-center gap-2 rounded-3 px-3 border bg-primary-base button-lm"
                             type="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
+                            style="height: 40px;"
                         >
-                            <icon name="user-circle" size="24" />
-                            <span class="subtitle-2 limit-text d-lg-none d-xl-block">Luca Ibrahimovic Cadabra Santos</span>
-                            <icon name="caret-down" size="16" />
+                            Belanja Obat di Medicastore
                         </button>
-
-                        <ul class="dropdown-menu p-0 shadow-lg border-0 rounded-4 overflow-hidden" style="min-width: 220px;">
-                            
-                            <!-- HEADER USER -->
-                            <li class="px-3 py-2">
-                                <div class="subtitle-2" style="color: var(--neutral-oreo-darker);">Mason Greenwood</div>
-                                <div class="caption-1" style="color: var(--neutral-oreo-light);">C00686</div>
-                                <a href="#" class="button-s mt-1 d-block" style="text-decoration: none; color: var(--primary-base);">Lihat Profil</a>
-                            </li>
-
-                            <li><hr class="dropdown-divider m-0"></hr></li>
-
-                            <!-- MENU ITEMS -->
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-3" href="#" style="color: var(--neutral-oreo-darker);">
-                                    <icon name="clipboard-text" size="16" /> 
-                                    Transaksi
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-3" href="#" style="color: var(--neutral-oreo-darker);">
-                                    <icon name="heart" size="16" />
-                                    Favorit
-                                </a>
-                            </li>
-
-                            <li><hr class="dropdown-divider m-0"></li>
-
-                            <!-- LOGOUT -->
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-3" href="#" style="color: var(--neutral-oreo-darker);">
-                                    <icon name="sign-out" size="16" />
-                                    Keluar
-                                </a>
-                            </li>
-                        </ul>
                     </div>
 
                 </div>
             </div>
         </nav>
 
-        <!-- SHIPPING ADDRESS -->
-        <div class="border-top py-0 small">
-            <div class="container d-flex align-items-center justify-content-end gap-1">
-                <i class="bi bi-geo-alt text-primary"></i>
-                <span>Di kirim ke -</span>
-                <a href="#" class="text-decoration-none">Tambah Alamat</a>
-                <i class="bi bi-caret-down-fill small"></i>
-            </div>
-        </div>
-        
-        <div class="container">
-            <CarouselParallax />
-        </div>
-        
         <!-- PAGE CONTENT -->
         <div class="container py-4">
             <slot />
         </div>
 
-        <!-- medicastore guarantee -->
-        <Guarantee />
-        
-        <!-- Footer -->
+        <!-- FOOTER -->
         <Footer />
     </div>
 </template>
@@ -476,7 +355,6 @@ footer {
 }
 
 .dropdown-menu {
-    top: 60px !important;
     display: none;
     opacity: 0;
     transition: opacity .15s ease;
@@ -485,13 +363,6 @@ footer {
 .dropdown-menu.show {
     display: block;
     opacity: 1;
-}
-
-.dropdown-menu .dropdown-divider {
-    border-color: #f5f5f5; /* ubah warna garis */
-    border-width: 1px;     /* ketebalan garis */
-    margin: 12px 0;         /* jarak vertikal */
-    opacity: 1;            /* hilangkan transparansi bawaan */
 }
 /* =============== */
 /* Hilangkan style bawaan */
@@ -555,68 +426,9 @@ footer {
     cursor: pointer;
 }
 
-/* button surface-large */
-.lg-btn-surface {
-    border-style: unset;
-    display: flex;
-    height: 40px;
-    min-width: 100px;
-    padding: 10px 8px;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    border-radius: 8px;
-    background: #EDF2FA;
-    color: var(--primary-base);
-}
-
-/* button primary-large */
-.lg-btn-primary {
-    text-decoration: none;
-    border-style: unset;
-    display: flex;
-    height: 40px;
-    min-width: 100px;
-    padding: 10px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    border-radius: 8px;
-    background: var(--primary-base);
-    color: #FFF;
-}
-
-.user-btn-navbar {
-    display: flex;
-    height: 40px;
-    min-width: 100px;
-    max-width: 241px;
-    padding: 10px 8px;
-    align-items: center;
-    border-radius: 8px;
-    border: 1px solid var(--surface-primary, #EDF2FA);
-    background: var(--pallete-neutral-milk-lightest, #FFF);
-    color: var(--neutral-oreo-darker);
-
-    /* Lvl1 */
-    box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);
-}
-
-.limit-text {
-    max-width: 150px;
-
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    align-self: stretch;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 </style>
 <script setup>
 import Icon from '../components/Icon.vue';
-import Footer from '../components/layout/Footer.vue';
-import Guarantee from '../components/layout/Guarantee.vue';
 
 const showAlert = () => {
     alert("Hello from Bootstrap JavaScript!");

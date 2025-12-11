@@ -5,13 +5,13 @@
         <div id="dropdownBackdrop" class="fade"></div>
 
         <!-- offcanvas search -->
-        <div class="offcanvas offcanvas-top" id="offCanvasSearch" data-bs-backdrop="static" tabindex="-1" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas offcanvas-top h-50" id="offCanvasSearch" data-bs-backdrop="static" tabindex="-1" aria-labelledby="offcanvasTopLabel">
             <div class="offcanvas-header">
                 <!-- <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
             </div>
             <div class="offcanvas-body">
-                <div class="container d-flex align-items-center justify-content-start gap-3">
+                <div class="container d-flex align-items-center justify-content-start">
 
                     <!-- LEFT: Toggler + Logo -->
                     <div class="d-flex align-items-center">
@@ -23,56 +23,50 @@
                         <!-- Logo -->
                         <a class="navbar-brand d-flex align-items-center" href="#">
                             <!-- mobile 146x24 -- desktop 244x40 -->
-                            <img src="/public/images/logo-medicastore.svg" class="img-fluid logo d-none d-sm-block" alt="logo" style="max-width: 244px; max-height: 35px;">
+                            <img src="https://medicastore.com/themes/blue/images/logo-lite-header.png" class="img-fluid logo" alt="logo">
                         </a>
                     </div>
 
                     <!-- search bar & jenis produk -->
-                    <div class="d-flex align-items-center justify-content-center gap-3 d-lg-flex d-none" style="max-width: 800px;width: 100%;">
+                    <div class="d-flex align-items-center justify-content-between gap-2 d-lg-flex d-none" style="max-width: 500px;width: 100%;">
 
-                    <!-- Search Group -->
-                    <div class="search-wrapper flex-grow-1" data-bs-toggle="offcanvas" data-bs-target="#offCanvasSearch" aria-controls="offCanvasSearch">
-                        <input type="text" class="form-control search-input" placeholder="Cari egoji" readonly>
-                        <button class="search-button">
-                            <icon name="magnifying-glass" size="16" color="#FFF" />
-                        </button>
-                    </div>
-
-                    <a class="button-lm text-decoration-none" style="color: var(--neutral-oreo-darker);" href="#">Batal</a>
-
-                    </div>
-
-                </div>
-            </div>
-            <div class="offcanvas-body border h-auto">
-                <div class="container d-flex align-items-center justify-content-start gap-3">
-
-                    <!-- LEFT: Toggler + Logo -->
-                    <div class="d-flex align-items-center">
-                        <!-- Hamburger -->
-                        <button class="navbar-toggler navbar-toggler-sm me-2 d-lg-none w-xs-25" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-                            <span class="navbar-toggler-icon"></span>
+                        <!-- Tombol Kategori -->
+                        <button class="btn btn-category px-3 py-2 gap-2 w-50">
+                            <!-- <i class="bi bi-grid"></i> -->
+                            <i class="ph ph-magnifying-glass"></i>
+                            Jenis Produk
                         </button>
 
-                        <!-- Logo -->
-                        <a class="navbar-brand d-flex align-items-center" href="#">
-                            <!-- mobile 146x24 -- desktop 244x40 -->
-                            <img src="/public/images/logo-medicastore.svg" class="img-fluid logo d-none d-sm-block" alt="logo" style="max-width: 244px; max-height: 35px;">
+                        <!-- Search Group -->
+                        <div class="input-group search-group w-100">
+                            <input type="text" class="form-control" placeholder="Cari egoji">
+                            <button class="btn btn-primary search-btn">
+                            <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- icon right -->
+                    <div class="d-flex align-items-center ms-auto gap-3">
+
+                        <!-- Search -->
+                        <a href="#" class="text-dark">
+                            <i class="bi bi-search"></i>
+                        </a>
+
+                        <!-- Cart -->
+                        <a href="#" class="position-relative text-dark">
+                            <i class="bi bi-cart2"></i>
+                            <span class="badge bg-danger position-absolute top-0 start-100 translate-middle rounded-pill">
+                                2
+                            </span>
+                        </a>
+
+                        <!-- User -->
+                        <a href="#" class="text-dark">
+                            <i class="bi bi-person-circle"></i>
                         </a>
                     </div>
-
-                    <!-- search bar & jenis produk -->
-                    <div class="d-flex align-items-center justify-content-center gap-2 d-lg-flex d-none" style="max-width: 500px;width: 100%;">
-
-                    <!-- Search Group -->
-                    <div class="search-wrapper flex-grow-1" data-bs-toggle="offcanvas" data-bs-target="#offCanvasSearch" aria-controls="offCanvasSearch">
-                        <input type="text" class="form-control search-input" placeholder="Cari egoji" readonly>
-                        <button class="search-button">
-                            <icon name="magnifying-glass" size="16" color="#FFF" />
-                        </button>
-                    </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -141,105 +135,21 @@
             <!-- TOP BAR -->
             <div class="border-bottom py-1 small d-lg-block d-none">
                 <div class="container d-flex justify-content-between align-items-center">
-
-                    <!-- Download App -->
-                    <div class="dropdown cart-dropdown" style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
+                    <div style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
                         <icon name="device-mobile" size="16" />
-                        <a href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Download Aplikasi Medicastore</a>
-                        
-
-                        <div class="dropdown-menu custom-download-app p-2">
-                            <div class="d-flex gap-3">
-                                <img src="/public/images/qrcode.svg">
-
-                            <div class="text-align-start align-content-center">
-                                <h6 class="subtitle-2" style="color: var(--neutral-oreo-darkest);">Download Aplikasi</h6>
-                                <p class="body-2 mb-3" style="color: var(--neutral-oreo-dark);">Scan QR untuk download aplikasi. 
-                                Atau download melalui:</p>
-
-                            <div class="d-flex gap-1">
-                                <div class="mt-0">
-                                    <a href="#">
-                                        <img src="https://medicastore.com/themes/blue/images/main-menu/googleplay.png" style="height:32px;">
-                                    </a>
-                                </div>
-                                <div class="mt-0">
-                                    <a href="#">
-                                        <img src="https://medicastore.com/themes/blue/images/main-menu/appstore.png" style="height:32px;">
-                                    </a>
-                                </div>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-
+                        <a href="#" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Download aplikasi medicastore</a>
                     </div>
-
                     <div class="d-flex gap-3">
                         <a href="#" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Konsultasi Online</a>
 
-                    <!-- Layanan Informasi -->
-                    <div class="dropdown" style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
-                        <a href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Layanan Informasi</a>
+                    <div style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
+                        <a href="#" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Layanan Informasi</a>
                         <icon name="caret-down" size="16" />
-
-                        <ul class="dropdown-menu p-0 shadow-lg border-0 rounded-4 overflow-hidden" style="min-width: 220px;">
-                            
-                            <!-- MENU ITEMS -->
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
-                                    Dokter & Spesialis
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
-                                    Fasilitas Kesehatan
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
-                                    Informasi Penyakit
-                                </a>
-                            </li>
-
-                        </ul>
                     </div>
 
-                    <!-- Tentang Medicastore -->
-                    <div class="dropdown" style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
-                        <a href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Tentang Medicastore</a>
+                    <div style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
+                        <a href="#" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Tentang Medicastore</a>
                         <icon name="caret-down" size="16" />
-
-                        <ul class="dropdown-menu p-0 shadow-lg border-0 rounded-4 overflow-hidden" style="min-width: 220px;">
-                            
-                            <!-- MENU ITEMS -->
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
-                                    Tentang Kami
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
-                                    Syarat & Ketentuan
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
-                                    Kritik & Saran
-                                </a>
-                            </li>
-
-                                                        <li>
-                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-2" href="#" style="color: var(--neutral-oreo-darker);"> 
-                                    Apotek Mitra
-                                </a>
-                            </li>
-
-                        </ul>
                     </div>
 
                     <a href="#" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">FAQ</a>
@@ -289,61 +199,16 @@
 
                 <div class="d-flex align-items-center justify-content-between gap-3 d-lg-flex d-none" style="max-width: 600px;width: 100%;">
 
-                    <!-- Jenis Produk -->
-                    <div class="dropdown pe-2 pt-1">
-                        <button 
-                            class="lg-btn-surface position-relative"
-                            type="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            <icon name="circles-three-plus" size="24" class="text-cta" />
-                            <span class="button-lm text-cta">Jenis Produk</span>
-                        </button>
-
-                        <div class="dropdown-menu custom-jenisproduk container p-4">
-                            <div class="d-flex text-center" style="color: var(--neutral-oreo-darker);">
-                                <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Semua</div>
-                                </div>
-                                <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
-                                </div>
-                                <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
-                                </div>
-                                <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
-                                </div>
-                                <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
-                                </div>
-                                <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
-                                </div>
-                                <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
-                                </div>
-                                <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
-                                </div>
-                                <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
+                    <!-- Tombol Kategori -->
+                    <button 
+                        class="lg-btn-surface"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        <icon name="circles-three-plus" size="24" class="text-cta" />
+                        <span class="button-lm text-cta">Jenis Produk</span>
+                    </button>
 
                     <!-- Search Group -->
                     <div class="search-wrapper flex-grow-1" data-bs-toggle="offcanvas" data-bs-target="#offCanvasSearch" aria-controls="offCanvasSearch">
@@ -765,7 +630,6 @@ footer {
     margin: 12px 0;         /* jarak vertikal */
     opacity: 1;            /* hilangkan transparansi bawaan */
 }
-
 /* =============== */
 /* Hilangkan style bawaan */
 .custom-cart-menu {
@@ -785,49 +649,6 @@ footer {
 }
 
 .custom-cart-menu.show {
-    display: block;
-    opacity: 1;
-}
-
-.custom-download-app {
-    display: flex;
-    padding: 4px;
-    gap: 4px;
-    align-self: stretch;
-
-    border-radius: 16px;
-    border: 1px solid var(--border-default, #E6E6E6);
-    background-image: url(/public/images/bg-downloadapp.svg);
-    background-size: cover;     /* supaya gambar memenuhi seluruh area */
-    background-repeat: no-repeat;  /* supaya tidak berulang */
-    background-position: center;   /* supaya gambarnya selalu center */
-
-    /* Lvl2 */
-    box-shadow: 0 2px 8px 0 rgba(51, 51, 51, 0.10);
-}
-
-.custom-download-app.show {
-    display: block;
-    opacity: 1;
-}
-
-.custom-jenisproduk {
-    position: absolute;
-    display: flex;
-    opacity: 0;
-    border: none;
-    border-radius: 20px;
-    width: auto;
-    padding: 4px;
-    flex-direction: column;
-    align-items: flex-start;
-
-    background: white;
-    box-shadow: 0px 12px 40px rgba(0,0,0,0.15);
-    transition: opacity .2s ease;
-}
-
-.custom-jenisproduk.show {
     display: block;
     opacity: 1;
 }
@@ -877,7 +698,7 @@ footer {
     display: flex;
     height: 40px;
     min-width: 100px;
-    padding: 10px 12px;
+    padding: 10px 8px;
     justify-content: center;
     align-items: center;
     gap: 6px;

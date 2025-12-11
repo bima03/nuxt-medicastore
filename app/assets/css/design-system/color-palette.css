@@ -89,10 +89,6 @@
     ============ CSS Class ============
 */
 
-.text-body {
-    background-color: var(--neutral-oreo-darker);
-}
-
 .surface-primary {
     background-color: #EDF2FA;
 }

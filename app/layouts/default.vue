@@ -78,52 +78,7 @@
         </div>
 
         <!-- off canvas menu -->
-        <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="mobileMenu">
-            <div class="offcanvas-header border-bottom">
-                <h6 class="mb-0 fw-bold">MENU</h6>
-
-                <button class="btn" data-bs-dismiss="offcanvas">
-                    <i class="bi bi-x-lg fs-5"></i>
-                </button>
-            </div>
-
-            <div class="offcanvas-body px-3">
-
-                <!-- Link: Beranda -->
-                <a href="#" class="d-flex align-items-center gap-3 py-2 fs-6 text-dark text-decoration-none">
-                    <i class="bi bi-house-door fs-5"></i>
-                    Beranda
-                </a>
-
-                <small class="text-muted mt-3 d-block">Layanan Informasi</small>
-
-                <a href="#" class="d-block py-2 fs-6 text-dark text-decoration-none">Dokter & Spesialis</a>
-                <a href="#" class="d-block py-2 fs-6 text-dark text-decoration-none">Fasilitas Kesehatan</a>
-                <a href="#" class="d-block py-2 fs-6 text-dark text-decoration-none">Informasi Penyakit</a>
-                <a href="#" class="d-block py-2 fs-6 text-dark text-decoration-none">Artikel</a>
-
-                <hr>
-
-                <a href="#" class="d-block py-2 fs-6 text-dark text-decoration-none">Konsultasi Online</a>
-
-                <hr>
-
-                <div class="small">
-                    <a href="#" class="text-decoration-none text-muted me-2">Tentang Kami</a>
-                    <a href="#" class="text-decoration-none text-muted">Syarat & Ketentuan</a>
-
-                    <br>
-
-                    <a href="#" class="text-decoration-none text-muted me-2">Kebijakan & Privasi</a>
-                    <a href="#" class="text-decoration-none text-muted">Kritik & Saran</a>
-
-                    <br>
-
-                    <a href="#" class="text-decoration-none text-muted me-2">Apotek Mitra</a>
-                    <a href="#" class="text-decoration-none text-muted">FAQ</a>
-                </div>
-            </div>
-        </div>
+        <OffCanvasMenu />
 
         <!-- off canvas profile -->
         <div class="offcanvas offcanvas-bottom h-50" tabindex="-1" id="profileCanvas" aria-labelledby="offcanvasBottomLabel">
@@ -137,7 +92,7 @@
         </div>
 
         <!-- new navbar -->
-        <nav class="navbar border-bottom-0 d-block sticky-top navbar-expand-lg bg-white p-0" style="box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);">
+        <nav class="navbar d-block sticky-top navbar-expand-lg bg-white p-0" style="box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);">
             <!-- TOP BAR -->
             <div class="border-bottom py-1 small d-lg-block d-none">
                 <div class="container d-flex justify-content-between align-items-center">
@@ -463,167 +418,16 @@
             </div>
         </nav>
 
-        <!-- SHIPPING ADDRESS -->
-        <div class="border-top py-0 small">
-            <div class="container d-flex align-items-center justify-content-end gap-1">
-                <i class="bi bi-geo-alt text-primary"></i>
-                <span>Di kirim ke -</span>
-                <a href="#" class="text-decoration-none">Tambah Alamat</a>
-                <i class="bi bi-caret-down-fill small"></i>
-            </div>
-        </div>
-        
-        <div class="container">
-            <CarouselParallax />
-        </div>
-        
         <!-- PAGE CONTENT -->
         <div class="container py-4">
             <slot />
         </div>
 
         <!-- medicastore guarantee -->
-        <div class="container-fluid surface-primary">
-            <div class="container py-5">
-                <div class="row g-4">
-
-                    <!-- Item 1 -->
-                    <div class="col-md-6 d-flex">
-                        <div class="me-3">
-                            <icon name="medal" size="40" color="#206BBC" />
-                        </div>
-                        <div>
-                            <h5 class="fw-semibold mb-1">100% Original</h5>
-                            <p class="mb-0 text-muted">
-                                Semua produk terdaftar di BPOM dan Kemenkes, berasal dari supplier resmi dengan harga bersaing.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="col-md-6 d-flex">
-                        <div class="me-3">
-                            <icon name="moped-front" size="40" color="#206BBC" />
-                        </div>
-                        <div>
-                            <h5 class="fw-semibold mb-1">Packing Aman</h5>
-                            <p class="mb-0 text-muted">
-                                Setiap pesanan dikemas rapi dan aman agar kenyamanan dan privasi Anda tetap terjaga.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="col-md-6 d-flex">
-                        <div class="me-3">
-                            <icon name="package" size="40" color="#206BBC" />
-                        </div>
-                        <div>
-                            <h5 class="fw-semibold mb-1">Pengiriman Cepat</h5>
-                            <p class="mb-0 text-muted">
-                                Dengan kurir profesional Medicastore dan mitra pengiriman nasional, pesanan Anda sampai lebih cepat dan aman.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Item 4 -->
-                    <div class="col-md-6 d-flex">
-                        <div class="me-3">
-                            <icon name="headset" size="40" color="#206BBC" />
-                        </div>
-                        <div>
-                            <h5 class="fw-semibold mb-1">Customer Service Responsif</h5>
-                            <p class="mb-0 text-muted">
-                                Kami bantu mencarikan ketersediaan obat yang Anda butuhkan dan informasikan segera saat siap dikirim.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+        <Guarantee />
         
-
-        <!-- FOOTER -->
-        <footer class="bg-primary text-white pt-5" style="background-color:#15477D !important;">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Left Section -->
-                    <div class="col-md-4 mb-4">
-                        <img src="https://medicastore.com/themes/blue/images/logo-dark-header-default.png" alt="medicastore" class="mb-3" style="max-width:180px;">
-
-                        <p class="small">
-                            Scan QR code atau download aplikasi Medicastore yang tersedia di iOS dan Android.
-                        </p>
-
-                        <div class="row">
-                            <div class="col-12 mt-2">
-                                <a href="#">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/googleplay.png" style="height:40px;">
-                                </a>
-                            </div>
-                            <div class="col-12 mt-2">
-                                <a href="#">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/appstore.png" style="height:40px;">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Middle Section 1 -->
-                    <div class="col-md-3 mb-4">
-                        <h6 class="fw-bold mb-3">Medicastore</h6>
-                        <ul class="list-unstyled small">
-                            <li><a href="#" class="text-white text-decoration-none">Tentang Kami</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Syarat & Ketentuan</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Kebijakan & Privasi</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Kritik & Saran</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Apotek Mitra</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Middle Section 2 -->
-                    <div class="col-md-3 mb-4">
-                        <h6 class="fw-bold mb-3">Layanan Kami</h6>
-                        <ul class="list-unstyled small">
-                            <li><a href="#" class="text-white text-decoration-none">Beli Obat</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Informasi Penyakit</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Informasi Dokter</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Informasi Fasilitas Kesehatan</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Artikel Kesehatan</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Right Section -->
-                    <div class="col-md-2 mb-4">
-                        <h6 class="fw-bold mb-3">Hubungi Kami</h6>
-                        <ul class="list-unstyled small">
-                            <li class="mb-2"><i class="bi bi-envelope"></i> support@medicastore.com</li>
-                            <li class="mb-2"><i class="bi bi-telephone"></i> 021-29293456</li>
-                            <li>
-                                <i class="bi bi-geo-alt"></i> 
-                                Jl Pospengumben Lama No. 2A,<br>
-                                Kembangan, Jakarta Barat,<br>
-                                DKI Jakarta, Indonesia
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Copyright -->
-            <div class="text-center mt-3 small" style="background-color:#143D73;">
-                <div class="container py-2">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <span>Copyright © {{ new Date().getFullYear() }} by medicastore</span>
-                        <span>PT. Clinisindo Putra Perkasa</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <!-- Footer -->
+        <Footer />
     </div>
 </template>
 <style scoped>
@@ -657,13 +461,13 @@
     }
     
     .blibli-banner {
-    width: 100%;
-    background: #fff;
-    border-radius: 16px;
-    overflow: hidden;
-    position: relative;
-    padding-bottom: 20px;
-}
+        width: 100%;
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 20px;
+    }
 
 .banner-slide {
     position: relative;
@@ -930,7 +734,10 @@ footer {
 }
 </style>
 <script setup>
+import OffCanvasMenu from '../components/element/OffCanvasMenu.vue';
 import Icon from '../components/Icon.vue';
+import Footer from '../components/layout/Footer.vue';
+import Guarantee from '../components/layout/Guarantee.vue';
 
 const showAlert = () => {
     alert("Hello from Bootstrap JavaScript!");

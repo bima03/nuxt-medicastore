@@ -7,3 +7,13 @@
 .text-cta {
     color: var(--primary-base);
 }
+
+.text-body-fig {
+    color: var(--neutral-oreo-darker);
+}
+
+/* ======= bg-color ============ */
+
+.bg-primary-base {
+    color: var(--primary-base);
+}

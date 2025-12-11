@@ -42,7 +42,7 @@ import EmblaCarousel from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay'
 
 const slides = [
-    'https://medicastore.com/images/slide/Hhh3A_12-09-2025.jpg',
+    'https://medicastore.com/images/slide/RdLDG_09-03-2024.webp',
     'https://medicastore.com/images/slide/smUY2_09-03-2024.webp',
     'https://medicastore.com/images/slide/PhstI_09-03-2024.webp',
 ]
@@ -167,6 +167,13 @@ const scrollTo = (index) => embla.value?.scrollTo(index)
 }
 .embla__btn--prev { left: 10px; }
 .embla__btn--next { right: 10px; }
+
+.embla__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
 
 .embla__dot {
     width: 10px;

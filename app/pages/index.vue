@@ -21,7 +21,27 @@
 </template>
 
 <script setup>
-const showAlert = () => {
-    alert("Hello from Bootstrap JavaScript!");
-};
+// const api = useApiRoutes();
+// const { get } = useApi();
+import { onMounted } from 'vue';
+import { useApiRoutes } from '../composables/useApiRoutes';
+import { useApi } from '../composables/useApi';
+
+const api = useApiRoutes();
+const {get} = useApi();
+
+onMounted(async() => {
+    fetchSlide();
+})
+
+async function fetchSlide() {
+    try {
+        const res = await get(api.SLIDE);
+        console.log(res);
+    } catch (error) {
+        console.error(error);
+    } finally { // bagus buat loader
+        // loading.value = false;
+    }
+}
 </script>

@@ -1,5 +1,21 @@
 NUXT x MEDICASTORE
 
+## 📁 Struktur Folder
+
+Berikut adalah penjelasan mengenai folder-folder utama dalam repositori ini:
+
+*   `app/`: Berisi kode sumber utama aplikasi nuxt x medicastore.
+    *   `assets/`: Menyimpan styling custom (CSS/SCSS) yang mengikuti desain dari Figma.
+    *   `components/`: Berisi komponen kecil yang bisa digunakan ulang.
+        * `element/`: Komponen kecil yang merepresentasikan bagian spesifik dari HTML (reusable).
+        * `layout/`: Komponen layout parsial yang dapat digunakan kembali pada berbagai halaman.
+    *   `layouts/`: Mengatur struktur layout untuk setiap halaman.
+    *   `pages/`: Berisi file halaman yang otomatis menjadi route di Nuxt.
+    *   `plugins/`: Menyimpan inisialisasi JavaScript global yang ingin dijalankan sebelum aplikasi rendering.
+    *   `public/`: Menyimpan file statis seperti gambar, ikon, atau font yang dapat diakses langsung oleh browser.
+*   `composables/`: Berisi fungsi-fungsi reusable yang berhubungan dengan logic Nuxt, termasuk helper untuk pemanggilan API.
+*   `server/`: Berisi file Nitro server–side seperti API route atau reverse proxy. Digunakan untuk meneruskan request ke Web Service (WS) agar menghindari error CORS di browser.
+
 🟩 prerequisite
 
 Notes : Jalankan node -v / npm -v jika return nya angka, maka lanjut ke no 3. no 1 & 2 hanya untuk yang belum install node js

@@ -292,7 +292,7 @@
 
                 <div class="d-flex align-items-center justify-content-between gap-3 d-lg-flex d-none ms-auto">
 
-                    <ul class="navbar-nav me-auto mb-2 gap-4 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 gap-4 gap-md-2 mb-lg-0">
                         <li class="nav-item">
                             <NuxtLink to="/dokter" class="nav-link text-body-fig subtitle-2" aria-current="page" exact-active-class="active">Dokter & Spesialis</NuxtLink>
                         </li>
@@ -314,13 +314,14 @@
 
                     <!-- User -->
                     <div class="user-menu ps-2 d-lg-block d-none">
-                        <button 
+                        <NuxtLink 
+                            to="/"
                             class="btn btn-primary-base d-flex align-items-center rounded-3 px-3 border button-lm"
                             type="button"
                             style="height: 40px;"
                         >
                             Belanja Obat di Medicastore
-                        </button>
+                        </NuxtLink>
                     </div>
 
                 </div>
@@ -328,7 +329,7 @@
         </nav>
 
         <!-- PAGE CONTENT -->
-        <div class="container py-4">
+        <div class="container-fluid py-4">
             <slot />
         </div>
 
@@ -496,38 +497,6 @@ footer {
     padding: 8px 12px;
 }
 
-/* ============= */
-.search-wrapper {
-    position: relative;
-    flex-grow: 1;            /* 🔥 BIAR IKUT MELEBAR */
-    max-width: 100%;
-}
-
-.search-input {
-    height: 40px;
-    width: 100%;             /* 🔥 LEBAR FLEXIBLE */
-    border-radius: 8px;
-    border: 1px solid #e6e6e6;
-    padding-left: 18px;
-    padding-right: 45px;     /* 🔥 TAMBAH SPASI UNTUK BUTTON */
-    font-size: 14px;
-}
-
-.search-button {
-    position: absolute;
-    right: 6px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 32px;
-    width: 32px;
-    background: var(--primary-base);
-    border: none;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
 
 </style>
 <script setup>

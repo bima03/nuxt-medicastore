@@ -1,6 +1,21 @@
-NUXT x MEDICASTORE
+🚀 Project NUXT x MEDICASTORE
 
 ## 📁 Struktur Folder
+
+├── app/
+│   ├── assets/
+│   ├── components/
+│   │   ├── element/
+│   │   └── layout/
+│   ├── layouts/
+│   ├── pages/
+│   ├── plugins/
+│   └── public/
+├── composables/
+├── server/
+│   └── api/
+│       └── fetch.js
+└── README.md
 
 Berikut adalah penjelasan mengenai folder-folder utama dalam repositori ini:
 

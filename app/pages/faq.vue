@@ -1,8 +1,10 @@
 <template>
   <!-- HEADER -->
-  <section class="py-5 text-center text-white" style="background-color: #0d6efd;">
-      <h2 class="fw-bold mb-1">FAQ</h2>
-      <p class="mb-0">Pertanyaan-pertanyaan umum pada medicastore</p>
+  <section class="py-5 text-center text-white">
+      <div class="container-fluid" style="background-color: #0d6efd;">
+        <h2 class="fw-bold mb-1">FAQ</h2>
+        <p class="mb-0">Pertanyaan-pertanyaan umum pada medicastore</p>
+      </div>
   </section>
 
   <!-- CONTENT -->

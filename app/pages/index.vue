@@ -1,4 +1,5 @@
 <template>
+    
     <div>
         <!-- SHIPPING ADDRESS -->
         <div class="py-0 small">
@@ -17,6 +18,7 @@
         <button class="btn btn-primary" @click="showAlert">
             <i class="bi bi-bell"></i> Click Me
         </button>
+        <button @click="showAlert" class="btn btn-primary">Tes Toast</button>
     </div>
 </template>
 
@@ -24,8 +26,9 @@
 // const api = useApiRoutes();
 // const { get } = useApi();
 import { onMounted } from 'vue';
-import { useApiRoutes } from '../composables/useApiRoutes';
-import { useApi } from '../composables/useApi';
+import { useApiRoutes } from '../../composables/useApiRoutes';
+import { useApi } from '../../composables/useApi';
+import { toast } from 'vue-sonner';
 
 const api = useApiRoutes();
 const {get} = useApi();
@@ -33,6 +36,13 @@ const {get} = useApi();
 onMounted(async() => {
     fetchSlide();
 })
+
+function showAlert() {
+    // toast.error("Data berhasil disimpan!")
+    toast("Terjadi kesalahan!", {
+        class: "toast-error"
+    })
+}
 
 async function fetchSlide() {
     try {

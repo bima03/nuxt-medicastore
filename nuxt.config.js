@@ -58,4 +58,19 @@ export default {
             enabled: true,
         },
     },
+    modules: ['@nuxt/image'],
+
+    image: {
+        // provider default IPX (local)
+        dir: 'public/images', // folder sumber gambar
+        quality: 80, // default compression
+        format: ['webp', 'avif', 'jpg'], // fallback otomatis
+        screens: {
+            sm: 320,
+            md: 640,
+            lg: 1024,
+            xl: 1280,
+            xxl: 1536,
+        }
+    }
 };

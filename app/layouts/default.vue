@@ -1,6 +1,7 @@
 <template>
     <div class="app-wrapper d-flex flex-column min-vh-100">
-
+        
+        <Toaster position="top-center" closeButton="true" closeButtonPosition="top-left" />
         <!-- Backdrop -->
         <div id="dropdownBackdrop" class="fade"></div>
 
@@ -733,10 +734,12 @@ footer {
 }
 </style>
 <script setup>
+import { Toaster } from 'vue-sonner';
 import OffCanvasMenu from '../components/element/OffCanvasMenu.vue';
 import Icon from '../components/Icon.vue';
 import Footer from '../components/layout/Footer.vue';
 import Guarantee from '../components/layout/Guarantee.vue';
+import 'vue-sonner/style.css';
 
 const showAlert = () => {
     alert("Hello from Bootstrap JavaScript!");

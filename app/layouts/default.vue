@@ -10,8 +10,9 @@
             <div class="offcanvas-header">
                 
             </div>
+            <!-- suggest pencarian-->
             <div class="offcanvas-body">
-                <div class="container d-flex align-items-center justify-content-start gap-3">
+                <div class="container d-flex align-items-center justify-content-start gap-5">
 
                     <!-- LEFT: Toggler + Logo -->
                     <div class="d-flex align-items-center">
@@ -44,35 +45,51 @@
 
                 </div>
             </div>
+            <!-- suggest rekomendasi-->
             <div class="offcanvas-body border h-auto">
+                <div class="container d-flex align-items-center justify-content-start gap-3 mb-3">
+                    <!-- Terakhir dicari -->
+                    <div class="d-flex flex-column align-items-start gap-2 button-lm" style="color: var(--neutral-oreo-darkest);">
+                        Terakhir dicari
+                        <div class="d-flex gap-2">
+                            <div class="sm-chips body-2" style="color: var(--neutral-oreo-darker);">
+                                <img src="/public/images/search-history.svg" alt="icon" style="max-width: 16px; max-height: 16px;">
+                                Panadol
+                            </div>
+                            <div class="sm-chips body-2" style="color: var(--neutral-oreo-darker);">
+                                <img src="/public/images/search-history.svg" alt="icon" style="max-width: 16px; max-height: 16px;">
+                                Panadol
+                            </div>
+                            <div class="sm-chips body-2" style="color: var(--neutral-oreo-darker);">
+                                <img src="/public/images/search-history.svg" alt="icon" style="max-width: 16px; max-height: 16px;">
+                                Panadol
+                            </div>
+                            <div class="sm-chips body-2" style="color: var(--neutral-oreo-darker);">
+                                <img src="/public/images/search-history.svg" alt="icon" style="max-width: 16px; max-height: 16px;">
+                                Panadol
+                            </div>
+                            <div class="sm-chips body-2" style="color: var(--neutral-oreo-darker);">
+                                <img src="/public/images/search-history.svg" alt="icon" style="max-width: 16px; max-height: 16px;">
+                                Panadol
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="container d-flex align-items-center justify-content-start gap-3">
-
-                    <!-- LEFT: Toggler + Logo -->
-                    <div class="d-flex align-items-center">
-                        <!-- Hamburger -->
-                        <button class="navbar-toggler navbar-toggler-sm me-2 d-lg-none w-xs-25" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <!-- Logo -->
-                        <a class="navbar-brand d-flex align-items-center" href="#">
-                            <!-- mobile 146x24 -- desktop 244x40 -->
-                            <img src="/public/images/logo-medicastore.svg" class="img-fluid logo d-none d-sm-block" alt="logo" style="max-width: 244px; max-height: 35px;">
-                        </a>
+                    <!-- Rekomendasi medicastore -->
+                    <div class="d-flex flex-column align-items-start gap-2 button-lm" style="color: var(--neutral-oreo-darkest);">
+                        Rekomendasi medicastore
+                        <div class="d-flex gap-2">
+                            <div class="sm-chips body-2" style="color: var(--neutral-oreo-darker);">
+                                <icon name="trend-up" size="16"/>
+                                Bisul
+                            </div>
+                            <div class="sm-chips body-2" style="color: var(--neutral-oreo-darker);">
+                                <icon name="trend-up" size="16"/>
+                                Anxiety
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- search bar & jenis produk -->
-                    <div class="d-flex align-items-center justify-content-center gap-2 d-lg-flex d-none" style="max-width: 500px;width: 100%;">
-
-                    <!-- Search Group -->
-                    <div class="search-wrapper flex-grow-1" data-bs-toggle="offcanvas" data-bs-target="#offCanvasSearch" aria-controls="offCanvasSearch">
-                        <input type="text" class="form-control search-input" placeholder="Cari egoji" readonly>
-                        <button class="search-button">
-                            <icon name="magnifying-glass" size="16" color="#FFF" />
-                        </button>
-                    </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -704,6 +721,20 @@ footer {
     border-radius: 8px;
     background: var(--primary-base);
     color: #FFF;
+}
+
+/* chips small */
+.sm-chips {
+    display: flex;
+    height: 28px;
+    min-width: 48px;
+    padding: 10px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-radius: 300px;
+    border: 1px solid var(--border-default, #E6E6E6);
+    background: var(--pallete-neutral-milk-lightest, #FFF);
 }
 
 .user-btn-navbar {

@@ -436,7 +436,7 @@
         </nav>
 
         <!-- PAGE CONTENT -->
-        <div class="container py-4">
+        <div class="container-fluid py-4">
             <slot />
         </div>
 

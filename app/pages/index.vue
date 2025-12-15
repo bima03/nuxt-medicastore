@@ -11,11 +11,14 @@
             </div>
         </div>
         
-        <CarouselParallax />
+        <div class="container">
+            <CarouselParallax />
+        </div>
+        
 
         <!-- Jenis Produk -->
-        <div class="d-flex flex-column align-items-start gap-3 title-1 my-5" style="color: var(--neutral-oreo-darkest);">
-        Jenis Produk
+        <div class="container d-flex flex-column align-items-start gap-3 title-1 my-5" style="color: var(--neutral-oreo-darkest);">
+            Jenis Produk
             <div class="d-flex ms-1 gap-2 w-100 align-items-start align-content-start flex-wrap" style="color: var(--neutral-oreo-darker);">
                 <div class="m-2 text-center">
                     <img src="/public/images/produk-semua.png" class="rounded-3 mb-2" width="120px">                                    <div class="subtitle-1" style="max-width: 120px;">Semua</div>
@@ -63,116 +66,115 @@
         <!-- Layanan Informasi -->
         <div>
 
-        <div class="container p-0 my-5">
-            <div class="row align-items-start">
-            <!-- Kolom kiri -->
-            <div class="col-md-8">
-                <h6 class="mb-3 title-1" style="color: var(--neutral-oreo-darkest);">Layanan Informasi</h6>
-                <div class="d-flex flex-wrap gap-3">
-                <!-- Card 1 -->
-                <div class="card info-card flex-fill">
-                    <h6 class="title-2" style="color: var(--neutral-oreo-darker);">Dokter & Spesialis</h6>
-                    <button class="mt-auto sm-btn-outline button-s">Lihat Info</button>  
-                    <div class="">
-                    <img src="/public/images/info-dokter.png" style="max-width: 84px;" alt="Dokter" class="icon position-absolute bottom-0 end-0">
+            <div class="container p-0 my-5">
+                <div class="row align-items-start">
+                <!-- Kolom kiri -->
+                <div class="col-md-8">
+                    <h6 class="mb-3 title-1" style="color: var(--neutral-oreo-darkest);">Layanan Informasi</h6>
+                    <div class="d-flex flex-wrap gap-3">
+                    <!-- Card 1 -->
+                    <div class="card info-card flex-fill">
+                        <h6 class="title-2" style="color: var(--neutral-oreo-darker);">Dokter & Spesialis</h6>
+                        <button class="mt-auto sm-btn-outline button-s">Lihat Info</button>  
+                        <div class="">
+                        <img src="/public/images/info-dokter.png" style="max-width: 84px;" alt="Dokter" class="icon position-absolute bottom-0 end-0">
+                        </div>
+                    </div>
+            
+                    <!-- Card 2 -->
+                    <div class="card info-card flex-fill">
+                        <h6 class="title-2" style="color: var(--neutral-oreo-darker);">Fasilitas Kesehatan</h6>
+                        <button class="mt-auto sm-btn-outline button-s">Lihat Info</button>
+                        <div class="">
+                        <img src="/public/images/info-faskes.png" style="max-width: 64px;" alt="Faskes" class="icon position-absolute bottom-0 end-0">
+                        </div>
+                    </div>
+            
+                    <!-- Card 3 -->
+                    <div class="card info-card flex-fill">
+                        <h6 class="title-2" style="color: var(--neutral-oreo-darker);">Informasi Penyakit</h6>
+                        <button class="mt-auto sm-btn-outline button-s">Lihat Info</button>
+                        <div class="">
+                        <img src="/public/images/info-penyakit.png" style="max-width: 64px;" alt="Penyakit" class="icon position-absolute bottom-0 end-0">
+                        </div>
+                    </div>
                     </div>
                 </div>
-        
-                <!-- Card 2 -->
-                <div class="card info-card flex-fill">
-                    <h6 class="title-2" style="color: var(--neutral-oreo-darker);">Fasilitas Kesehatan</h6>
-                    <button class="mt-auto sm-btn-outline button-s">Lihat Info</button>
-                    <div class="">
-                    <img src="/public/images/info-faskes.png" style="max-width: 64px;" alt="Faskes" class="icon position-absolute bottom-0 end-0">
+            
+                <!-- Kolom kanan -->
+                <div class="col-md-4 mt-4 mt-md-0">
+                    <h6 class="mb-3 title-1" style="color: var(--neutral-oreo-darkest);">Belum Tahu Obat yang Tepat?</h6>
+                    <div class="card tebus-card d-flex flex-row align-items-center px-3 py-3">
+                    <img src="/public/images/tebus-obat.png" alt="Resep" class="me-2" style="height: 80px" />
+                    <div>
+                        <h6 class="title-2" style="color: var(--neutral-oreo-darker);">Konsultasi Online</h6>
+                        <p class="body-2" style="color: var(--neutral-oreo-dark);">Langsung chat dokter kami untuk rekomendasi obat</p>
                     </div>
-                </div>
-        
-                <!-- Card 3 -->
-                <div class="card info-card flex-fill">
-                    <h6 class="title-2" style="color: var(--neutral-oreo-darker);">Informasi Penyakit</h6>
-                    <button class="mt-auto sm-btn-outline button-s">Lihat Info</button>
-                    <div class="">
-                    <img src="/public/images/info-penyakit.png" style="max-width: 64px;" alt="Penyakit" class="icon position-absolute bottom-0 end-0">
                     </div>
                 </div>
                 </div>
             </div>
-        
-            <!-- Kolom kanan -->
-            <div class="col-md-4 mt-4 mt-md-0">
-                <h6 class="mb-3 title-1" style="color: var(--neutral-oreo-darkest);">Belum Tahu Obat yang Tepat?</h6>
-                <div class="card tebus-card d-flex flex-row align-items-center px-3 py-3">
-                <img src="/public/images/tebus-obat.png" alt="Resep" class="me-2" style="height: 80px" />
-                <div>
-                    <h6 class="title-2" style="color: var(--neutral-oreo-darker);">Konsultasi Online</h6>
-                    <p class="body-2" style="color: var(--neutral-oreo-dark);">Langsung chat dokter kami untuk rekomendasi obat</p>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
 
         </div>
 
         <!-- Belanja Berdasarkan Keluhan-->
         <div class="container-fluid py-4 mt-4 surface-primary">
-        <div class="container py-4">
-        <div class="row align-items-start">
-        <!-- Kolom kiri -->
-        <div class="col-md-3 mb-3 mb-md-0 d-flex flex-column justify-content-between" style="color: var(--neutral-oreo-darkest);">
-          <div>
-            <h6 class="title-1 mb-0">Belanja</h6>
-            <h6 class="title-1 text-wrap">berdasarkan keluhan</h6>
-          </div>
-          <div>
-            <button class="lg-btn-primary button-lm mt-3">Lihat Semua</button>
-          </div>
-          
-        </div>
-    
-        <!-- Kolom kanan -->
-        <div class="col-md-9">
-          <div class="d-flex justify-content-end flex-wrap gap-3">
-            <!-- Card item -->
-            <div class="flex inikeluhan-card">
-              <div class="keluhan-img">
-                <img src="/public/images/penyakit1.png" style="height: 80px;" alt="Demam" />
-              </div>
-              <p class="subtitle-2 m-0 text-center" style="color: var(--neutral-oreo-darker);">Demam</p>
-            </div>
-    
-            <div class="flex inikeluhan-card">
-              <div class="keluhan-img">
-                <img src="/public/images/penyakit1.png" style="height: 80px;" alt="Demam" />
-              </div>
-              <p class="subtitle-2 m-0 text-center" style="color: var(--neutral-oreo-darker);">Batuk</p>
-            </div>
-    
-            <div class="flex inikeluhan-card">
-              <div class="keluhan-img">
-                <img src="/public/images/penyakit2.png" style="height: 80px;" alt="Demam" />
-              </div>
-              <p class="subtitle-2 m-0 text-center" style="color: var(--neutral-oreo-darker);">Penghilang Rasa Nyeri</p>
-            </div>
-    
-            <div class="flex inikeluhan-card">
-              <div class="keluhan-img">
-                <img src="/public/images/penyakit2.png" style="height: 80px;" alt="Demam" />
-              </div>
-              <p class="subtitle-2 m-0 text-center" style="color: var(--neutral-oreo-darker);">Vitamin Daya Tahan Tubuh</p>
-            </div>
+            <div class="container py-4">
+                <div class="row align-items-start">
+                    <!-- Kolom kiri -->
+                    <div class="col-md-3 mb-3 mb-md-0 d-flex flex-column justify-content-between" style="color: var(--neutral-oreo-darkest);">
+                        <div>
+                            <h6 class="title-1 mb-0">Belanja</h6>
+                            <h6 class="title-1 text-wrap">berdasarkan keluhan</h6>
+                        </div>
+                        <div>
+                            <button class="lg-btn-primary button-lm mt-3">Lihat Semua</button>
+                        </div>
+                    
+                    </div>
+                
+                    <!-- Kolom kanan -->
+                    <div class="col-md-9">
+                        <div class="d-flex justify-content-end flex-wrap gap-3">
+                            <!-- Card item -->
+                            <div class="flex inikeluhan-card">
+                                <div class="keluhan-img">
+                                    <img src="/public/images/penyakit1.png" style="height: 80px;" alt="Demam" />
+                                </div>
+                                <p class="subtitle-2 m-0 text-center" style="color: var(--neutral-oreo-darker);">Demam</p>
+                            </div>
+                    
+                            <div class="flex inikeluhan-card">
+                                <div class="keluhan-img">
+                                    <img src="/public/images/penyakit1.png" style="height: 80px;" alt="Demam" />
+                                </div>
+                                <p class="subtitle-2 m-0 text-center" style="color: var(--neutral-oreo-darker);">Batuk</p>
+                            </div>
+                    
+                            <div class="flex inikeluhan-card">
+                                <div class="keluhan-img">
+                                    <img src="/public/images/penyakit2.png" style="height: 80px;" alt="Demam" />
+                                </div>
+                                <p class="subtitle-2 m-0 text-center" style="color: var(--neutral-oreo-darker);">Penghilang Rasa Nyeri</p>
+                            </div>
+                    
+                            <div class="flex inikeluhan-card">
+                                <div class="keluhan-img">
+                                    <img src="/public/images/penyakit2.png" style="height: 80px;" alt="Demam" />
+                                </div>
+                                <p class="subtitle-2 m-0 text-center" style="color: var(--neutral-oreo-darker);">Vitamin Daya Tahan Tubuh</p>
+                            </div>
 
-            <div class="flex inikeluhan-card">
-              <div class="keluhan-img">
-                <img src="/public/images/penyakit2.png" style="height: 80px;" alt="Demam" />
-              </div>
-              <p class="subtitle-2 m-0 text-center" style="color: var(--neutral-oreo-darker);">Vitamin Daya Tahan Tubuh</p>
+                            <div class="flex inikeluhan-card">
+                                <div class="keluhan-img">
+                                    <img src="/public/images/penyakit2.png" style="height: 80px;" alt="Demam" />
+                                </div>
+                                <p class="subtitle-2 m-0 text-center" style="color: var(--neutral-oreo-darker);">Vitamin Daya Tahan Tubuh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
         </div>
         
         <!-- Start Section-PRODUK -->
@@ -380,7 +382,6 @@
           </div>
         </div>
         <!-- End Section-PRODUK -->
-
     </div>
 
     
@@ -520,8 +521,11 @@ onMounted(async() => {
 
 function showAlert() {
     // toast.error("Data berhasil disimpan!")
+    // toast("Terjadi kesalahan!", {
+    //     class: "toast-error"
+    // })
     toast("Terjadi kesalahan!", {
-        class: "toast-error"
+        class: "toast-success"
     })
 }
 

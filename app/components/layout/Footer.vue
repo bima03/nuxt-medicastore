@@ -35,7 +35,8 @@
                         <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Kebijakan & Privasi</a></li>
                         <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Kritik & Saran</a></li>
                         <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Apotek Mitra</a></li>
-                        <li><a href="#" class="body-1 text-white text-decoration-none">FAQ</a></li>
+                        <!-- <li><a href="#" class="body-1 text-white text-decoration-none">FAQ</a></li> -->
+                        <li><NuxtLink to="/faq" class="body-1 text-white text-decoration-none">FAQ</NuxtLink></li>
                     </ul>
                 </div>
 

@@ -35,7 +35,7 @@
                     <div class="search-wrapper flex-grow-1" aria-controls="offCanvasSearch">
                         <input type="text" class="form-control search-input" placeholder="Cari egoji">
                         <button class="search-button">
-                            <icon name="magnifying-glass" size="16" color="#FFF" />
+                            <PhMagnifyingGlass size="16" style="color: white;"/>
                         </button>
                     </div>
 
@@ -81,11 +81,11 @@
                         Rekomendasi medicastore
                         <div class="d-flex gap-2">
                             <div class="sm-chips body-2" style="color: var(--neutral-oreo-darker);">
-                                <icon name="trend-up" size="16"/>
+                                <PhTrendUp size="16"/>
                                 Bisul
                             </div>
                             <div class="sm-chips body-2" style="color: var(--neutral-oreo-darker);">
-                                <icon name="trend-up" size="16"/>
+                                <PhTrendUp size="16"/>
                                 Anxiety
                             </div>
                         </div>
@@ -116,7 +116,7 @@
 
                     <!-- Download App -->
                     <div class="dropdown cart-dropdown" style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
-                        <icon name="device-mobile" size="16" />
+                        <PhDeviceMobile size="16"/>
                         <a href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Download Aplikasi Medicastore</a>
                         
 
@@ -153,7 +153,7 @@
                     <!-- Layanan Informasi -->
                     <div class="dropdown" style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
                         <a href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Layanan Informasi</a>
-                        <icon name="caret-down" size="16" />
+                        <PhCaretDown size="16"/>
 
                         <ul class="dropdown-menu p-0 shadow-lg border-0 rounded-4 overflow-hidden" style="min-width: 220px;">
                             
@@ -182,7 +182,7 @@
                     <!-- Tentang Medicastore -->
                     <div class="dropdown" style="display: flex; align-items: center; gap: 4px; color: var(--neutral-oreo-dark);">
                         <a href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--neutral-oreo-dark);" class="button-s text-decoration-none">Tentang Medicastore</a>
-                        <icon name="caret-down" size="16" />
+                        <PhCaretDown size="16"/>
 
                         <ul class="dropdown-menu p-0 shadow-lg border-0 rounded-4 overflow-hidden" style="min-width: 220px;">
                             
@@ -333,7 +333,7 @@
                     <!-- Notif -->
                     <div class="dropdown cart-dropdown pe-2 pt-1">
                         <button class="btn cart-btn position-relative gap-2 rounded-3 px-2 py-1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <PhBellSimple size="24" />
+                            <PhBellSimple size="24" style="color: var(--neutral-oreo-darker);" />
                             <span class="position-absolute top-10 start-70 translate-middle bg-danger rounded-circle" style="width:10px; height:10px;"></span>
                         </button>
 
@@ -353,7 +353,7 @@
                     <!-- Cart -->
                     <div class="dropdown cart-dropdown border-start ps-2 pt-1">
                         <button class="btn cart-btn gap-2 rounded-3 px-2 py-1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <icon name="shopping-cart-simple" size="24" />
+                            <PhShoppingCart size="24" style="color: var(--neutral-oreo-darker);"/>
                             <span class="badge bg-danger position-absolute top-48 start-80 translate-middle rounded-pill">
                                 2
                             </span>
@@ -374,8 +374,8 @@
                     <div class="d-lg-none d-block ms-2">
 
                         <button class="btn cart-btn gap-2 rounded-3 px-2 py-2 d-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#profileCanvas" aria-controls="profileCanvas">
-                            <icon name="user-circle" size="24" />
-                            <i class="bi bi-chevron-down ms-auto"></i>
+                            <PhUserCircle size="24"/>
+                            <PhCaretDown size="16"/>
                         </button>
                     </div>
                     
@@ -388,9 +388,9 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            <icon name="user-circle" size="24" />
+                            <PhUserCircle size="24"/>
                             <span class="subtitle-2 limit-text d-lg-none d-xl-block">Luca Ibrahimovic Cadabra Santos</span>
-                            <icon name="caret-down" size="16" />
+                            <PhCaretDown size="16"/>
                         </button>
 
                         <ul class="dropdown-menu p-0 shadow-lg border-0 rounded-4 overflow-hidden" style="min-width: 220px;">
@@ -407,14 +407,14 @@
                             <!-- MENU ITEMS -->
                             <li>
                                 <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-3" href="#" style="color: var(--neutral-oreo-darker);">
-                                    <icon name="clipboard-text" size="16" /> 
+                                    <PhClipboardText size="16"/>
                                     Transaksi
                                 </a>
                             </li>
 
                             <li>
                                 <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-3" href="#" style="color: var(--neutral-oreo-darker);">
-                                    <icon name="heart" size="16" />
+                                    <PhHeart size="16" />
                                     Favorit
                                 </a>
                             </li>
@@ -424,7 +424,7 @@
                             <!-- LOGOUT -->
                             <li>
                                 <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-3" href="#" style="color: var(--neutral-oreo-darker);">
-                                    <icon name="sign-out" size="16" />
+                                    <PhSignOut size="16" />
                                     Keluar
                                 </a>
                             </li>
@@ -771,7 +771,7 @@ import Icon from '../components/Icon.vue';
 import Footer from '../components/layout/Footer.vue';
 import Guarantee from '../components/layout/Guarantee.vue';
 import 'vue-sonner/style.css';
-import { PhBellSimple, PhCirclesThreePlus, PhMagnifyingGlass } from "@phosphor-icons/vue"
+import { PhBellSimple, PhCirclesThreePlus, PhMagnifyingGlass, PhDeviceMobile, PhCaretDown, PhTrendUp, PhShoppingCart, PhUserCircle, PhClipboardText, PhHeart, PhSignOut    } from "@phosphor-icons/vue"
 
 const showAlert = () => {
     alert("Hello from Bootstrap JavaScript!");

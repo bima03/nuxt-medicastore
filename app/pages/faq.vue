@@ -9,19 +9,20 @@ import TopBarIcon from '../components/element/TopBarIcon.vue';
 
   <!-- CONTENT -->
   <section class="py-5">
-      <div class="container" style="max-width: 900px;">
+      <div class="container border border-top-0 border-bottom-0" style="max-width: 900px;">
 
           <div class="accordion" id="faqAccordion">
 
               <!-- GROUP 1 -->
-              <div class="mb-4 border-bottom pb-3">
+              <div class="mb-4 p-4">
                   <h5 class="fw-semibold d-flex align-items-center mb-3">
                       <i class="bi bi-info-circle me-2"></i> Tentang Medicastore
                   </h5>
 
                   <div class="accordion-item border-0">
                       <h2 class="accordion-header" id="headingOne">
-                          <button class="accordion-button collapsed ps-0" 
+                          <button class="border-top border-bottom accordion-button collapsed ps-0" 
+                                  style="border-radius: 0; background-color: transparent;"
                                   type="button" 
                                   data-bs-toggle="collapse" 
                                   data-bs-target="#collapseOne">
@@ -128,5 +129,26 @@ import TopBarIcon from '../components/element/TopBarIcon.vue';
 </template>
 
 <style>
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-button {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+}
+
 
 </style>

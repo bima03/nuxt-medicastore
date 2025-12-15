@@ -7,7 +7,7 @@
               <!-- Item 1 -->
               <div class="col-md-6 d-flex">
                   <div class="me-3">
-                      <icon name="medal" size="40" color="#206BBC" />
+                      <PhMedal size="40" style="color: var(--primary-base);"/>
                   </div>
                   <div>
                       <h5 class="fw-semibold mb-1">100% Original</h5>
@@ -20,7 +20,7 @@
               <!-- Item 2 -->
               <div class="col-md-6 d-flex">
                   <div class="me-3">
-                      <icon name="moped-front" size="40" color="#206BBC" />
+                      <PhPackage size="40" style="color: var(--primary-base);"/>
                   </div>
                   <div>
                       <h5 class="fw-semibold mb-1">Packing Aman</h5>
@@ -33,7 +33,7 @@
               <!-- Item 3 -->
               <div class="col-md-6 d-flex">
                   <div class="me-3">
-                      <icon name="package" size="40" color="#206BBC" />
+                      <PhMopedFront size="40" style="color: var(--primary-base);"/>
                   </div>
                   <div>
                       <h5 class="fw-semibold mb-1">Pengiriman Cepat</h5>
@@ -46,7 +46,7 @@
               <!-- Item 4 -->
               <div class="col-md-6 d-flex">
                   <div class="me-3">
-                      <icon name="headset" size="40" color="#206BBC" />
+                      <PhHeadset size="40" style="color: var(--primary-base);"/>
                   </div>
                   <div>
                       <h5 class="fw-semibold mb-1">Customer Service Responsif</h5>
@@ -62,6 +62,8 @@
 </template>
 
 <script lang="ts" setup>
+import { PhHeadset, PhMedal, PhMopedFront, PhPackage } from '@phosphor-icons/vue';
+
 
 </script>
 

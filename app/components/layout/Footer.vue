@@ -57,23 +57,23 @@
                 <div class="col-md-3 mb-4">
                     <h6 class="body-2 mb-3" style="color: var(--neutral-oreo-light);">Hubungi Kami</h6>
 
-                    <div class="d-flex gap-2 mb-3">
+                    <div class="d-flex align-items-center gap-2 mb-3">
                         <div>
-                            <icon name="envelope-simple" size="20" weight="fill"/>
+                            <PhEnvelopeSimple size="20" weight="fill"/>
                         </div>
                         <p class="subtitle-2 m-0">support@medicastore.com</p>
                     </div>
 
-                    <div class="d-flex gap-2 mb-3">
+                    <div class="d-flex align-items-center gap-2 mb-3">
                         <div>
-                            <icon name="phone" size="20" weight="fill"/>
+                            <PhPhone size="20" weight="fill"/>
                         </div>
                         <p class="subtitle-2 m-0">021-29293456</p>
                     </div>
 
-                    <div class="d-flex gap-2">
+                    <div class="d-flex align-items-center gap-2">
                         <div>
-                            <icon name="map-pin" size="20" weight="fill"/>
+                            <PhMapPin size="20" weight="fill"/>
                         </div>
                         <p class="subtitle-2 m-0">Jl Pospengumben Lama No. 2A,
                             Kembangan, Jakarta Barat,
@@ -96,3 +96,7 @@
         </div>
     </footer>
 </template>
+
+<script setup>
+    import { PhEnvelopeSimple, PhMapPin, PhPhone } from '@phosphor-icons/vue';
+</script>

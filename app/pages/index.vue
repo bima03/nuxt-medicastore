@@ -4,10 +4,10 @@
         <!-- SHIPPING ADDRESS -->
         <div class="py-0 small mb-2">
             <div class="container d-flex align-items-center justify-content-end gap-1">
-                <icon name="map-pin" size="16" weight="fill" style="color: var(--primary-base);"/>
+                <PhMapPin size="16" weight="fill" style="color: var(--primary-base);"/>
                 <span class="caption-1" style="color: var(--neutral-oreo-light);">Di kirim ke -</span>
                 <a href="#" class="button-s text-decoration-none" style="color: var(--neutral-oreo-dark);">Tambah Alamat</a>
-                <icon name="caret-down" size="16"/>
+                <PhCaretDown size="16" style="color: var(--neutral-oreo-dark);"/>
             </div>
         </div>
         
@@ -15,7 +15,6 @@
             <CarouselParallax />
         </div>
         
-
         <!-- Jenis Produk -->
         <div class="container d-flex flex-column align-items-start gap-3 title-1 my-5" style="color: var(--neutral-oreo-darkest);">
             Jenis Produk
@@ -57,14 +56,10 @@
                 </div>      
             </div>
 
-        <button class="btn btn-primary" @click="showAlert">
-            <i class="bi bi-bell"></i> Click Me
-        </button>
-        <button @click="showAlert" class="btn btn-primary">Tes Toast</button>
         </div>
 
         <!-- Layanan Informasi -->
-        <div>
+        <div class="container">
 
             <div class="container p-0 my-5">
                 <div class="row align-items-start">
@@ -189,30 +184,31 @@
                     <div class="card-body w-100 text-center" style="background-color: white; border-top-left-radius: 16px; border-top-right-radius: 16px;">
                       <img src="/public/images/produk.png" alt="" class="img-fluid" style="max-height: 150px; object-fit: contain; background-color: white;">
                     </div>
-                    <div class="card-body align-self-stretch p-3" style="background-color: white; border-radius: 0 0 12px 12px; border-bottom: 1px solid var(--icon-primary, #E6E6E6) ;">
 
-                      <p class="subtitle-2 mb-2" style="color: var(--neutral-oreo-darker);"> Paracetamol 500 mg Kaplet </p>
+                      <div class="card-body align-self-stretch p-3" style="background-color: white; border-radius: 0 0 12px 12px; border-bottom: 1px solid var(--icon-primary, #E6E6E6) ;">
+                        <p class="subtitle-2 mb-2" style="color: var(--neutral-oreo-darker);"> Paracetamol 500 mg Kaplet </p>
 
-                      <div class="d-flex flex-column gap-1">
-                        <p class="button-s m-0" style="color: var(--neutral-oreo-base);">Per Kaplet</p>
-                        <p class="button-lm m-0" style="color: #DE724A;">Rp 100.000</p>
-                        <div class="d-flex align-items-center gap-1">
-                            <p class="label-diskon caption-1 m-0" style="color: #DC2626;">10%</p>
-                            <p class="caption-1 m-0" style="text-decoration-line: line-through; color: var(--neutral-oreo-light);">Rp 100.000</p>
+                        <div class="d-flex flex-column gap-1">
+                          <p class="button-s m-0" style="color: var(--neutral-oreo-base);">Per Kaplet</p>
+                          <p class="button-lm m-0" style="color: #DE724A;">Rp 100.000</p>
+                          <div class="d-flex align-items-center gap-1">
+                              <p class="label-diskon caption-1 m-0" style="color: #DC2626;">10%</p>
+                              <p class="caption-1 m-0" style="text-decoration-line: line-through; color: var(--neutral-oreo-light);">Rp 100.000</p>
+                          </div>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2 mt-3" style="color: var(--neutral-oreo-light);">
+                          <div>
+                            <PhBuildings size="16"/>
+                          </div>
+                          <p class="caption-1 m-0">support@medicastore.com</p>
                         </div>
                       </div>
 
-                      <div class="d-flex align-items-center gap-2 mt-3" style="color: var(--neutral-oreo-light);">
-                            <div>
-                                <icon name="buildings" size="16"/>
-                            </div>
-                            <p class="caption-1 m-0">support@medicastore.com</p>
-                        </div>
-                    </div>
-                    <div class="card-body d-flex justify-content-center align-self-stretch p-2 gap-1" style="color: var(--neutral-oreo-dark);">
-                      <p class="button-s mb-0"> Produk Serupa </p>
-                      <icon name="caret-right" size="16"/>
-                    </div>
+                      <div class="card-body d-flex justify-content-center align-self-stretch p-2 gap-1" style="color: var(--neutral-oreo-dark);">
+                        <p class="button-s mb-0"> Produk Serupa </p>
+                        <PhCaretRight size="16"/>
+                      </div>
                   </div>
                 </div>
 
@@ -221,30 +217,31 @@
                     <div class="card-body w-100 text-center" style="background-color: white; border-top-left-radius: 16px; border-top-right-radius: 16px;">
                       <img src="/public/images/produk.png" alt="" class="img-fluid" style="max-height: 150px; object-fit: contain; background-color: white;">
                     </div>
-                    <div class="card-body align-self-stretch p-3" style="background-color: white; border-radius: 0 0 12px 12px; border-bottom: 1px solid var(--icon-primary, #E6E6E6) ;">
 
-                      <p class="subtitle-2 mb-2" style="color: var(--neutral-oreo-darker);"> Paracetamol 500 mg Kaplet </p>
+                      <div class="card-body align-self-stretch p-3" style="background-color: white; border-radius: 0 0 12px 12px; border-bottom: 1px solid var(--icon-primary, #E6E6E6) ;">
+                        <p class="subtitle-2 mb-2" style="color: var(--neutral-oreo-darker);"> Paracetamol 500 mg Kaplet </p>
 
-                      <div class="d-flex flex-column gap-1">
-                        <p class="button-s m-0" style="color: var(--neutral-oreo-base);">Per Kaplet</p>
-                        <p class="button-lm m-0" style="color: #DE724A;">Rp 100.000</p>
-                        <div class="d-flex align-items-center gap-1">
-                            <p class="label-diskon caption-1 m-0" style="color: #DC2626;">10%</p>
-                            <p class="caption-1 m-0" style="text-decoration-line: line-through; color: var(--neutral-oreo-light);">Rp 100.000</p>
+                        <div class="d-flex flex-column gap-1">
+                          <p class="button-s m-0" style="color: var(--neutral-oreo-base);">Per Kaplet</p>
+                          <p class="button-lm m-0" style="color: #DE724A;">Rp 100.000</p>
+                          <div class="d-flex align-items-center gap-1">
+                              <p class="label-diskon caption-1 m-0" style="color: #DC2626;">10%</p>
+                              <p class="caption-1 m-0" style="text-decoration-line: line-through; color: var(--neutral-oreo-light);">Rp 100.000</p>
+                          </div>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2 mt-3" style="color: var(--neutral-oreo-light);">
+                          <div>
+                            <PhBuildings size="16"/>
+                          </div>
+                          <p class="caption-1 m-0">support@medicastore.com</p>
                         </div>
                       </div>
 
-                      <div class="d-flex align-items-center gap-2 mt-3" style="color: var(--neutral-oreo-light);">
-                            <div>
-                                <icon name="buildings" size="16"/>
-                            </div>
-                            <p class="caption-1 m-0">support@medicastore.com</p>
-                        </div>
-                    </div>
-                    <div class="card-body d-flex justify-content-center align-self-stretch p-2 gap-1" style="color: var(--neutral-oreo-dark);">
-                      <p class="button-s mb-0"> Produk Serupa </p>
-                      <icon name="caret-right" size="16"/>
-                    </div>
+                      <div class="card-body d-flex justify-content-center align-self-stretch p-2 gap-1" style="color: var(--neutral-oreo-dark);">
+                        <p class="button-s mb-0"> Produk Serupa </p>
+                        <PhCaretRight size="16"/>
+                      </div>
                   </div>
                 </div>
 
@@ -253,8 +250,8 @@
                     <div class="card-body w-100 text-center" style="background-color: white; border-top-left-radius: 16px; border-top-right-radius: 16px;">
                       <img src="/public/images/produk.png" alt="" class="img-fluid" style="max-height: 150px; object-fit: contain; background-color: white;">
                     </div>
-                    <div class="card-body align-self-stretch p-3" style="background-color: white; border-radius: 0 0 12px 12px;">
 
+                    <div class="card-body align-self-stretch p-3" style="background-color: white; border-radius: 0 0 12px 12px;">
                       <p class="subtitle-2 mb-2" style="color: var(--neutral-oreo-darker);"> Paracetamol 500 mg Kaplet </p>
 
                       <div class="d-flex flex-column gap-1">
@@ -267,11 +264,11 @@
                       </div>
 
                       <div class="d-flex align-items-center gap-2 mt-3" style="color: var(--neutral-oreo-light);">
-                            <div>
-                                <icon name="buildings" size="16"/>
-                            </div>
-                            <p class="caption-1 m-0">support@medicastore.com</p>
+                        <div>
+                          <PhBuildings size="16"/>
                         </div>
+                        <p class="caption-1 m-0">support@medicastore.com</p>
+                      </div>
                     </div>
                     <!--<div class="card-body d-flex justify-content-center align-self-stretch p-2 gap-1" style="color: var(--neutral-oreo-dark);">
                       <p class="button-s mb-0"> Produk Serupa </p>
@@ -285,30 +282,31 @@
                     <div class="card-body w-100 text-center" style="background-color: white; border-top-left-radius: 16px; border-top-right-radius: 16px;">
                       <img src="/public/images/produk.png" alt="" class="img-fluid" style="max-height: 150px; object-fit: contain; background-color: white;">
                     </div>
-                    <div class="card-body align-self-stretch p-3" style="background-color: white; border-radius: 0 0 12px 12px; border-bottom: 1px solid var(--icon-primary, #E6E6E6) ;">
 
-                      <p class="subtitle-2 mb-2" style="color: var(--neutral-oreo-darker);"> Paracetamol 500 mg Kaplet </p>
+                      <div class="card-body align-self-stretch p-3" style="background-color: white; border-radius: 0 0 12px 12px; border-bottom: 1px solid var(--icon-primary, #E6E6E6) ;">
+                        <p class="subtitle-2 mb-2" style="color: var(--neutral-oreo-darker);"> Paracetamol 500 mg Kaplet </p>
 
-                      <div class="d-flex flex-column gap-1">
-                        <p class="button-s m-0" style="color: var(--neutral-oreo-base);">Per Kaplet</p>
-                        <p class="button-lm m-0" style="color: #DE724A;">Rp 100.000</p>
-                        <div class="d-flex align-items-center gap-1">
-                            <p class="label-diskon caption-1 m-0" style="color: #DC2626;">10%</p>
-                            <p class="caption-1 m-0" style="text-decoration-line: line-through; color: var(--neutral-oreo-light);">Rp 100.000</p>
+                        <div class="d-flex flex-column gap-1">
+                          <p class="button-s m-0" style="color: var(--neutral-oreo-base);">Per Kaplet</p>
+                          <p class="button-lm m-0" style="color: #DE724A;">Rp 100.000</p>
+                          <div class="d-flex align-items-center gap-1">
+                              <p class="label-diskon caption-1 m-0" style="color: #DC2626;">10%</p>
+                              <p class="caption-1 m-0" style="text-decoration-line: line-through; color: var(--neutral-oreo-light);">Rp 100.000</p>
+                          </div>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2 mt-3" style="color: var(--neutral-oreo-light);">
+                          <div>
+                            <PhBuildings size="16"/>
+                          </div>
+                          <p class="caption-1 m-0">support@medicastore.com</p>
                         </div>
                       </div>
 
-                      <div class="d-flex align-items-center gap-2 mt-3" style="color: var(--neutral-oreo-light);">
-                            <div>
-                                <icon name="buildings" size="16"/>
-                            </div>
-                            <p class="caption-1 m-0">support@medicastore.com</p>
-                        </div>
-                    </div>
-                    <div class="card-body d-flex justify-content-center align-self-stretch p-2 gap-1" style="color: var(--neutral-oreo-dark);">
-                      <p class="button-s mb-0"> Produk Serupa </p>
-                      <icon name="caret-right" size="16"/>
-                    </div>
+                      <div class="card-body d-flex justify-content-center align-self-stretch p-2 gap-1" style="color: var(--neutral-oreo-dark);">
+                        <p class="button-s mb-0"> Produk Serupa </p>
+                        <PhCaretRight size="16"/>
+                      </div>
                   </div>
                 </div>
 
@@ -317,30 +315,31 @@
                     <div class="card-body w-100 text-center" style="background-color: white; border-top-left-radius: 16px; border-top-right-radius: 16px;">
                       <img src="/public/images/produk.png" alt="" class="img-fluid" style="max-height: 150px; object-fit: contain; background-color: white;">
                     </div>
-                    <div class="card-body align-self-stretch p-3" style="background-color: white; border-radius: 0 0 12px 12px; border-bottom: 1px solid var(--icon-primary, #E6E6E6) ;">
 
-                      <p class="subtitle-2 mb-2" style="color: var(--neutral-oreo-darker);"> Paracetamol 500 mg Kaplet </p>
+                      <div class="card-body align-self-stretch p-3" style="background-color: white; border-radius: 0 0 12px 12px; border-bottom: 1px solid var(--icon-primary, #E6E6E6) ;">
+                        <p class="subtitle-2 mb-2" style="color: var(--neutral-oreo-darker);"> Paracetamol 500 mg Kaplet </p>
 
-                      <div class="d-flex flex-column gap-1">
-                        <p class="button-s m-0" style="color: var(--neutral-oreo-base);">Per Kaplet</p>
-                        <p class="button-lm m-0" style="color: #DE724A;">Rp 100.000</p>
-                        <div class="d-flex align-items-center gap-1">
-                            <p class="label-diskon caption-1 m-0" style="color: #DC2626;">10%</p>
-                            <p class="caption-1 m-0" style="text-decoration-line: line-through; color: var(--neutral-oreo-light);">Rp 100.000</p>
+                        <div class="d-flex flex-column gap-1">
+                          <p class="button-s m-0" style="color: var(--neutral-oreo-base);">Per Kaplet</p>
+                          <p class="button-lm m-0" style="color: #DE724A;">Rp 100.000</p>
+                          <div class="d-flex align-items-center gap-1">
+                              <p class="label-diskon caption-1 m-0" style="color: #DC2626;">10%</p>
+                              <p class="caption-1 m-0" style="text-decoration-line: line-through; color: var(--neutral-oreo-light);">Rp 100.000</p>
+                          </div>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2 mt-3" style="color: var(--neutral-oreo-light);">
+                          <div>
+                            <PhBuildings size="16"/>
+                          </div>
+                          <p class="caption-1 m-0">support@medicastore.com</p>
                         </div>
                       </div>
 
-                      <div class="d-flex align-items-center gap-2 mt-3" style="color: var(--neutral-oreo-light);">
-                            <div>
-                                <icon name="buildings" size="16"/>
-                            </div>
-                            <p class="caption-1 m-0">support@medicastore.com</p>
-                        </div>
-                    </div>
-                    <div class="card-body d-flex justify-content-center align-self-stretch p-2 gap-1" style="color: var(--neutral-oreo-dark);">
-                      <p class="button-s mb-0"> Produk Serupa </p>
-                      <icon name="caret-right" size="16"/>
-                    </div>
+                      <div class="card-body d-flex justify-content-center align-self-stretch p-2 gap-1" style="color: var(--neutral-oreo-dark);">
+                        <p class="button-s mb-0"> Produk Serupa </p>
+                        <PhCaretRight size="16"/>
+                      </div>
                   </div>
                 </div>
 
@@ -349,30 +348,31 @@
                     <div class="card-body w-100 text-center" style="background-color: white; border-top-left-radius: 16px; border-top-right-radius: 16px;">
                       <img src="/public/images/produk.png" alt="" class="img-fluid" style="max-height: 150px; object-fit: contain; background-color: white;">
                     </div>
-                    <div class="card-body align-self-stretch p-3" style="background-color: white; border-radius: 0 0 12px 12px; border-bottom: 1px solid var(--icon-primary, #E6E6E6) ;">
 
-                      <p class="subtitle-2 mb-2" style="color: var(--neutral-oreo-darker);"> Paracetamol 500 mg Kaplet </p>
+                      <div class="card-body align-self-stretch p-3" style="background-color: white; border-radius: 0 0 12px 12px; border-bottom: 1px solid var(--icon-primary, #E6E6E6) ;">
+                        <p class="subtitle-2 mb-2" style="color: var(--neutral-oreo-darker);"> Paracetamol 500 mg Kaplet </p>
 
-                      <div class="d-flex flex-column gap-1">
-                        <p class="button-s m-0" style="color: var(--neutral-oreo-base);">Per Kaplet</p>
-                        <p class="button-lm m-0" style="color: #DE724A;">Rp 100.000</p>
-                        <div class="d-flex align-items-center gap-1">
-                            <p class="label-diskon caption-1 m-0" style="color: #DC2626;">10%</p>
-                            <p class="caption-1 m-0" style="text-decoration-line: line-through; color: var(--neutral-oreo-light);">Rp 100.000</p>
+                        <div class="d-flex flex-column gap-1">
+                          <p class="button-s m-0" style="color: var(--neutral-oreo-base);">Per Kaplet</p>
+                          <p class="button-lm m-0" style="color: #DE724A;">Rp 100.000</p>
+                          <div class="d-flex align-items-center gap-1">
+                              <p class="label-diskon caption-1 m-0" style="color: #DC2626;">10%</p>
+                              <p class="caption-1 m-0" style="text-decoration-line: line-through; color: var(--neutral-oreo-light);">Rp 100.000</p>
+                          </div>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2 mt-3" style="color: var(--neutral-oreo-light);">
+                          <div>
+                            <PhBuildings size="16"/>
+                          </div>
+                          <p class="caption-1 m-0">support@medicastore.com</p>
                         </div>
                       </div>
 
-                      <div class="d-flex align-items-center gap-2 mt-3" style="color: var(--neutral-oreo-light);">
-                            <div>
-                                <icon name="buildings" size="16"/>
-                            </div>
-                            <p class="caption-1 m-0">support@medicastore.com</p>
-                        </div>
-                    </div>
-                    <div class="card-body d-flex justify-content-center align-self-stretch p-2 gap-1" style="color: var(--neutral-oreo-dark);">
-                      <p class="button-s mb-0"> Produk Serupa </p>
-                      <icon name="caret-right" size="16"/>
-                    </div>
+                      <div class="card-body d-flex justify-content-center align-self-stretch p-2 gap-1" style="color: var(--neutral-oreo-dark);">
+                        <p class="button-s mb-0"> Produk Serupa </p>
+                        <PhCaretRight size="16"/>
+                      </div>
                   </div>
                 </div>
 
@@ -382,6 +382,70 @@
           </div>
         </div>
         <!-- End Section-PRODUK -->
+
+        <!-- Artikel -->
+        <div class="container d-flex flex-column align-items-start gap-3 title-1 my-5" style="color: var(--neutral-oreo-darkest);">
+            Artikel Kesehatan
+        
+            <div class="d-flex align-self-stretch align-items-center gap-2">
+              <div class="md-chips-active body-2" style="color: var(--primary-base);">
+                Terbaru
+              </div>
+              <div class="md-chips body-2" style="color: var(--neutral-oreo-darker);">
+                Paling Populer
+              </div>
+              <div class="d-flex ms-auto button-lm align-items-center gap-2" style="color: var(--primary-base);">
+                Lihat Semua Artikel
+                <PhCaretRight size="16"/>
+              </div>
+            </div>
+
+            <!-- Artikel Grid -->
+            <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0">
+                    <img src="https://medicastore.com/images/artikel/Manfaat-Roll-On-Aromatik-untuk-Relaksasi.webp" class="card-img-top rounded" alt="">
+                    <div class="card-body p-0 mt-3">
+                        <h6 class="subtitle-1 mb-2" style="color: var(--neutral-oreo-darker);">
+                            Loperamide, Obat untuk Mengatasi Diare Akut dan Kronis
+                        </h6>
+                        <p class="subtitle-2" style="color: var(--neutral-oreo-base);">13 Nov</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0">
+                    <img src="https://medicastore.com/images/artikel/Manfaat-Roll-On-Aromatik-untuk-Relaksasi.webp" class="card-img-top rounded" alt="">
+                    <div class="card-body p-0 mt-3">
+                        <h6 class="subtitle-1 mb-2" style="color: var(--neutral-oreo-darker);">
+                            Loperamide, Obat untuk Mengatasi Diare Akut dan Kronis
+                        </h6>
+                        <p class="subtitle-2" style="color: var(--neutral-oreo-base);">13 Nov</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0">
+                    <img src="https://medicastore.com/images/artikel/Manfaat-Roll-On-Aromatik-untuk-Relaksasi.webp" class="card-img-top rounded" alt="">
+                    <div class="card-body p-0 mt-3">
+                        <h6 class="subtitle-1 mb-2" style="color: var(--neutral-oreo-darker);">
+                            Loperamide, Obat untuk Mengatasi Diare Akut dan Kronis
+                        </h6>
+                        <p class="subtitle-2" style="color: var(--neutral-oreo-base);">13 Nov</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="btn btn-primary" @click="showAlert">
+            <i class="bi bi-bell"></i> Click Me
+        </button>
+        <button @click="showAlert" class="btn btn-primary">Tes Toast</button>
+        </div>
     </div>
 
     
@@ -398,11 +462,11 @@
     background: var(--pallete-neutral-milk-lighter, #FAFAFA);
 }
 
-/* chips small */
-.sm-chips {
+/* chips medium */
+.md-chips {
     display: flex;
-    height: 28px;
-    min-width: 48px;
+    height: 36px;
+    min-width: 54px;
     padding: 10px 12px;
     justify-content: center;
     align-items: center;
@@ -410,6 +474,19 @@
     border-radius: 300px;
     border: 1px solid var(--border-default, #E6E6E6);
     background: var(--pallete-neutral-milk-lightest, #FFF);
+}
+
+.md-chips-active {
+    display: flex;
+    height: 36px;
+    min-width: 54px;
+    padding: 10px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-radius: 300px;
+    border: 1px solid var(--border-primary, #D1DDE9);
+    background: var(--surface-primary, #EDF2FA);
 }
 
 .info-card {
@@ -511,6 +588,7 @@ import { onMounted } from 'vue';
 import { useApiRoutes } from '../../composables/useApiRoutes';
 import { useApi } from '../../composables/useApi';
 import { toast } from 'vue-sonner';
+import { PhBuildings, PhCaretDown, PhCaretRight, PhMapPin } from '@phosphor-icons/vue';
 
 const api = useApiRoutes();
 const {get} = useApi();

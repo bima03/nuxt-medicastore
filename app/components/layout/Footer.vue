@@ -32,13 +32,12 @@
                 <div class="col-md-2 mb-4">
                     <h6 class="body-2 mb-3" style="color: var(--neutral-oreo-light);">Medicastore</h6>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Tentang Kami</a></li>
+                        <li class="mb-3"><NuxtLink to="/about" class="body-1 text-white text-decoration-none">Tentang Kami</NuxtLink></li>
                         <li class="mb-3"><NuxtLink to="/terms" class="body-1 text-white text-decoration-none">Syarat & Ketentuan</NuxtLink></li>
-                        <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Kebijakan & Privasi</a></li>
-                        <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Kritik & Saran</a></li>
+                        <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Kebijakan & Privasi (belum ada link)</a></li>
+                        <li class="mb-3"><NuxtLink to="/saran" class="body-1 text-white text-decoration-none">Kritik & Saran</NuxtLink></li>
                         <li class="mb-3"><NuxtLink to="/apotek-mitra" class="body-1 text-white text-decoration-none">Apotek Mitra</NuxtLink></li>
-                        <!-- <li><a href="#" class="body-1 text-white text-decoration-none">FAQ</a></li> -->
-                        <li><NuxtLink to="/faq" class="body-1 text-white text-decoration-none">FAQ</NuxtLink></li>
+                        <li class="mb-3"><NuxtLink to="/faq" class="body-1 text-white text-decoration-none">FAQ</NuxtLink></li>
                     </ul>
                 </div>
 

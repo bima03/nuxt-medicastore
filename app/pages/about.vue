@@ -1,6 +1,21 @@
+<script setup lang="js">
+import TopBarIcon from '../components/element/TopBarIcon.vue';
+
+</script>
+
 <template>
-    <div>
-        <h2>About Page</h2>
-        <p>This is an example page using Nuxt 3 + Bootstrap.</p>
-    </div>
+    <!-- HEADER -->
+    <top-bar-icon text="" title="Tentang Kami" icon="cartsimple" />
+
+    <!-- CONTENT -->
+    <section class="py-5">
+        <div class="container" style="max-width: 900px;">
+            Konten here
+        </div>
+    </section>
+
 </template>
+
+<style>
+
+</style>

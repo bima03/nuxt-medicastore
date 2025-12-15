@@ -764,7 +764,7 @@
         text-overflow: ellipsis;
     }
 </style>
-<script setup>
+<script setup lang="js">
 import { Toaster } from 'vue-sonner';
 import OffCanvasMenu from '../components/element/OffCanvasMenu.vue';
 import Icon from '../components/Icon.vue';

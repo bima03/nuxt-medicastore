@@ -5,7 +5,7 @@ import TopBarIcon from '../components/element/TopBarIcon.vue';
 
 <template>
   <!-- HEADER -->
-  <top-bar-icon text="" title="Kritik dan Saran" icon="cartsimple" />
+  <top-bar-icon text="" title="Kritik dan Saran" icon="envelopsimple" />
 
   <!-- CONTENT -->
   <section class="py-5">

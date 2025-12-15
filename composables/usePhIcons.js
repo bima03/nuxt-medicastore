@@ -5,7 +5,7 @@ import {
   PhArticle,
   PhUser,
   PhShoppingCartSimple,
-  PhCirclesThreePlus
+  PhEnvelopeSimple
 } from "@phosphor-icons/vue"
 
 const ICONS = {
@@ -15,7 +15,7 @@ const ICONS = {
   article: PhArticle,
   user: PhUser,
   cartsimple: PhShoppingCartSimple,
-  circlesthreeplus: PhCirclesThreePlus
+  envelopsimple: PhEnvelopeSimple
 }
 
 export function usePhIcon(name) {

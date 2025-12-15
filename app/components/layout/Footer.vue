@@ -6,7 +6,9 @@
 
                 <!-- Left Section -->
                 <div class="col-md-5 mb-4">
-                    <img src="/public/images/logo-medicastore-putih.svg" alt="medicastore" class="mb-3" style="max-width:180px;">
+                    <NuxtLink to="/">
+                        <img src="/public/images/logo-medicastore-putih.svg" alt="medicastore" class="mb-3" style="max-width:180px;"></img>
+                    </NuxtLink>
 
                     <p class="body-2" style="max-width: 300px;">
                         Scan QR code atau download aplikasi Medicastore yang tersedia di iOS dan Android.
@@ -31,10 +33,10 @@
                     <h6 class="body-2 mb-3" style="color: var(--neutral-oreo-light);">Medicastore</h6>
                     <ul class="list-unstyled">
                         <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Tentang Kami</a></li>
-                        <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Syarat & Ketentuan</a></li>
+                        <li class="mb-3"><NuxtLink to="/terms" class="body-1 text-white text-decoration-none">Syarat & Ketentuan</NuxtLink></li>
                         <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Kebijakan & Privasi</a></li>
                         <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Kritik & Saran</a></li>
-                        <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Apotek Mitra</a></li>
+                        <li class="mb-3"><NuxtLink to="/apotek-mitra" class="body-1 text-white text-decoration-none">Apotek Mitra</NuxtLink></li>
                         <!-- <li><a href="#" class="body-1 text-white text-decoration-none">FAQ</a></li> -->
                         <li><NuxtLink to="/faq" class="body-1 text-white text-decoration-none">FAQ</NuxtLink></li>
                     </ul>

@@ -8,7 +8,6 @@ export default {
     css: [
         "bootstrap/dist/css/bootstrap.min.css",
         "bootstrap-icons/font/bootstrap-icons.css",
-        "phosphor-icons/src/css/icons.css",
         "~/assets/css/design-system/typography.css",
         "~/assets/css/design-system/color-palette.css",
         "~/assets/css/design-system/colors.css",

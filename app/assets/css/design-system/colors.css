@@ -14,9 +14,9 @@
 
 /* ======= btn-custom ============ */
 .btn-primary-base {
-  background-color: var(--primary-base) !important;
-  color: #fff !important;
-  border-color: var(--primary-base) !important;
+    background-color: var(--primary-base) !important;
+    color: #fff !important;
+    border-color: var(--primary-base) !important;
 }
 
 /* Saat tombol ditekan (active), focus, atau focus-visible */
@@ -24,8 +24,13 @@
 .btn-primary-base:focus,
 .btn-primary-base:focus-visible,
 .btn-check:checked + .btn-primary-base {
-  background-color: var(--primary-base) !important;
-  border-color: var(--primary-base) !important;
-  color: #fff !important;
-  box-shadow: none !important;
+    background-color: var(--primary-base) !important;
+    border-color: var(--primary-base) !important;
+    color: #fff !important;
+    box-shadow: none !important;
+}
+
+/* ============ bg-custom =============== */
+.bg-primary-fig {
+    background-color: var(--primary-base);
 }

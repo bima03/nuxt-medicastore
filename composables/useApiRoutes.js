@@ -15,6 +15,7 @@ export const useApiRoutes = () => {
 
     // Tentang
     ARTIKEL: "information/articles",
-    SLIDE: "information/slide"
+    SLIDE: "information/slide",
+    MITRA: "information/apotek-mitra"
   };
 };

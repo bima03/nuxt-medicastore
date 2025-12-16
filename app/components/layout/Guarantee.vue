@@ -1,6 +1,6 @@
 <template>
   <!-- medicastore guarantee -->
-  <div class="container-fluid surface-primary">
+  <div class="surface-primary">
       <div class="container py-5">
           <div class="row g-4">
 
@@ -61,7 +61,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="js" setup>
 import { PhHeadset, PhMedal, PhMopedFront, PhPackage } from '@phosphor-icons/vue';
 
 

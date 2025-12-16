@@ -1,0 +1,16 @@
+.toast-success {
+    background: #e8f8ee !important;
+    color: #0f7a36 !important;
+    border-bottom: 3px solid #20c063 !important;
+}
+
+.toast-error {
+    background: #fdeaea !important;
+    color: #c62828 !important;
+    border-bottom: 3px solid #ff5252 !important;
+}
+
+.toast-default {
+    background: #404040 !important;
+    color: #fff !important;
+}

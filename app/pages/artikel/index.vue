@@ -14,126 +14,50 @@
     </div> -->
     <div class="container py-4">
 
+        <div class="py-2 small" v-if="keyword">
+            <div class="container d-flex align-items-center justify-content-start gap-1">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" @click="clearKeyword">Artikel</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Hasil Pencarian</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 mb-4" v-if="keyword">
+            <div class="flex-grow-1" style="max-width: 350px;">
+                <input type="text" class="form-control" placeholder="Cari artikel" v-model="keywordInput" @keyup.enter="onSearchEnter">
+            </div>
+            <hr>
+        </div>
+        
+
         <!-- Header + Search -->
-        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4" v-if="!keyword">
             <h4 class="fw-bold m-0">Artikel-artikel Kesehatan<br>Terbitan Kami</h4>
 
             <div class="flex-grow-1" style="max-width: 350px;">
-                <input type="text" class="form-control" placeholder="Cari informasi dokter, fasilitas, penyakit, artikel">
+                <input type="text" class="form-control" placeholder="Cari artikel" v-model="keywordInput" @keyup.enter="onSearchEnter">
             </div>
         </div>
 
         <!-- Artikel Grid -->
         <div class="row g-4">
-
-            <!-- Card 1 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 border-0">
-                    <img src="https://medicastore.com/images/artikel/Manfaat-Roll-On-Aromatik-untuk-Relaksasi.webp" class="card-img-top rounded" alt="">
-                    <div class="card-body p-3">
-                        <h6 class="fw-semibold mb-1">
-                            Loperamide, Obat untuk Mengatasi Diare Akut dan Kronis
-                        </h6>
-                        <p class="text-muted small mb-1">13 Nov</p>
-                    </div>
+            <template v-if="pendingArtikel">
+                <div class="col-12 col-md-6 col-lg-4" v-for="i in 9">
+                    <ArtikelSkeletonCard />
                 </div>
-            </div>
-            <!-- Card 1 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 border-0">
-                    <img src="https://medicastore.com/images/artikel/Manfaat-Roll-On-Aromatik-untuk-Relaksasi.webp" class="card-img-top rounded" alt="">
-                    <div class="card-body p-3">
-                        <h6 class="fw-semibold mb-1">
-                            Loperamide, Obat untuk Mengatasi Diare Akut dan Kronis
-                        </h6>
-                        <p class="text-muted small mb-1">13 Nov</p>
-                    </div>
+            </template>
+            <template v-else>
+                <div class="col-12 col-md-6 col-lg-4" v-for="artikel in dataArtikel.data" :key="artikel.iId">
+                    <ArtikelListCard :artikel="artikel" />
                 </div>
-            </div>
-            <!-- Card 1 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 border-0">
-                    <img src="https://medicastore.com/images/artikel/Manfaat-Roll-On-Aromatik-untuk-Relaksasi.webp" class="card-img-top rounded" alt="">
-                    <div class="card-body p-3">
-                        <h6 class="fw-semibold mb-1">
-                            Loperamide, Obat untuk Mengatasi Diare Akut dan Kronis
-                        </h6>
-                        <p class="text-muted small mb-1">13 Nov</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 1 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 border-0">
-                    <img src="https://medicastore.com/images/artikel/Manfaat-Roll-On-Aromatik-untuk-Relaksasi.webp" class="card-img-top rounded" alt="">
-                    <div class="card-body p-3">
-                        <h6 class="fw-semibold mb-1">
-                            Loperamide, Obat untuk Mengatasi Diare Akut dan Kronis
-                        </h6>
-                        <p class="text-muted small mb-1">13 Nov</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 1 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 border-0">
-                    <img src="https://medicastore.com/images/artikel/Manfaat-Roll-On-Aromatik-untuk-Relaksasi.webp" class="card-img-top rounded" alt="">
-                    <div class="card-body p-3">
-                        <h6 class="fw-semibold mb-1">
-                            Loperamide, Obat untuk Mengatasi Diare Akut dan Kronis
-                        </h6>
-                        <p class="text-muted small mb-1">13 Nov</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 1 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 border-0">
-                    <img src="https://medicastore.com/images/artikel/Manfaat-Roll-On-Aromatik-untuk-Relaksasi.webp" class="card-img-top rounded" alt="">
-                    <div class="card-body p-3">
-                        <h6 class="fw-semibold mb-1">
-                            Loperamide, Obat untuk Mengatasi Diare Akut dan Kronis
-                        </h6>
-                        <p class="text-muted small mb-1">13 Nov</p>
-                    </div>
-                </div>
-            </div>
-
+            </template>
         </div>
 
         <!-- PAGINATION -->
         <div class="d-flex justify-content-center justify-content-center mt-4">
-            <nav>
-                <ul class="pagination pagination-sm">
-
-                <!-- Prev -->
-                <li class="page-item" :class="{ disabled: page <= 1 }">
-                    <a class="page-link" href="#" @click.prevent="goToPage(page - 1)">
-                    Previous
-                    </a>
-                </li>
-
-                <!-- Page Numbers -->
-                <li 
-                    v-for="i in totalPages" 
-                    :key="i"
-                    class="page-item"
-                    :class="{ active: page == i }"
-                >
-                    <a class="page-link" href="#" @click.prevent="goToPage(i)">
-                    {{ i }}
-                    </a>
-                </li>
-
-                <!-- Next -->
-                <li class="page-item" :class="{ disabled: page >= totalPages }">
-                    <a class="page-link" href="#" @click.prevent="goToPage(page + 1)">
-                    Next
-                    </a>
-                </li>
-
-                </ul>
-            </nav>
+            
         </div>
     </div>
 
@@ -154,11 +78,47 @@
 }
 
 </style>
-<script>
+<script setup js>
+    import { ref } from 'vue';
+    import { useApiRoutes } from '../../../composables/useApiRoutes';
+    import { useApi } from '../../../composables/useApi';
+import ArtikelSkeletonCard from '../../components/element/artikel/ArtikelSkeletonCard.vue';
+import ArtikelListCard from '../../components/element/artikel/ArtikelListCard.vue';
+
     definePageMeta({
         layout: 'informasi-layout'
     })
 
-    const items      = computed(() => artikel.value?.data || [])
-    const totalPages = computed(() => artikel.value?.totalPages || 5)
+    const api = useApiRoutes()
+    const {get} = useApi()
+    const keyword = ref("")
+    const keywordInput = ref("")
+    const page = ref(0)
+    const count = ref(15)
+
+    const { data:dataArtikel, pending:pendingArtikel, error, refresh:refreshArtikel } = await useLazyAsyncData(
+        'listArtikel',
+        () => get(api.ARTIKEL, {
+            page:page.value,
+            count:count.value ?? 15,
+            keyword:keyword.value,
+            popular:"",
+            homepage:""
+        }), {immediate : true} // refresh
+    )
+
+    console.log(dataArtikel.value);
+
+    watch(keyword, () => {
+        refreshArtikel()
+    })
+
+    function onSearchEnter(){
+        page.value = 1
+        keyword.value = keywordInput.value.trim()
+    }
+    function clearKeyword(){
+        keyword.value = '';
+        keywordInput.value = '';
+    }
 </script>

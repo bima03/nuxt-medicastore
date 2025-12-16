@@ -1,7 +1,7 @@
 <template>
     <div class="app-wrapper d-flex flex-column min-vh-100">
         
-        <Toaster position="top-center" closeButton="true" closeButtonPosition="top-left" />
+        <Toaster position="top-center" closeButton closeButtonPosition="top-right" />
         <!-- Backdrop -->
         <div id="dropdownBackdrop" class="fade"></div>
 
@@ -436,13 +436,10 @@
         </nav>
 
         <!-- PAGE CONTENT -->
-        <div class="container-fluid py-4">
+        <div class="">
             <slot />
         </div>
 
-        <!-- medicastore guarantee -->
-        <Guarantee />
-        
         <!-- Footer -->
         <Footer />
     </div>

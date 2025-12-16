@@ -12,6 +12,8 @@ export default {
         "~/assets/css/design-system/color-palette.css",
         "~/assets/css/design-system/colors.css",
         "~/assets/css/custom-style/style.css",
+        "~/assets/css/custom-style/sonner.css",
+        "~/assets/css/custom-style/skeleton.css",
     ],
 
     plugins: [

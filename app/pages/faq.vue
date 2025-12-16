@@ -1,5 +1,6 @@
 <script setup lang="js">
 import TopBarIcon from '../components/element/TopBarIcon.vue';
+import { PhCreditCard, PhInfo, PhMopedFront, PhPackage } from '@phosphor-icons/vue';
 
 </script>
 
@@ -15,13 +16,13 @@ import TopBarIcon from '../components/element/TopBarIcon.vue';
 
               <!-- GROUP 1 -->
               <div class="mb-4 p-4">
-                  <h5 class="fw-semibold d-flex align-items-center mb-3">
-                      <i class="bi bi-info-circle me-2"></i> Tentang Medicastore
+                  <h5 class="title-1 d-flex align-items-center mb-3 gap-2" style="color: var(--neutral-oreo-darkest);">
+                    <PhInfo size="24"/> Tentang Medicastore
                   </h5>
 
                   <div class="accordion-item border-0">
                       <h2 class="accordion-header" id="headingOne">
-                          <button class="border-top border-bottom accordion-button collapsed ps-0" 
+                          <button class="subtitle-1 border-top border-bottom accordion-button collapsed ps-0" 
                                   style="border-radius: 0; background-color: transparent;"
                                   type="button" 
                                   data-bs-toggle="collapse" 
@@ -32,7 +33,7 @@ import TopBarIcon from '../components/element/TopBarIcon.vue';
                       <div id="collapseOne" 
                           class="accordion-collapse collapse" 
                           data-bs-parent="#faqAccordion">
-                          <div class="accordion-body ps-0">
+                          <div class="accordion-body body-2 ps-0" style="color: var(--neutral-oreo-darker);">
                               Medicastore.com adalah penyedia informasi melalui media internet yang berisi
                               berbagai macam informasi penyakit, informasi obat dan informasi dokter spesialis
                               di Indonesia. Dengan informasi ribuan merek obat dan ratusan jenis penyakit 
@@ -45,14 +46,15 @@ import TopBarIcon from '../components/element/TopBarIcon.vue';
               </div>
 
               <!-- GROUP 2 -->
-              <div class="mb-4 border-bottom pb-3">
-                  <h5 class="fw-semibold d-flex align-items-center mb-3">
-                      <i class="bi bi-box me-2"></i> Pemesanan
+              <div class="mb-4 p-4">
+                  <h5 class="title-1 d-flex align-items-center mb-3 gap-2" style="color: var(--neutral-oreo-darkest);">
+                      <PhPackage size="24"/> Pemesanan
                   </h5>
 
                   <div class="accordion-item border-0">
                       <h2 class="accordion-header">
-                          <button class="accordion-button collapsed ps-0"
+                          <button class="subtitle-1 border-top border-bottom accordion-button collapsed ps-0"
+                                  style="border-radius: 0; background-color: transparent;"  
                                   type="button" 
                                   data-bs-toggle="collapse" 
                                   data-bs-target="#collapseTwo">
@@ -62,7 +64,7 @@ import TopBarIcon from '../components/element/TopBarIcon.vue';
                       <div id="collapseTwo" 
                           class="accordion-collapse collapse" 
                           data-bs-parent="#faqAccordion">
-                          <div class="accordion-body ps-0">
+                          <div class="accordion-body body-2 ps-0" style="color: var(--neutral-oreo-darker);">
                               Anda dapat memesan obat melalui situs medicastore dengan memilih produk 
                               yang diinginkan dan mengikuti langkah pemesanan hingga pembayaran.
                           </div>
@@ -71,14 +73,15 @@ import TopBarIcon from '../components/element/TopBarIcon.vue';
               </div>
 
               <!-- GROUP 3 -->
-              <div class="mb-4 border-bottom pb-3">
-                  <h5 class="fw-semibold d-flex align-items-center mb-3">
-                      <i class="bi bi-credit-card me-2"></i> Pembayaran
+              <div class="mb-4 p-4">
+                  <h5 class="title-1 d-flex align-items-center mb-3 gap-2" style="color: var(--neutral-oreo-darkest);">
+                      <PhCreditCard size="24"/> Pembayaran
                   </h5>
 
                   <div class="accordion-item border-0">
                       <h2 class="accordion-header">
-                          <button class="accordion-button collapsed ps-0"
+                          <button class="subtitle-1 border-top border-bottom accordion-button collapsed ps-0"
+                                  style="border-radius: 0; background-color: transparent;"  
                                   type="button" 
                                   data-bs-toggle="collapse" 
                                   data-bs-target="#collapseThree">
@@ -88,7 +91,7 @@ import TopBarIcon from '../components/element/TopBarIcon.vue';
                       <div id="collapseThree" 
                           class="accordion-collapse collapse" 
                           data-bs-parent="#faqAccordion">
-                          <div class="accordion-body ps-0">
+                          <div class="accordion-body body-2 ps-0" style="color: var(--neutral-oreo-darker);">
                               Pembayaran dapat dilakukan melalui transfer bank, e-wallet, dan metode 
                               pembayaran lain yang sudah tersedia pada halaman checkout.
                           </div>
@@ -97,14 +100,15 @@ import TopBarIcon from '../components/element/TopBarIcon.vue';
               </div>
 
               <!-- GROUP 4 -->
-              <div class="mb-2">
-                  <h5 class="fw-semibold d-flex align-items-center mb-3">
-                      <i class="bi bi-truck me-2"></i> Pengiriman
+              <div class="mb-4 p-4">
+                  <h5 class="title-1 d-flex align-items-center mb-3 gap-2" style="color: var(--neutral-oreo-darkest);">
+                      <PhMopedFront size="24"/> Pengiriman
                   </h5>
 
                   <div class="accordion-item border-0">
                       <h2 class="accordion-header">
-                          <button class="accordion-button collapsed ps-0"
+                          <button class="subtitle-1 border-top border-bottom accordion-button collapsed ps-0"
+                                  style="border-radius: 0; background-color: transparent;"  
                                   type="button" 
                                   data-bs-toggle="collapse" 
                                   data-bs-target="#collapseFour">
@@ -114,7 +118,7 @@ import TopBarIcon from '../components/element/TopBarIcon.vue';
                       <div id="collapseFour" 
                           class="accordion-collapse collapse" 
                           data-bs-parent="#faqAccordion">
-                          <div class="accordion-body ps-0">
+                          <div class="accordion-body body-2 ps-0" style="color: var(--neutral-oreo-darker);">
                               Pengiriman dilakukan melalui kurir rekanan dan tersedia pilihan pengiriman 
                               reguler maupun ekspres tergantung daerah masing-masing.
                           </div>
@@ -148,7 +152,8 @@ import TopBarIcon from '../components/element/TopBarIcon.vue';
 .accordion-button:not(.collapsed) {
   background-color: transparent;
   box-shadow: none;
+  font-weight: 700;
+  color: var(--primary-base);
 }
-
 
 </style>

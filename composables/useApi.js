@@ -9,14 +9,21 @@ export const useApi = () => {
   const get = (path, params = {}) => {
     return $fetch(BASE + path, {
       method: "GET",
-      query: params,
+      query: {
+        path,
+        method: "GET",
+        ...params
+      }
     });
   };
 
   const post = (path, body = {}) => {
     return $fetch(BASE + path, {
       method: "POST",
-      body,
+      query: {
+        path,
+      },
+      body: body,
     });
   };
 

@@ -11,15 +11,11 @@
                 
             </div>
             <!-- suggest pencarian-->
-            <div class="offcanvas-body">
+            <div class="offcanvas-body h-auto">
                 <div class="container d-flex align-items-center justify-content-start gap-5">
 
                     <!-- LEFT: Toggler + Logo -->
                     <div class="d-flex align-items-center">
-                        <!-- Hamburger -->
-                        <button class="navbar-toggler navbar-toggler-sm me-2 d-lg-none w-xs-25" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
 
                         <!-- Logo -->
                         <a class="navbar-brand d-flex align-items-center" href="#">
@@ -29,17 +25,17 @@
                     </div>
 
                     <!-- search bar & jenis produk -->
-                    <div class="d-flex align-items-center justify-content-center gap-3 d-lg-flex d-none" style="max-width: 800px;width: 100%;">
+                    <div class="d-flex align-items-center justify-content-center gap-3 d-lg-flex" style="max-width: 800px;width: 100%;">
 
-                    <!-- Search Group -->
-                    <div class="search-wrapper flex-grow-1" aria-controls="offCanvasSearch">
-                        <input type="text" class="form-control search-input" placeholder="Cari egoji">
-                        <button class="search-button">
-                            <PhMagnifyingGlass size="16" style="color: white;"/>
-                        </button>
-                    </div>
+                        <!-- Search Group -->
+                        <div class="search-wrapper flex-grow-1" aria-controls="offCanvasSearch">
+                            <input type="text" class="form-control search-input" placeholder="Cari egoji">
+                            <button class="search-button">
+                                <PhMagnifyingGlass size="16" style="color: white;"/>
+                            </button>
+                        </div>
 
-                    <a class="button-lm text-decoration-none" style="color: var(--neutral-oreo-darker);" href="#" data-bs-toggle="offcanvas" data-bs-target="#offCanvasSearch">Batal</a>
+                        <a class="button-lm text-decoration-none" style="color: var(--neutral-oreo-darker);" href="#" data-bs-toggle="offcanvas" data-bs-target="#offCanvasSearch">Batal</a>
 
                     </div>
 
@@ -264,52 +260,49 @@
                     <!-- Jenis Produk -->
                     <div class="dropdown pe-2 pt-1">
                         <button 
-                            class="lg-btn-surface position-relative"
-                            type="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
+                            class="btn cart-btn gap-2 rounded-3 px-3 py-2 btn-surface" data-bs-toggle="dropdown" aria-expanded="false"
                         >
                             <PhCirclesThreePlus size="24" class="text-cta" />
                             <span class="button-lm text-cta">Jenis Produk</span>
                         </button>
 
-                        <div class="dropdown-menu custom-jenisproduk container p-4">
+                        <div class="dropdown-menu custom-jenisproduk container p-4 wrapper" >
                             <div class="d-flex text-center" style="color: var(--neutral-oreo-darker);">
                                 <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
+                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" style="max-width: 60px;">
                                     <div class="subtitle-2">Semua</div>
                                 </div>
                                 <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
+                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" style="max-width: 60px;">
+                                    <div class="subtitle-2">Semua</div>
                                 </div>
                                 <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
+                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" style="max-width: 60px;">
+                                    <div class="subtitle-2">Semua</div>
                                 </div>
                                 <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
+                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" style="max-width: 60px;">
+                                    <div class="subtitle-2">Semua</div>
                                 </div>
                                 <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
+                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" style="max-width: 60px;">
+                                    <div class="subtitle-2">Semua</div>
                                 </div>
                                 <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
+                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" style="max-width: 60px;">
+                                    <div class="subtitle-2">Semua</div>
                                 </div>
                                 <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
+                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" style="max-width: 60px;">
+                                    <div class="subtitle-2">Semua</div>
                                 </div>
                                 <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
+                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" style="max-width: 60px;">
+                                    <div class="subtitle-2">Semua</div>
                                 </div>
                                 <div class="text-center mx-4">
-                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" width="80">
-                                    <div class="subtitle-2">Obat</div>
+                                    <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" class="rounded-3 mb-2" style="max-width: 60px;">
+                                    <div class="subtitle-2">Semua</div>
                                 </div>
                                 
                             </div>
@@ -327,8 +320,44 @@
                     
                 </div>
 
-                <!-- icon right -->
-                <div class="d-flex align-items-center ms-auto flex-shrink-0 ps-0">
+                <!-- icon right belum login -->
+                <div class="d-flex align-items-center ms-auto flex-shrink-0 ps-0" v-if="!isLogin">
+                    <div class="d-lg-none d-block" data-bs-toggle="offcanvas" data-bs-target="#offCanvasSearch" aria-controls="offCanvasSearch">
+                        <button class="btn cart-btn gap-2 rounded-3 px-2 py-2 mt-1 d-flex align-items-center ms-2">
+                            <PhMagnifyingGlass size="24"/>
+                        </button>
+                    </div>
+                    <!-- Cart -->
+                    <div class="dropdown cart-dropdown ps-2 pt-1">
+                        <button class="btn cart-btn gap-2 rounded-3 px-2 py-1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <PhShoppingCart size="24" style="color: var(--neutral-oreo-darker);"/>
+                            <!-- <span class="badge bg-danger position-absolute top-48 start-80 translate-middle rounded-pill">
+                                2
+                            </span> -->
+                        </button>
+
+                        <div class="dropdown-menu custom-cart-menu p-4">
+                            <div class="text-center">
+                                <img src="https://medicastore.com/themes/blue/images/main-menu/no-transaction.webp" width="150" class="mb-3" />
+
+                                <h6 class="subtitle-1" style="color: var(--neutral-oreo-darkest);">Keranjang Anda Kosong</h6>
+                                <p class="body-2 mb-3" style="color: var(--neutral-oreo-dark);">Yuk, tambahkan produk sekarang</p>
+
+                                <a href="#" class="lg-btn-primary button-lm">Belanja Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <NuxtLink to="/login" class="btn cart-btn gap-2 rounded-3 px-2 py-2 mt-1 d-flex align-items-center ms-2 text-cta button-lm">
+                        <div class="position-relative">
+                            <PhSignIn size="24"/> 
+                            <span class="position-absolute top-0 start-100 translate-middle bg-danger rounded-circle" style="width:10px; height:10px;"></span>
+                        </div>
+                        <span class="d-lg-block d-none">Masuk</span>
+                    </NuxtLink>
+                </div>
+                <!-- icon right login -->
+                <div class="d-flex align-items-center ms-auto flex-shrink-0 ps-0" v-if="isLogin">
 
                     <!-- Notif -->
                     <div class="dropdown cart-dropdown pe-2 pt-1">
@@ -353,10 +382,12 @@
                     <!-- Cart -->
                     <div class="dropdown cart-dropdown border-start ps-2 pt-1">
                         <button class="btn cart-btn gap-2 rounded-3 px-2 py-1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <PhShoppingCartSimple size="24" style="color: var(--neutral-oreo-darker);"/>
-                            <span class="badge bg-danger position-absolute top-48 start-80 translate-middle rounded-pill">
-                                2
-                            </span>
+                            <div class="position-relative">
+                                <PhShoppingCartSimple size="24" style="color: var(--neutral-oreo-darker);"/>
+                                <span class="badge bg-danger position-absolute top-0 start-100 translate-middle rounded-pill">
+                                    2
+                                </span>
+                            </div>
                         </button>
 
                         <div class="dropdown-menu custom-cart-menu p-4">
@@ -379,7 +410,6 @@
                         </button>
                     </div>
                     
-
                     <!-- User -->
                     <div class="user-menu dropdown ps-2 d-lg-block d-none">
                         <button 
@@ -389,7 +419,7 @@
                             aria-expanded="false"
                         >
                             <PhUserCircle size="24"/>
-                            <span class="subtitle-2 limit-text d-lg-none d-xl-block">Luca Ibrahimovic Cadabra Santos</span>
+                            <span class="subtitle-2 limit-text d-lg-none d-xl-block mx-1">{{ nama }}</span>
                             <PhCaretDown size="16"/>
                         </button>
 
@@ -397,8 +427,8 @@
                             
                             <!-- HEADER USER -->
                             <li class="px-3 py-2">
-                                <div class="subtitle-2" style="color: var(--neutral-oreo-darker);">Mason Greenwood</div>
-                                <div class="caption-1" style="color: var(--neutral-oreo-light);">C00686</div>
+                                <div class="subtitle-2" style="color: var(--neutral-oreo-darker);">{{ nama }}</div>
+                                <div class="caption-1" style="color: var(--neutral-oreo-light);">{{ nip }}</div>
                                 <a href="#" class="button-s mt-1 d-block" style="text-decoration: none; color: var(--primary-base);">Lihat Profil</a>
                             </li>
 
@@ -423,7 +453,7 @@
 
                             <!-- LOGOUT -->
                             <li>
-                                <a class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-3" href="#" style="color: var(--neutral-oreo-darker);">
+                                <a @click="logout()" class="dropdown-item d-flex align-items-center subtitle-2 gap-2 py-3" href="#" style="color: var(--neutral-oreo-darker);">
                                     <PhSignOut size="16" />
                                     Keluar
                                 </a>
@@ -764,14 +794,39 @@
 <script setup lang="js">
 import { Toaster } from 'vue-sonner';
 import OffCanvasMenu from '../components/element/OffCanvasMenu.vue';
-import Icon from '../components/Icon.vue';
 import Footer from '../components/layout/Footer.vue';
-import Guarantee from '../components/layout/Guarantee.vue';
 import 'vue-sonner/style.css';
-import { PhBellSimple, PhCirclesThreePlus, PhMagnifyingGlass, PhDeviceMobile, PhCaretDown, PhTrendUp, PhShoppingCart, PhUserCircle, PhClipboardText, PhHeart, PhSignOut, PhShoppingCartSimple    } from "@phosphor-icons/vue"
+import { PhBellSimple, PhCirclesThreePlus, PhMagnifyingGlass, PhDeviceMobile, PhCaretDown, PhTrendUp, PhShoppingCart, PhUserCircle, PhClipboardText, PhHeart, PhSignOut, PhSignIn, PhShoppingCartSimple    } from "@phosphor-icons/vue"
+import { onMounted, ref } from 'vue';
+import { useStorage } from '@vueuse/core'
+import { useRoute, useRouter } from 'vue-router';
 
-const showAlert = () => {
-    alert("Hello from Bootstrap JavaScript!");
-};
+const router = useRouter()
+const route = useRoute()
+const isLogin = ref(0);
+const nama = ref('');
+const nip = ref('');
+onMounted(async() => {
+    // const token = useStorage('token', null);
+    const namaUser = useStorage('namaUser', null);
+    const nipUser = useStorage('nipUser', null);
+    const isAuth = useStorage('isAuth', null);
+
+    isLogin.value = isAuth.value;
+    nama.value = namaUser.value;
+    nip.value = nipUser.value;
+
+    console.log(isLogin.value);
+})
+
+function logout(){
+    const isAuth = useStorage('isAuth', null);
+    console.log("logout bro")
+
+    isAuth.value = "";
+    // router.replace(route.fullPath)
+    window.location.reload
+    // await navigateTo(route.fullPath, { replace: true })
+}
 
 </script>

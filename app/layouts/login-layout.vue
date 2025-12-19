@@ -1,5 +1,6 @@
 <template>
     <div class="app-wrapper d-flex flex-column min-vh-100">
+        <Toaster position="top-center" closeButton closeButtonPosition="top-right" />
 
         <!-- Backdrop -->
         <div id="dropdownBackdrop" class="fade"></div>
@@ -21,7 +22,7 @@
         </nav>
 
         <!-- PAGE CONTENT -->
-        <div class="container py-4">
+        <div class="">
             <slot />
         </div>
 
@@ -335,6 +336,7 @@ box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);
 <script setup>
 import { ref } from "vue";
 import Footer from "../components/layout/Footer.vue";
+import { Toaster } from "vue-sonner";
 
 const activeTab = ref("wa");
 const wa = ref("");

@@ -30,6 +30,23 @@
     box-shadow: none !important;
 }
 
+.btn-surface {
+    background-color: #EDF2FA!important;
+    /* color: #fff !important; */
+    border-color: #EDF2FA !important;
+}
+
+/* Saat tombol ditekan (active), focus, atau focus-visible */
+.btn-surface:active,
+.btn-surface:focus,
+.btn-surface:focus-visible,
+.btn-check:checked + .btn-surface {
+    background-color: #EDF2FA !important;
+    border-color: #EDF2FA !important;
+    /* color: #fff !important; */
+    box-shadow: none !important;
+}
+
 /* ============ bg-custom =============== */
 .bg-primary-fig {
     background-color: var(--primary-base);

@@ -46,10 +46,10 @@
                     <h6 class="body-2 mb-3" style="color: var(--neutral-oreo-light);">Layanan Kami</h6>
                     <ul class="list-unstyled small">
                         <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Beli Obat</a></li>
-                        <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Informasi Penyakit</a></li>
+                        <li class="mb-3"><NuxtLink to="/penyakit" class="body-1 text-white text-decoration-none">Informasi Penyakit</NuxtLink></li>
                         <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Informasi Dokter</a></li>
                         <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Informasi Fasilitas Kesehatan</a></li>
-                        <li class="mb-3"><a href="#" class="body-1 text-white text-decoration-none">Artikel Kesehatan</a></li>
+                        <li class="mb-3"><NuxtLink to="/artikel" class="body-1 text-white text-decoration-none">Artikel Kesehatan</NuxtLink></li>
                     </ul>
                 </div>
 

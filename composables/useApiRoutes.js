@@ -15,7 +15,13 @@ export const useApiRoutes = () => {
 
     // Tentang
     ARTIKEL: "information/articles",
+    ARTIKELDETAIL: "information/article",
     SLIDE: "information/slide",
-    MITRA: "information/apotek-mitra"
+    MITRA: "information/apotek-mitra",
+
+    // auth
+    CREDENTIALS: "user/credentials-validate",
+    LOGIN: "user/login",
+    VALIDATEOTP: "user/validate-otp"
   };
 };

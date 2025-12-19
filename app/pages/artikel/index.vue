@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 mb-4" v-if="keyword">
-            <div class="flex-grow-1" style="max-width: 350px;">
+            <div class="flex-grow-1" style="max-width: 500px;">
                 <input type="text" class="form-control" placeholder="Cari artikel" v-model="keywordInput" @keyup.enter="onSearchEnter">
             </div>
             <hr>
@@ -36,7 +36,7 @@
         <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4" v-if="!keyword">
             <h4 class="fw-bold m-0">Artikel-artikel Kesehatan<br>Terbitan Kami</h4>
 
-            <div class="flex-grow-1" style="max-width: 350px;">
+            <div class="flex-grow-1" style="max-width: 400px;">
                 <input type="text" class="form-control" placeholder="Cari artikel" v-model="keywordInput" @keyup.enter="onSearchEnter">
             </div>
         </div>
@@ -82,8 +82,8 @@
     import { ref } from 'vue';
     import { useApiRoutes } from '../../../composables/useApiRoutes';
     import { useApi } from '../../../composables/useApi';
-import ArtikelSkeletonCard from '../../components/element/artikel/ArtikelSkeletonCard.vue';
-import ArtikelListCard from '../../components/element/artikel/ArtikelListCard.vue';
+    import ArtikelSkeletonCard from '../../components/element/artikel/ArtikelSkeletonCard.vue';
+    import ArtikelListCard from '../../components/element/artikel/ArtikelListCard.vue';
 
     definePageMeta({
         layout: 'informasi-layout'

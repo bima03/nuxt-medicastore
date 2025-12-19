@@ -1,11 +1,20 @@
 export default defineEventHandler(async (event) => {
   try {
+    const baseUrl = "http://10.4.15.2/medicastore/wsapi/web/?r=";
+    // const baseUrl = "https://anaconda.medicastore.com/index.php?r=";
     const headers = await getHeaders(event);
     const query = await getQuery(event);
 
-    const { path, method = "GET", ...restQuery } = query;
-    const body = method !== "GET" ? await readBody(event) : undefined;
+    const { path, ...restQuery } = query;
+    const method = event.method;
+    const body = method !== "GET"
+    ? await readBody(event)
+    : undefined
 
+    // console.log({
+    //   httpMethod: event.method,
+    //   body
+    // })
     const allowedHeaders = {};
     ["authorization", "signature", "content-type"].forEach((key) => {
       if (headers[key]) {
@@ -14,15 +23,15 @@ export default defineEventHandler(async (event) => {
     });
 
     const res = await $fetch(
-      "https://anaconda.medicastore.com/?r=" + path,
+      baseUrl + path,
       {
         method,
         headers: {
           "Content-Type": "application/json",
           ...allowedHeaders,
         },
-        body: method !== "GET" ? body : undefined,
         query: restQuery,
+        body,
       }
     );
 

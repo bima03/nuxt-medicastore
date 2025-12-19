@@ -1,5 +1,17 @@
 // nuxt.config.js
 export default {
+    vite: {
+        server: {
+        watch: {
+            usePolling: true,
+            interval: 100
+        },
+        hmr: {
+            protocol: 'ws',
+            host: 'localhost'
+        }
+        }
+    },
     head: {
         charset: "utf-8",
         viewport: "width=device-width, initial-scale=1",
@@ -59,7 +71,7 @@ export default {
             enabled: true,
         },
     },
-    modules: ['@nuxt/image'],
+    modules: ['@nuxt/image','@vueuse/nuxt'],
 
     image: {
         // provider default IPX (local)
@@ -73,5 +85,5 @@ export default {
             xl: 1280,
             xxl: 1536,
         }
-    }
+    },
 };

@@ -353,7 +353,7 @@
                     <!-- Cart -->
                     <div class="dropdown cart-dropdown border-start ps-2 pt-1">
                         <button class="btn cart-btn gap-2 rounded-3 px-2 py-1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <PhShoppingCart size="24" style="color: var(--neutral-oreo-darker);"/>
+                            <PhShoppingCartSimple size="24" style="color: var(--neutral-oreo-darker);"/>
                             <span class="badge bg-danger position-absolute top-48 start-80 translate-middle rounded-pill">
                                 2
                             </span>
@@ -768,7 +768,7 @@ import Icon from '../components/Icon.vue';
 import Footer from '../components/layout/Footer.vue';
 import Guarantee from '../components/layout/Guarantee.vue';
 import 'vue-sonner/style.css';
-import { PhBellSimple, PhCirclesThreePlus, PhMagnifyingGlass, PhDeviceMobile, PhCaretDown, PhTrendUp, PhShoppingCart, PhUserCircle, PhClipboardText, PhHeart, PhSignOut    } from "@phosphor-icons/vue"
+import { PhBellSimple, PhCirclesThreePlus, PhMagnifyingGlass, PhDeviceMobile, PhCaretDown, PhTrendUp, PhShoppingCart, PhUserCircle, PhClipboardText, PhHeart, PhSignOut, PhShoppingCartSimple    } from "@phosphor-icons/vue"
 
 const showAlert = () => {
     alert("Hello from Bootstrap JavaScript!");

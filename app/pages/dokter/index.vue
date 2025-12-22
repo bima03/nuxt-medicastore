@@ -4,10 +4,6 @@
       <div class="d-flex flex-column container container-fluid justify-content-center gap-5">
         <!-- PENCARIAN -->
         <div class="d-flex flex-column text-center gap-2">
-          <!-- Title -->
-          <h6 class="headline-2 mb-2" style="color: var(--neutral-oreo-darkest);">Cari Dokter dan Spesialis</h6>
-          <p class="body-1 mb-4">Dapatkan informasi dokter yang sesuai dengan kebutuhan anda</p>
-
           <!-- Cari -->
           <div class="col-lg-8 m-auto search-wrapper">
             <div class="search-box">
@@ -175,278 +171,74 @@
       </div>
     </section>
 
-        <!-- Modal CUSTOM -->
+        <!-- Modal Semua Spesialis -->
         <div class="modal fade" id="termsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
                     <div class="modal-content rounded-4">
 
                     <!-- Header -->
-                    <div class="modal-header border-0">
+                    <div class="modal-header border-0 align-items-start">
+                      <div class="d-flex flex-column gap-2">
+                        <h6 class="button-xl">Semua Spesialisasi</h6>
+                        <div class="d-flex align-self-stretch align-items-center gap-2">
+                          <div class="md-chips active body-2">
+                            Spesialis Dokter
+                          </div>
+                          <div class="md-chips body-2">
+                            Spesialis Gigi
+                          </div>
+                          <div class="md-chips body-2">
+                            Bidang Non-Spesialis
+                          </div>
+                        </div>
+                      </div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
 
                     <!-- Body -->
                     <div class="modal-body py-0 pb-3" style="max-height: 60vh; overflow-y:auto;">
 
-                      <div class="card-aktifkan-lokasi">
-                        <div class="d-flex flex-column align-items-start gap-2">
-                          <p class="m-0 body-2" style="color: var(--neutral-oreo-base);">Aktifkan Lokasi</p>
-                          <div class="d-flex align-items-center gap-1 button-lm" style="color: var(--primary-base);">
-                            <PhCrosshair size="16"/>
-                            Cari di lokasi sekitar saya</div>
-                        </div>
-                        <button class="md-btn-outline button-lm">
-                          <PhMapTrifold weight="bold" size="16"/>
-                          Semua Lokasi</button>
-                      </div>
-                        
-                      <hr class="divider mt-3" style="color: var(--neutral-oreo-light);"></hr>
-
-                      <!-- Search -->
-                      <div class="position-relative mb-3">
-                        <PhMagnifyingGlass size="16" class="position-absolute top-50 start-0 translate-middle-y ms-3"/>
-                        <input
-                          type="text"
-                          class="form-control body-2 ps-5"
-                          placeholder="Masukkan kota"
-                        />
-                      </div>
-
-                      <!-- List -->
-                      <div class="area-list">
-
-                        <!-- Bali -->
-                        <div class="area-group" style="color: var(--neutral-oreo-darkest);">
-                          <button
-                            class="area-header w-100 d-flex justify-content-between align-items-center subtitle-1"
-                            style="color: var(--neutral-oreo-darkest);"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#bali"
-                          >
-                            Bali
-                            <PhCaretDown size="20"/>
-                          </button>
-
-                          <div id="bali" class="collapse ps-2">
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Seminyak</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Jimbaran</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Denpasar</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Renon</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Kuta</div>
+                      <!-- List Suggestion -->
+                       <div class="area-list">
+                        <div class="d-flex align-items-center" style="color: var(--neutral-oreo-darkest);">
+                          <div class="px-3 py-2 gap-3 align-items-center w-100 d-flex align-items-start subtitle-2">
+                            <img src="/public/images/spesialis-anak.png" alt="" class="spesialis-icon">
+                            <div class="d-flex flex-column gap-1 subtitle-1">
+                              Semarang
+                              <p class="m-0 body-2" style="color: var(--neutral-oreo-dark);">Kota Semarang, Jawa Tengah, Indonesia</p>
+                            </div>
                           </div>
                         </div>
 
-                        <hr class="divider m-1" style="color: var(--neutral-oreo-light);"></hr>
-
-                        <!-- Bandar Lampung -->
-                        <div class="area-group" style="color: var(--neutral-oreo-darkest);">
-                          <button
-                            class="area-header w-100 d-flex justify-content-between align-items-center subtitle-1"
-                            style="color: var(--neutral-oreo-darkest);"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#bandarLampung"
-                          >
-                            Bandar Lampung
-                            <PhCaretDown size="20"/>
-                          </button>
-
-                          <div id="bandarLampung" class="collapse ps-2">
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Seminyak</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Jimbaran</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Denpasar</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Renon</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Kuta</div>
+                       </div>
+                      <hr class="divider m-1" style="color: var(--neutral-oreo-light);"></hr>
+                      <!-- List Suggestion -->
+                       <div class="area-list">
+                        <div class="d-flex align-items-center" style="color: var(--neutral-oreo-darkest);">
+                          <div class="px-3 py-2 gap-3 align-items-center w-100 d-flex align-items-start subtitle-2">
+                            <PhMapPin size="16"/>
+                            <div class="d-flex flex-column gap-1">
+                              Semarang
+                              <p class="m-0 caption-1" style="color: var(--neutral-oreo-dark);">Kota Semarang, Jawa Tengah, Indonesia</p>
+                            </div>
                           </div>
                         </div>
 
-                        <hr class="divider m-1" style="color: var(--neutral-oreo-light);"></hr>
-
-                        <!-- Bandung -->
-                        <div class="area-group" style="color: var(--neutral-oreo-darkest);">
-                          <button
-                            class="area-header w-100 d-flex justify-content-between align-items-center subtitle-1"
-                            style="color: var(--neutral-oreo-darkest);"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#bandung"
-                          >
-                            Bandung
-                            <PhCaretDown size="20"/>
-                          </button>
-
-                          <div id="bandung" class="collapse ps-2">
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Seminyak</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Jimbaran</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Denpasar</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Renon</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Kuta</div>
+                       </div>
+                      <hr class="divider m-1" style="color: var(--neutral-oreo-light);"></hr>
+                      <!-- List Suggestion -->
+                       <div class="area-list">
+                        <div class="d-flex align-items-center" style="color: var(--neutral-oreo-darkest);">
+                          <div class="px-3 py-2 gap-3 align-items-center w-100 d-flex align-items-start subtitle-2">
+                            <PhMapPin size="16"/>
+                            <div class="d-flex flex-column gap-1">
+                              Semarang
+                              <p class="m-0 caption-1" style="color: var(--neutral-oreo-dark);">Kota Semarang, Jawa Tengah, Indonesia</p>
+                            </div>
                           </div>
                         </div>
 
-                        <hr class="divider m-1" style="color: var(--neutral-oreo-light);"></hr>
-
-                        <!-- Bogor -->
-                        <div class="area-group" style="color: var(--neutral-oreo-darkest);">
-                          <button
-                            class="area-header w-100 d-flex justify-content-between align-items-center subtitle-1"
-                            style="color: var(--neutral-oreo-darkest);"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#bogor"
-                          >
-                            Bogor
-                            <PhCaretDown size="20"/>
-                          </button>
-
-                          <div id="bogor" class="collapse ps-2">
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Seminyak</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Jimbaran</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Denpasar</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Renon</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Kuta</div>
-                          </div>
-                        </div>
-
-                        <hr class="divider m-1" style="color: var(--neutral-oreo-light);"></hr>
-
-                        <!-- Depok -->
-                        <div class="area-group" style="color: var(--neutral-oreo-darkest);">
-                          <button
-                            class="area-header w-100 d-flex justify-content-between align-items-center subtitle-1"
-                            style="color: var(--neutral-oreo-darkest);"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#depok"
-                          >
-                            Depok
-                            <PhCaretDown size="20"/>
-                          </button>
-
-                          <div id="depok" class="collapse ps-2">
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Seminyak</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Jimbaran</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Denpasar</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Renon</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Kuta</div>
-                          </div>
-                        </div>
-
-                        <hr class="divider m-1" style="color: var(--neutral-oreo-light);"></hr>
-
-                        <!-- Jakarta -->
-                        <div class="area-group" style="color: var(--neutral-oreo-darkest);">
-                          <button
-                            class="area-header w-100 d-flex justify-content-between align-items-center subtitle-1"
-                            style="color: var(--neutral-oreo-darkest);"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#jakarta"
-                          >
-                            Jakarta
-                            <PhCaretDown size="20"/>
-                          </button>
-
-                          <div id="jakarta" class="collapse ps-2">
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Seminyak</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Jimbaran</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Denpasar</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Renon</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Kuta</div>
-                          </div>
-                        </div>
-
-                        <hr class="divider m-1" style="color: var(--neutral-oreo-light);"></hr>
-
-                        <!-- Jember -->
-                        <div class="area-group" style="color: var(--neutral-oreo-darkest);">
-                          <button
-                            class="area-header w-100 d-flex justify-content-between align-items-center subtitle-1"
-                            style="color: var(--neutral-oreo-darkest);"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#jember"
-                          >
-                            Jember
-                            <PhCaretDown size="20"/>
-                          </button>
-
-                          <div id="jember" class="collapse ps-2">
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Seminyak</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Jimbaran</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Denpasar</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Renon</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Kuta</div>
-                          </div>
-                        </div>
-
-                        <hr class="divider m-1" style="color: var(--neutral-oreo-light);"></hr>
-
-                        <!-- Makassar -->
-                        <div class="area-group" style="color: var(--neutral-oreo-darkest);">
-                          <button
-                            class="area-header w-100 d-flex justify-content-between align-items-center subtitle-1"
-                            style="color: var(--neutral-oreo-darkest);"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#makassar"
-                          >
-                            Makassar
-                            <PhCaretDown size="20"/>
-                          </button>
-
-                          <div id="makassar" class="collapse ps-2">
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Seminyak</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Jimbaran</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Denpasar</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Renon</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Kuta</div>
-                          </div>
-                        </div>
-
-                        <hr class="divider m-1" style="color: var(--neutral-oreo-light);"></hr>
-
-                        <!-- Malang -->
-                        <div class="area-group" style="color: var(--neutral-oreo-darkest);">
-                          <button
-                            class="area-header w-100 d-flex justify-content-between align-items-center subtitle-1"
-                            style="color: var(--neutral-oreo-darkest);"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#malang"
-                          >
-                            Malang
-                            <PhCaretDown size="20"/>
-                          </button>
-
-                          <div id="malang" class="collapse ps-2">
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Seminyak</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Jimbaran</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Denpasar</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Renon</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Kuta</div>
-                          </div>
-                        </div>
-
-                        <hr class="divider m-1" style="color: var(--neutral-oreo-light);"></hr>
-
-                        <!-- Semarang -->
-                        <div class="area-group" style="color: var(--neutral-oreo-darkest);">
-                          <button
-                            class="area-header w-100 d-flex justify-content-between align-items-center subtitle-1"
-                            style="color: var(--neutral-oreo-darkest);"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#semarang"
-                          >
-                            Semarang
-                            <PhCaretDown size="20"/>
-                          </button>
-
-                          <div id="semarang" class="collapse ps-2">
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Seminyak</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Jimbaran</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Denpasar</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Renon</div>
-                            <div class="area-item body-2"> <PhArrowBendDownRight size="16"/> Kuta</div>
-                          </div>
-                        </div>
-
-                        <hr class="divider m-1" style="color: var(--neutral-oreo-light);"></hr>
-
-
-                      </div>
+                       </div>
 
                     </div>
 
@@ -455,201 +247,340 @@
                 </div>
         </div>
 
-        <!-- LIST -->
-        <div class="container d-flex flex-column gap-3 title-1 my-5" style="color: var(--neutral-oreo-darkest);">
-        
-            <div class="d-flex align-self-stretch align-items-center justify-content-center gap-2 mb-3">
-              <div class="xl-chips-active subtitle-2" style="color: var(--primary-base);">
-                Spesialis Dokter
-              </div>
-              <div class="xl-chips body-2" style="color: var(--neutral-oreo-darker);">
-                Spesialis Gigi
-              </div>
-              <div class="xl-chips body-2" style="color: var(--neutral-oreo-darker);">
-                Bidang Non-Spesialis
+  <div class="container py-4">
+  <div class="row">
+
+    <!-- SIDEBAR -->
+    <div class="col-lg-3 col-md-4 d-none d-md-block py-3" style="border-right: 1px solid var(--border-default, #E6E6E6);">
+      <div class="specialist-sidebar">
+        <p class="body-2 mb-1" style="color: var(--neutral-oreo-base);">Spesialis</p>
+        <h6 class="title-1 mb-5" style="color: var(--primary-base);">
+          Radiologi <PhCaretDown size="20"/>
+        </h6>
+
+        <p class="body-2 mb-1" style="color: var(--neutral-oreo-base);">Keahlian/Subspesialis</p>
+        <ul class="list-unstyled specialist-list body-2">
+          <li>Sub Spesialis Radiologi Anak</li>
+          <li>Sub Spesialis Radiologi Thorax</li>
+          <li>Sub Spesialis Radiologi Muskuloskeletal</li>
+          <li>Sub Spesialis Radiologi Intervensional</li>
+          <li>Sub Spesialis Radiologi Neuroradiologi dan Kepala Leher</li>
+          <li>Sub Spesialis Radiologi Payudara dan Reproduksi Perempuan</li>
+          <li>Sub Spesialis Radiologi Nuklir dan Pencitraan Molekular</li>
+          <li>Sub Spesialis Radiologi Saluran Cerna</li>
+          <li>Sub Spesialis Onkologi Radiasi</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="col-lg-9 col-md-8">
+      
+      <!-- INFO BOX -->
+      <div class="info-box mb-4 d-flex justify-content-between align-items-start align-items-center">
+        <p class="mb-0 body-2" style="color: var(--neutral-oreo-dark);">
+          Dokter Radiologi adalah dokter spesialis radiologi yang berfokus pada pemeriksaan radiologi
+          untuk mendeteksi, mendiagnosis, dan mengobati penyakit menggunakan prosedur pencitraan.
+          <a href="#" class="text-primary fw-semibold">Baca Selengkapnya</a>
+        </p>
+        <img src="/public/images/spesialis-anak.png" alt="" class="info-icon">
+      </div>
+
+      <!-- CARD LIST -->
+      <div class="row g-3">
+
+        <!-- CARD1 -->
+        <div class="col-lg-6 col-md-12">
+          <div class="doctor-card d-flex gap-0">
+
+            <!-- Dokter -->
+            <div class="d-flex align-self-stretch align-items-center gap-3" style="padding: 8px 8px 8px 8px;">
+              <img src="https://medicastore.com/images/dokter/AA-SG-MAYA-PRAYOGA_Medicastore_PGiHl.png" class="doctor-avatar" />
+              <div class="d-flex flex-column">
+                <h6 class="subtitle-2 mb-3" style="color: var(--neutral-oreo-darker);">
+                  dr. Debora Maemun Nah, Sp.Rad Imanuel Sitanggang
+                </h6>
+                <div class="d-flex align-items-center gap-2">
+                  <PhStethoscope size="16" color="#206BBC"/>
+                  <p class="body-2 mb-0" style="color: var(--neutral-oreo-dark);"> Spesialis Radiologi </p>
+                </div>
               </div>
             </div>
 
-            <!-- Spesialis Grid -->
-            <div class="row g-4">
-            <!-- Card 1 -->
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="category-card">
-                  <div class="category-icon">
-                    <img src="/public/images/spesialis-anak.png" alt="Anak">
-                  </div>
-                  <div class="subtitle-1">Anak</div>
-                  <PhQuestion class="ms-auto" data-bs-toggle="modal" data-bs-target="#penyakitModal" weight="fill" size="24"/>
-                </div>
+            <!-- RumahSakit -->
+            <div class="d-flex gap-2 align-items-start align-self-stretch" style="padding: 12px 8px 12px 96px; background: var(--pallete-neutral-milk-lighter, #F5F5F5);">
+              <div class="d-flex">
+                  <PhHospital size="16" color="#206BBC"/>
+              </div>
+              <div class="d-flex flex-column" style="color: var(--neutral-oreo-darker);">
+                <h6 class="body-2 mb-1">
+                  Rumah Sakit Pondok Indah Bintaro Jaya
+                </h6>
+                <p class="label mb-0">
+                  Buka di google maps
+                </p>
+              </div>
             </div>
-            <!-- Card 2 -->
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="category-card">
-                  <div class="category-icon">
-                    <img src="/public/images/spesialis-anak.png" alt="Anak">
-                  </div>
-                  <div class="subtitle-1">Anak</div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="category-card">
-                  <div class="category-icon">
-                    <img src="/public/images/spesialis-anak.png" alt="Anak">
-                  </div>
-                  <div class="subtitle-1">Anak</div>
-                </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="category-card">
-                  <div class="category-icon">
-                    <img src="/public/images/spesialis-anak.png" alt="Anak">
-                  </div>
-                  <div class="subtitle-1">Anak</div>
-                </div>
-            </div>
-            <!-- Card 5 -->
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="category-card">
-                  <div class="category-icon">
-                    <img src="/public/images/spesialis-anak.png" alt="Anak">
-                  </div>
-                  <div class="subtitle-1">Anak</div>
-                </div>
-            </div>
-
+            
+          </div>
         </div>
 
-        </div>
+        <!-- CARD2 -->
+        <div class="col-lg-6 col-md-12">
+          <div class="doctor-card d-flex gap-0">
 
-        <!-- Modal Penjelasan Penyakit -->
-        <div class="modal fade" id="penyakitModal" aria-hidden="true" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered" style="max-width: 500px;">
-                <div class="modal-content rounded-4">
-
-                <!-- Header -->
-                <div class="modal-header border-0">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <!-- Dokter -->
+            <div class="d-flex align-self-stretch align-items-center gap-3" style="padding: 8px 8px 8px 8px;">
+              <img src="https://medicastore.com/images/dokter/AA-SG-MAYA-PRAYOGA_Medicastore_PGiHl.png" class="doctor-avatar" />
+              <div class="d-flex flex-column">
+                <h6 class="subtitle-2 mb-3" style="color: var(--neutral-oreo-darker);">
+                  dr. Debora Maemun Nah, Sp.Rad Imanuel Sitanggang
+                </h6>
+                <div class="d-flex align-items-center gap-2">
+                  <PhStethoscope size="16" color="#206BBC"/>
+                  <p class="body-2 mb-0" style="color: var(--neutral-oreo-dark);"> Spesialis Radiologi </p>
                 </div>
-
-                <!-- Body -->
-                <div class="modal-body">
-
-                    <div class="category-icon mb-3">
-                      <img src="/public/images/spesialis-anak.png" alt="Anak">
-                    </div>
-                    <h6 class="title-2" style="color: var(--neutral-oreo-darker);">Dokter Spesialis Radiologi</h6>
-                    <p class="body-1" style="color: var(--neutral-oreo-darker);">
-                    adalah dokter spesialis yang berfokus pada  pemeriksaan radiologi yang bertujuan untuk mendeteksi, mendiagnosis, dan mengobati suatu penyakit menggunakan prosedur pencitraan. Prosedur  tersebut adalah rontgen, CT scan, MRI dan USG.
-                    </p>
-
-                </div>
-
-                </div>
+              </div>
             </div>
+
+            <!-- RumahSakit -->
+            <div class="d-flex gap-2 align-items-start align-self-stretch" style="padding: 12px 8px 12px 96px; background: var(--pallete-neutral-milk-lighter, #F5F5F5);">
+              <div class="d-flex">
+                  <PhHospital size="16" color="#206BBC"/>
+              </div>
+              <div class="d-flex flex-column" style="color: var(--neutral-oreo-darker);">
+                <h6 class="body-2 mb-1">
+                  Rumah Sakit Pondok Indah Bintaro Jaya
+                </h6>
+                <p class="label mb-0">
+                  Buka di google maps
+                </p>
+              </div>
+            </div>
+            
+          </div>
         </div>
+
+        <!-- CARD3 -->
+        <div class="col-lg-6 col-md-12">
+          <div class="doctor-card d-flex gap-0">
+
+            <!-- Dokter -->
+            <div class="d-flex align-self-stretch align-items-center gap-3" style="padding: 8px 8px 8px 8px;">
+              <img src="https://medicastore.com/images/dokter/AA-SG-MAYA-PRAYOGA_Medicastore_PGiHl.png" class="doctor-avatar" />
+              <div class="d-flex flex-column">
+                <h6 class="subtitle-2 mb-3" style="color: var(--neutral-oreo-darker);">
+                  dr. Debora Maemun Nah, Sp.Rad Imanuel Sitanggang
+                </h6>
+                <div class="d-flex align-items-center gap-2">
+                  <PhStethoscope size="16" color="#206BBC"/>
+                  <p class="body-2 mb-0" style="color: var(--neutral-oreo-dark);"> Spesialis Radiologi </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- RumahSakit -->
+            <div class="d-flex gap-2 align-items-start align-self-stretch" style="padding: 12px 8px 12px 96px; background: var(--pallete-neutral-milk-lighter, #F5F5F5);">
+              <div class="d-flex">
+                  <PhHospital size="16" color="#206BBC"/>
+              </div>
+              <div class="d-flex flex-column" style="color: var(--neutral-oreo-darker);">
+                <h6 class="body-2 mb-1">
+                  Rumah Sakit Pondok Indah Bintaro Jaya
+                </h6>
+                <p class="label mb-0">
+                  Buka di google maps
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- CARD4 -->
+        <div class="col-lg-6 col-md-12">
+          <div class="doctor-card d-flex gap-0">
+
+            <!-- Dokter -->
+            <div class="d-flex align-self-stretch align-items-center gap-3" style="padding: 8px 8px 8px 8px;">
+              <img src="https://medicastore.com/images/dokter/AA-SG-MAYA-PRAYOGA_Medicastore_PGiHl.png" class="doctor-avatar" />
+              <div class="d-flex flex-column">
+                <h6 class="subtitle-2 mb-3" style="color: var(--neutral-oreo-darker);">
+                  dr. Debora Maemun Nah, Sp.Rad Imanuel Sitanggang
+                </h6>
+                <div class="d-flex align-items-center gap-2">
+                  <PhStethoscope size="16" color="#206BBC"/>
+                  <p class="body-2 mb-0" style="color: var(--neutral-oreo-dark);"> Spesialis Radiologi </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- RumahSakit -->
+            <div class="d-flex gap-2 align-items-start align-self-stretch" style="padding: 12px 8px 12px 96px; background: var(--pallete-neutral-milk-lighter, #F5F5F5);">
+              <div class="d-flex">
+                  <PhHospital size="16" color="#206BBC"/>
+              </div>
+              <div class="d-flex flex-column" style="color: var(--neutral-oreo-darker);">
+                <h6 class="body-2 mb-1">
+                  Rumah Sakit Pondok Indah Bintaro Jaya
+                </h6>
+                <p class="label mb-0">
+                  Buka di google maps
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- CARD5 -->
+        <div class="col-lg-6 col-md-12">
+          <div class="doctor-card d-flex gap-0">
+
+            <!-- Dokter -->
+            <div class="d-flex align-self-stretch align-items-center gap-3" style="padding: 8px 8px 8px 8px;">
+              <img src="https://medicastore.com/images/dokter/AA-SG-MAYA-PRAYOGA_Medicastore_PGiHl.png" class="doctor-avatar" />
+              <div class="d-flex flex-column">
+                <h6 class="subtitle-2 mb-3" style="color: var(--neutral-oreo-darker);">
+                  dr. Debora Maemun Nah, Sp.Rad Imanuel Sitanggang
+                </h6>
+                <div class="d-flex align-items-center gap-2">
+                  <PhStethoscope size="16" color="#206BBC"/>
+                  <p class="body-2 mb-0" style="color: var(--neutral-oreo-dark);"> Spesialis Radiologi </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- RumahSakit -->
+            <div class="d-flex gap-2 align-items-start align-self-stretch" style="padding: 12px 8px 12px 96px; background: var(--pallete-neutral-milk-lighter, #F5F5F5);">
+              <div class="d-flex">
+                  <PhHospital size="16" color="#206BBC"/>
+              </div>
+              <div class="d-flex flex-column" style="color: var(--neutral-oreo-darker);">
+                <h6 class="body-2 mb-1">
+                  Rumah Sakit Pondok Indah Bintaro Jaya
+                </h6>
+                <p class="label mb-0">
+                  Buka di google maps
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 </template>
 <style>
 
-.area-header {
-  display: flex;
-  padding: 12px;
-  justify-content: space-between;
-  align-items: center;
-  align-self: stretch;
-  background: none;
-  border: none;
-}
+/* chips medium */
+  .md-chips {
+      display: flex;
+      height: 36px;
+      min-width: 54px;
+      padding: 10px 12px;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      border-radius: 300px;
+      cursor: pointer;
+      border: 1px solid var(--border-default, #E6E6E6);
+      background: var(--pallete-neutral-milk-lightest, #FFF);
+      color: var(--neutral-oreo-darker);
+  }
 
-.area-item {
-  display: flex;
-  padding: 8px 12px;
-  align-items: center;
-  gap: 12px;
-  align-self: stretch;
-}
-
-.form-control {
-  height: 40px;
-  border-radius: 8px;
-  border: 1px solid var(--border-default, #E6E6E6);
-  background: var(--pallete-neutral-milk-lightest, #FFF);
-}
-
-.card-aktifkan-lokasi {
-  display: flex;
-  padding: 12px 16px;
-  align-items: flex-start;
-  gap: 4px;
-  align-self: stretch;
-  justify-content: space-between;
-  align-items: center;
-
-  border-radius: 16px;
-  border: 1px solid var(--border-default, #EEEEEE);
-  background: #FFF;
-
-  /* Lvl2 */
-  box-shadow: 0 2px 8px 0 rgba(51, 51, 51, 0.10);
-}
-
-.custom-card-cari {
-  display: flex;
-  width: 740px;
-  height: 400px;
-  padding: 4px;
-  align-items: flex-start;
-  border-radius: 16px;
-  border: 1px solid var(--border-default, #E6E6E6);
-  background: #FFF;
-
-  overflow-y: auto;       /* 🔥 SCROLL */
-  overflow-x: hidden;
-
-  /* Lvl2 */
-  box-shadow: 0 2px 8px 0 rgba(51, 51, 51, 0.10);
-}
-
-    .dropdown-menu {
-        top: 10px !important;
-        display: none;
-        opacity: 0;
-        transition: opacity .15s ease;
-    }
-
-    .dropdown-menu.show {
-        display: block;
-        opacity: 1;
-    }
-
-/* chips extra large */
-.xl-chips {
-    display: flex;
-    height: 44px;
-    min-width: 54px;
-    padding: 10px 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    border-radius: 300px;
-    border: 1px solid var(--border-default, #E6E6E6);
-    background: var(--pallete-neutral-milk-lightest, #FFF);
-}
-
-.xl-chips-active {
-    display: flex;
-    height: 44px;
-    min-width: 54px;
-    padding: 10px 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    border-radius: 300px;
+  .md-chips.active {
+    color: var(--primary-base);
     border: 1px solid var(--border-primary, #D1DDE9);
     background: var(--surface-primary, #EDF2FA);
+  }
+
+.specialist-list li {
+  color: var(--neutral-oreo-darker) !important;  /* warna default */ 
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
+
+.specialist-list li:hover {
+  color: var(--primary-base) !important; /* warna saat hover */
+}
+
+/* SIDEBAR */
+.specialist-sidebar {
+  padding-right: 20px;
+}
+
+.specialist-list li {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.specialist-list li:hover {
+  color: #0d6efd;
+}
+
+/* INFO BOX */
+.info-box {
+  max-height: 70px;
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 116px 16px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--border-default, #E6E6E6);
+  background: var(--pallete-neutral-milk-lighter, #FAFAFA);
+  overflow: hidden;
+}
+
+.info-icon {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  right: -16px;
+}
+
+.info-icon img {
+  object-fit: cover;            /* jaga proporsi */
+  position: absolute;
+  right: -16px;
+  top: -8px;
+}
+
+/* CARD */
+.doctor-card {
+  background: #fff;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid var(--border-default, #E6E6E6);
+  background: var(--pallete-neutral-milk-lightest, #FFF);
+
+  /* Lvl2 */
+  box-shadow: 0 2px 8px 0 rgba(51, 51, 51, 0.10);
+}
+
+.doctor-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #E6E6E6;
+}
+
+.spesialis-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+
 
 .search-icon {
   position: absolute;
@@ -742,54 +673,11 @@
     border: 1px solid var(--primary-base);
 }
 
-.category-card {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  background: #EDF2FA;
-  border-radius: 16px;
-  padding: 8px 16px;
-  min-height: 96px;
-
-  cursor: pointer;
-  transition: all .2s ease;
-}
-
-.category-card:hover {
-  background: #e6edf7;
-}
-
-/* icon wrapper */
-.category-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: #d9e4f3;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* image */
-.category-icon img {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-}
 
 .doctor-icon img {
   width: 40px;
   height: 40px;
   object-fit: contain;
-}
-
-/* title */
-.category-title {
-  font-size: 24px;
-  font-weight: 600;
-  color: #444;
 }
 
 </style>
@@ -798,5 +686,5 @@
         layout: 'informasi-layout'
     })
 
-    import { PhArrowBendDownRight, PhArrowSquareOut, PhCaretDown, PhCrosshair, PhDotOutline, PhMagnifyingGlass, PhMapPin, PhMapTrifold, PhPhone, PhQuestion, PhSquaresFour, PhStethoscope } from '@phosphor-icons/vue';
+    import { PhArrowBendDownRight, PhArrowSquareOut, PhCaretDown, PhCrosshair, PhDotOutline, PhHospital, PhMagnifyingGlass, PhMapPin, PhMapTrifold, PhPhone, PhQuestion, PhSquaresFour, PhStethoscope } from '@phosphor-icons/vue';
 </script>

@@ -108,9 +108,11 @@ const otp = ref(Array(props.length).fill(''))
 const inputs = ref([])
 const loading = ref(false)
 const phone = useCookie('phoneLogin')
+const otpState = useCookie('otpState')
 const messageError  = ref('')
 
 console.log(phone.value)
+console.log(otpState.value)
 
 const otpValue = computed(() => otp.value.join(''))
 
@@ -159,7 +161,7 @@ async function submitOtp() {
     const res = await post(api.VALIDATEOTP, {
         username: '62'+phone.value,
         otp: otpValue.value,
-        state: "Login",
+        state: (otpState.value == 'register') ? "Register" : "Login",
     })
 
     console.log(res.status)
@@ -175,7 +177,7 @@ async function submitOtp() {
       nipUser.value = res.data.NIP;
       isAuth.value = 1;
 
-      navigateTo('/')
+      window.location.replace('/')
     }else{
       messageError.value = res.message
     }

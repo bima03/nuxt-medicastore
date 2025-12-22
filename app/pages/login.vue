@@ -368,6 +368,7 @@ box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);
     import { useStorage } from '@vueuse/core'
     import GoogleLogin from '../components/GoogleLogin.vue';
     import { navigateTo } from 'nuxt/app';
+    import { isValidEmail, phoneLength } from '../utils/validify';
 
     const router = useRouter()
     const api = useApiRoutes()
@@ -382,9 +383,11 @@ box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);
     const errorPassword = ref('')
     const errorPhone = ref('')
 
-    function isValidEmail(value) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
-    }
+    const stateRegis = useCookie('stateRegis', {
+        maxAge: 120, // 5 menit
+        sameSite: 'lax',
+        secure: true
+    })
 
     async function submitEmail() {
         errorEmail.value = ''
@@ -412,7 +415,16 @@ box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);
             if(res.status){
                 step.value = 'password'
             }else{
-                router.push(`/register?email=${email.value}`)
+                const emailRegis = useCookie('emailRegis', {
+                    maxAge: 120, // 2 menit
+                    sameSite: 'lax',
+                    secure: true
+                })
+
+                emailRegis.value = email.value
+                stateRegis.value = 'email'
+
+                navigateTo('/register');
             }
 
         } catch (e) {
@@ -470,8 +482,6 @@ box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);
     /**
      * ======== login otp
      */
-    
-
     const onInput = (e) => {
         let val = e.target.value.replace(/\D/g, '')
 
@@ -492,7 +502,7 @@ box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);
             return
         }
 
-        if (!/^8\d{9,}$/.test(phone.value)) {
+        if (!phoneLength(phone.value)) {
             errorPhone.value = 'Nomor Whatsapp tidak boleh kurang dari 10 digit'
             return
         }
@@ -513,15 +523,6 @@ box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);
             console.log(res);
 
             if(res.status){
-                // const token = useStorage('token', null);
-                // const namaUser = useStorage('namaUser', null);
-                // const nipUser = useStorage('nipUser', null);
-                // const isAuth = useStorage('isAuth', null);
-
-                // token.value = res.data.auth_key;
-                // namaUser.value = res.data.data_pelanggan.vNama;
-                // nipUser.value = res.data.NIP;
-                // isAuth.value = 1;
                 const phoneLogin = useCookie('phoneLogin', {
                     maxAge: 120, // 2 menit
                     sameSite: 'lax',
@@ -530,6 +531,14 @@ box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);
 
                 phoneLogin.value = phone.value
 
+                const otpState = useCookie('otpState', {
+                    maxAge: 120, // 2 menit
+                    sameSite: 'lax',
+                    secure: true
+                })
+
+                otpState.value = 'login'
+                
                 navigateTo('/otp');
             }else{
                 const phoneRegis = useCookie('phoneRegis', {
@@ -538,6 +547,7 @@ box-shadow: 0 1px 4px 0 rgba(51, 51, 51, 0.10);
                     secure: true
                 })
                 phoneRegis.value = phone.value
+                stateRegis.value = 'whatsapp'
                 navigateTo('/register')
             }
 

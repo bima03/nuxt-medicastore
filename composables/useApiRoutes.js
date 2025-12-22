@@ -22,6 +22,7 @@ export const useApiRoutes = () => {
     // auth
     CREDENTIALS: "user/credentials-validate",
     LOGIN: "user/login",
-    VALIDATEOTP: "user/validate-otp"
+    VALIDATEOTP: "user/validate-otp",
+    REGISTER: "user/register"
   };
 };

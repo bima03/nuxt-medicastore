@@ -825,7 +825,7 @@ function logout(){
 
     isAuth.value = "";
     // router.replace(route.fullPath)
-    window.location.reload
+    window.location.reload()
     // await navigateTo(route.fullPath, { replace: true })
 }
 

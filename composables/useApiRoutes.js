@@ -18,6 +18,9 @@ export const useApiRoutes = () => {
     ARTIKELDETAIL: "information/article",
     SLIDE: "information/slide",
     MITRA: "information/apotek-mitra",
+    SPESIALIS: "information/specialists",
+    DOKTER: "information/doctors",
+    DOKTERDETAIL: "information/doctor",
 
     // auth
     CREDENTIALS: "user/credentials-validate",

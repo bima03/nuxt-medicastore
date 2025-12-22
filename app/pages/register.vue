@@ -350,7 +350,6 @@ const strengthTextClass = computed(() => {
 async function submitRegis(){
   if (isFormValid.value) {
 
-    showTermsModal.value = false
     loading.value = true
 
     try {
@@ -382,7 +381,7 @@ async function submitRegis(){
             })
 
             otpState.value = 'register'
-
+            showTermsModal.value = false
             navigateTo('/otp')
         }
 

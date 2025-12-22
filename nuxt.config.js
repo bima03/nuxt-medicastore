@@ -62,6 +62,7 @@ export default {
         // apiBase: process.env.API_BASE || "http://wsmanita.cpp/web/index.php",
         public: {
             apiBase: process.env.API_BASE || "https://anaconda.medicastore.com/index.php?r=", // url live
+            googleClientId: "235546364586-ud5hbdufhn57iu2f6do8a8sus0r47480.apps.googleusercontent.com"
         },
         // apiBase: "http://wsmanita.cpp/web/index.php",
     },
@@ -71,7 +72,14 @@ export default {
             enabled: true,
         },
     },
-    modules: ['@nuxt/image','@vueuse/nuxt'],
+    // googleSignIn: {
+    //     clientId: "235546364586-ud5hbdufhn57iu2f6do8a8sus0r47480.apps.googleusercontent.com"  // ambil dari .env
+    // },
+    modules: [
+        '@nuxt/image',
+        '@vueuse/nuxt',
+        // 'vue3-google-signin'
+    ],
 
     image: {
         // provider default IPX (local)

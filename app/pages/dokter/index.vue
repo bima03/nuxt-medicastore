@@ -159,6 +159,8 @@
                   type="text"
                   class="form-control border-0 body-2"
                   placeholder="Cari dokter, spesialisasi, tindakan medis, spesialisasi penyakit"
+                  v-model="keywordInput"
+                  @keyup.enter="searchQuery"
                 />
                 <PhMagnifyingGlass class="search-icon" size="20"/>
               </div>
@@ -788,6 +790,7 @@
   import { useApi } from '../../../composables/useApi';
   import SpesialisSkeletonCard from '../../components/element/dokter/SpesialisSkeletonCard.vue';
   import SpesialisListCard from '../../components/element/dokter/SpesialisListCard.vue';
+import { navigateTo } from 'nuxt/app';
 
 
   const api = useApiRoutes()
@@ -818,6 +821,10 @@
     showModal.value = false
   }
 
+  function searchQuery(){
+    navigateTo('/dokter/search/'+keywordInput.value)
+  }
+
   /* lock body scroll */
   watch(showModal, (val) => {
     document.body.style.overflow = val ? 'hidden' : ''
@@ -828,13 +835,13 @@
       () => get(api.SPESIALIS, {
           page:page.value,
           count:count.value ?? 15,
-          keyword:keywordInput.value,
+          keyword:"",
       }), {immediate : true} // refresh
   )
 
   console.log(dataSpesialis.value);
 
-  watch(keywordInput, () => {
-    refreshSpesialis()
-  })
+  // watch(keywordInput, () => {
+  //   refreshSpesialis()
+  // })
 </script>

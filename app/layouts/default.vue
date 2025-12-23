@@ -29,7 +29,7 @@
 
                         <!-- Search Group -->
                         <div class="search-wrapper flex-grow-1" aria-controls="offCanvasSearch">
-                            <input type="text" class="form-control search-input" placeholder="Cari egoji">
+                            <input type="text" class="form-control search-input" placeholder="Cari egoji" @keyup.enter="search">
                             <button class="search-button">
                                 <PhMagnifyingGlass size="16" style="color: white;"/>
                             </button>
@@ -800,6 +800,7 @@ import { PhBellSimple, PhCirclesThreePlus, PhMagnifyingGlass, PhDeviceMobile, Ph
 import { onMounted, ref } from 'vue';
 import { useStorage } from '@vueuse/core'
 import { useRoute, useRouter } from 'vue-router';
+import { navigateTo } from 'nuxt/app';
 
 const router = useRouter()
 const route = useRoute()
@@ -818,6 +819,10 @@ onMounted(async() => {
 
     console.log(isLogin.value);
 })
+
+function search(){
+    navigateTo('/product')
+}
 
 function logout(){
     const isAuth = useStorage('isAuth', null);

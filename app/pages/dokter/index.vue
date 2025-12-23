@@ -501,19 +501,22 @@
     <div class="container d-flex flex-column gap-3 title-1 my-5" style="color: var(--neutral-oreo-darkest);">
     
         <div class="d-flex align-self-stretch align-items-center justify-content-center gap-2 mb-3">
-          <div class="xl-chips-active subtitle-2" style="color: var(--primary-base);">
-            Spesialis Dokter
+          <div v-for="(filter, index) in filterSpesialis" :key="index">
+            <div 
+              class="xl-chips body-2" 
+              :class="(filterShow == index) ? 'subtitle-2 active' : 'body-2'" 
+              :style="(filterShow == index) ? 'color: var(--primary-base);' : 'color: var(--neutral-oreo-darker);'"
+              style="cursor: pointer;"
+              @click="changeFilter(index)"
+            >
+              {{ filter }}
+            </div>
           </div>
-          <div class="xl-chips body-2" style="color: var(--neutral-oreo-darker);">
-            Spesialis Gigi
-          </div>
-          <div class="xl-chips body-2" style="color: var(--neutral-oreo-darker);">
-            Bidang Non-Spesialis
-          </div>
+          
         </div>
 
         <!-- Spesialis Grid -->
-        <div class="row g-4">
+        <div class="row g-4" >
           <!-- Card 1 -->
           <template v-if="pendingSpesialis">
               <div class="col-12 col-md-6 col-lg-3" v-for="i in 4">
@@ -521,241 +524,261 @@
               </div>
           </template>
           <template v-else>
-              <div class="col-12 col-md-6 col-lg-3" v-for="spesialis in dataSpesialis.data" :key="spesialis.iId">
-                  <SpesialisListCard :spesialis="spesialis" />
+              <div v-if="filterShow == 0" alt="spesialis" class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3" v-for="spesialis in dataSpesialis.data" :key="spesialis.iId">
+                    <SpesialisListCard :spesialis="spesialis" @open-modal="handleOpenModal" />
+                </div>  
               </div>
+              <div v-if="filterShow == 1" alt="gigi" class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3" v-for="gigi in dataSpesialis.gigi" :key="gigi.iId">
+                    <SpesialisListCard :spesialis="gigi" @open-modal="handleOpenModal" />
+                </div>
+              </div>
+              <div v-if="filterShow == 2" alt="non" class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3" v-for="non in dataSpesialis.non" :key="non.iId">
+                    <SpesialisListCard :spesialis="non" @open-modal="handleOpenModal"/>
+                </div>
+              </div>
+              
           </template>
         </div>
     </div>
 
-    <!-- Modal Penjelasan Penyakit -->
-    <div class="modal fade" id="penyakitModal" aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered" style="max-width: 500px;">
-            <div class="modal-content rounded-4">
+    <Teleport to="body">
+      <div v-if="showModal">
+        <!-- Backdrop -->
+        <div
+          class="modal-backdrop fade show"
+          @click="closeModal"
+        ></div>
+        <div class="modal fade show d-block" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered" style="max-width: 500px;">
+                <div class="modal-content rounded-4">
 
-            <!-- Header -->
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-
-            <!-- Body -->
-            <div class="modal-body">
-
-                <div class="category-icon mb-3">
-                  <img src="/public/images/spesialis-anak.png" alt="Anak">
+                <!-- Header -->
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" @click="closeModal"></button>
                 </div>
-                <h6 class="title-2" style="color: var(--neutral-oreo-darker);">Dokter Spesialis Radiologi</h6>
-                <p class="body-1" style="color: var(--neutral-oreo-darker);">
-                adalah dokter spesialis yang berfokus pada  pemeriksaan radiologi yang bertujuan untuk mendeteksi, mendiagnosis, dan mengobati suatu penyakit menggunakan prosedur pencitraan. Prosedur  tersebut adalah rontgen, CT scan, MRI dan USG.
-                </p>
 
-            </div>
+                <!-- Body -->
+                <div class="modal-body">
 
+                    <div class="category-icon mb-3">
+                      <img :src="selectedSpesialis?.vFoto" :alt="selectedSpesialis?.vNama">
+                    </div>
+                    <h6 class="title-2" style="color: var(--neutral-oreo-darker);">{{ selectedSpesialis?.vNama }}</h6>
+                    <p class="body-1" style="color: var(--neutral-oreo-darker);">
+                      {{ selectedSpesialis?.vDesc }}
+                    </p>
+
+                </div>
+
+                </div>
             </div>
         </div>
-    </div>
-
+      </div>
+    </Teleport>
 </template>
 <style>
 
-.area-header {
-  display: flex;
-  padding: 12px;
-  justify-content: space-between;
-  align-items: center;
-  align-self: stretch;
-  background: none;
-  border: none;
-}
-
-.area-item {
-  display: flex;
-  padding: 8px 12px;
-  align-items: center;
-  gap: 12px;
-  align-self: stretch;
-}
-
-.form-control {
-  height: 40px;
-  border-radius: 8px;
-  border: 1px solid var(--border-default, #E6E6E6);
-  background: var(--pallete-neutral-milk-lightest, #FFF);
-}
-
-.card-aktifkan-lokasi {
-  display: flex;
-  padding: 12px 16px;
-  align-items: flex-start;
-  gap: 4px;
-  align-self: stretch;
-  justify-content: space-between;
-  align-items: center;
-
-  border-radius: 16px;
-  border: 1px solid var(--border-default, #EEEEEE);
-  background: #FFF;
-
-  /* Lvl2 */
-  box-shadow: 0 2px 8px 0 rgba(51, 51, 51, 0.10);
-}
-
-.custom-card-cari {
-  display: flex;
-  width: 740px;
-  height: 400px;
-  padding: 4px;
-  align-items: flex-start;
-  border-radius: 16px;
-  border: 1px solid var(--border-default, #E6E6E6);
-  background: #FFF;
-
-  overflow-y: auto;       /* 🔥 SCROLL */
-  overflow-x: hidden;
-
-  /* Lvl2 */
-  box-shadow: 0 2px 8px 0 rgba(51, 51, 51, 0.10);
-}
-
-.dropdown-menu {
-    top: 10px !important;
-    display: none;
-    opacity: 0;
-    transition: opacity .15s ease;
-}
-
-.dropdown-menu.show {
-    display: block;
-    opacity: 1;
-}
-
-/* chips extra large */
-.xl-chips {
+  .area-header {
     display: flex;
-    height: 44px;
-    min-width: 54px;
-    padding: 10px 12px;
-    justify-content: center;
+    padding: 12px;
+    justify-content: space-between;
     align-items: center;
-    gap: 6px;
-    border-radius: 300px;
+    align-self: stretch;
+    background: none;
+    border: none;
+  }
+
+  .area-item {
+    display: flex;
+    padding: 8px 12px;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+  }
+
+  .form-control {
+    height: 40px;
+    border-radius: 8px;
     border: 1px solid var(--border-default, #E6E6E6);
     background: var(--pallete-neutral-milk-lightest, #FFF);
-}
+  }
 
-.xl-chips-active {
+  .card-aktifkan-lokasi {
     display: flex;
-    height: 44px;
-    min-width: 54px;
-    padding: 10px 12px;
-    justify-content: center;
+    padding: 12px 16px;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 16px;
+    border: 1px solid var(--border-default, #EEEEEE);
+    background: #FFF;
+
+    /* Lvl2 */
+    box-shadow: 0 2px 8px 0 rgba(51, 51, 51, 0.10);
+  }
+
+  .custom-card-cari {
+    display: flex;
+    width: 740px;
+    height: 400px;
+    padding: 4px;
+    align-items: flex-start;
+    border-radius: 16px;
+    border: 1px solid var(--border-default, #E6E6E6);
+    background: #FFF;
+
+    overflow-y: auto;       /* 🔥 SCROLL */
+    overflow-x: hidden;
+
+    /* Lvl2 */
+    box-shadow: 0 2px 8px 0 rgba(51, 51, 51, 0.10);
+  }
+
+  .dropdown-menu {
+      top: 10px !important;
+      display: none;
+      opacity: 0;
+      transition: opacity .15s ease;
+  }
+
+  .dropdown-menu.show {
+      display: block;
+      opacity: 1;
+  }
+
+  /* chips extra large */
+  .xl-chips {
+      display: flex;
+      height: 44px;
+      min-width: 54px;
+      padding: 10px 12px;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      border-radius: 300px;
+      border: 1px solid var(--border-default, #E6E6E6);
+      background: var(--pallete-neutral-milk-lightest, #FFF);
+  }
+
+  .xl-chips.active {
+      display: flex;
+      height: 44px;
+      min-width: 54px;
+      padding: 10px 12px;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      border-radius: 300px;
+      border: 1px solid var(--border-primary, #D1DDE9);
+      background: var(--surface-primary, #EDF2FA);
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 8px;      /* jarak dari kanan */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    cursor: pointer;
+  }
+
+  .search-wrapper {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .search-box {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 6px 6px;
+    flex: 1;
+  }
+
+  /* Dropdown lokasi */
+  .btn-location {
+    height: 28px;
+    background: #EDF2FA;
+    border-radius: 8px;  
+    color: #2563eb;
+    border: none;
+    display: flex;
     align-items: center;
     gap: 6px;
-    border-radius: 300px;
-    border: 1px solid var(--border-primary, #D1DDE9);
-    background: var(--surface-primary, #EDF2FA);
-}
+    padding: 0 12px;
+  }
 
-.search-icon {
-  position: absolute;
-  right: 8px;      /* jarak dari kanan */
-  top: 50%;
-  transform: translateY(-50%);
-  color: #9ca3af;
-  cursor: pointer;
-}
+  /* Input */
+  .search-input {
+    position: relative;
+    flex: 1;
+  }
 
-.search-wrapper {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
+  .search-input input {
+    padding-right: 36px;
+  }
 
-.search-box {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 6px 6px;
-  flex: 1;
-}
+  .search-input i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+  }
 
-/* Dropdown lokasi */
-.btn-location {
-  height: 28px;
-  background: #EDF2FA;
-  border-radius: 8px;  
-  color: #2563eb;
-  border: none;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 0 12px;
-}
+  .doctor-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
 
-/* Input */
-.search-input {
-  position: relative;
-  flex: 1;
-}
+  /* card */
+  .category-icon img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+  }
+  .category-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 
-.search-input input {
-  padding-right: 36px;
-}
+    background: #EDF2FA;
+    border-radius: 16px;
+    padding: 8px 16px;
+    min-height: 96px;
 
-.search-input i {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #9ca3af;
-}
+    cursor: pointer;
+    transition: all .2s ease;
+  }
 
-.doctor-icon img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
+  .category-card:hover {
+    background: #e6edf7;
+  }
+  /* icon wrapper */
+  .category-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #d9e4f3;
 
-/* card */
-.category-icon img {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-}
-.category-card {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  background: #EDF2FA;
-  border-radius: 16px;
-  padding: 8px 16px;
-  min-height: 96px;
-
-  cursor: pointer;
-  transition: all .2s ease;
-}
-
-.category-card:hover {
-  background: #e6edf7;
-}
-/* icon wrapper */
-.category-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: #d9e4f3;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 </style>
-<script lang="ts" setup>
+<script lang="js" setup>
   definePageMeta({
       layout: 'informasi-layout'
   })
@@ -763,8 +786,8 @@
   import { PhArrowBendDownRight, PhArrowSquareOut, PhCaretDown, PhCrosshair, PhDotOutline, PhMagnifyingGlass, PhMapPin, PhMapTrifold, PhPhone, PhQuestion, PhSquaresFour, PhStethoscope } from '@phosphor-icons/vue';
   import { useApiRoutes } from '../../../composables/useApiRoutes';
   import { useApi } from '../../../composables/useApi';
-import SpesialisSkeletonCard from '../../components/element/dokter/SpesialisSkeletonCard.vue';
-import SpesialisListCard from '../../components/element/dokter/SpesialisListCard.vue';
+  import SpesialisSkeletonCard from '../../components/element/dokter/SpesialisSkeletonCard.vue';
+  import SpesialisListCard from '../../components/element/dokter/SpesialisListCard.vue';
 
 
   const api = useApiRoutes()
@@ -772,6 +795,33 @@ import SpesialisListCard from '../../components/element/dokter/SpesialisListCard
   const keywordInput = ref("")
   const page = ref(0)
   const count = ref(15)
+  const filterShow = ref(0)
+  const filterSpesialis = [
+    'Spesialis Dokter',
+    'Spesialis Gigi',
+    'Bidang Non-Spesialis'
+  ]
+
+  function changeFilter(index){
+    filterShow.value = index
+  }
+
+  const selectedSpesialis = ref(null)
+  const showModal = ref(false)
+
+  function handleOpenModal(spesialis) {
+    selectedSpesialis.value = spesialis
+    showModal.value = true
+  }
+
+  function closeModal() {
+    showModal.value = false
+  }
+
+  /* lock body scroll */
+  watch(showModal, (val) => {
+    document.body.style.overflow = val ? 'hidden' : ''
+  })
 
   const { data:dataSpesialis, pending:pendingSpesialis, error, refresh:refreshSpesialis } = await useLazyAsyncData(
       'listSpesialis',
@@ -783,4 +833,8 @@ import SpesialisListCard from '../../components/element/dokter/SpesialisListCard
   )
 
   console.log(dataSpesialis.value);
+
+  watch(keywordInput, () => {
+    refreshSpesialis()
+  })
 </script>

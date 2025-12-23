@@ -10,7 +10,7 @@
   </NuxtLink>
 </template>
 
-<script lang="ts" setup>
+<script lang="js" setup>
   import { computed } from 'vue'
   import { slugify } from '../../../utils/slugify'
   import { encodeId } from '../../../utils/hashify'

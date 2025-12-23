@@ -15,10 +15,10 @@
             <div class="d-flex flex-column gap-2 align-self-stretch">
                 <ul class="nav nav-pills nav-fill mb-3 login-tabs" id="pills-login" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-whatsapp-tab" data-bs-toggle="pill" data-bs-target="#pills-whatsapp" type="button" role="tab" aria-controls="pills-whatsapp" aria-selected="true">Whatsapp</button>
+                        <button class="nav-link active subtitle-2" id="pills-whatsapp-tab" data-bs-toggle="pill" data-bs-target="#pills-whatsapp" type="button" role="tab" aria-controls="pills-whatsapp" aria-selec ted="true">Whatsapp</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-email-tab" data-bs-toggle="pill" data-bs-target="#pills-email" type="button" role="tab" aria-controls="pills-email" aria-selected="false">Email</button>
+                        <button class="nav-link subtitle-2" id="pills-email-tab" data-bs-toggle="pill" data-bs-target="#pills-email" type="button" role="tab" aria-controls="pills-email" aria-selected="false">Email</button>
                     </li>
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
@@ -30,7 +30,8 @@
                                 <span class="subtitle-2 input-group-text" style="color: var(--neutral-oreo-darker);">+62</span>
                                 <input
                                     type="text"
-                                    class="form-control"
+                                    style="border-radius: 0px 8px 8px 0px;"
+                                    class="form-control body-2"
                                     placeholder="Contoh: 8123456789"
                                     :class="{ 'is-invalid': errorPhone }"
                                     v-model="phone"
@@ -45,7 +46,7 @@
                             
                         </div>
                         <button 
-                            class="btn btn-primary w-100"
+                            class="btn lg-btn-primary button-lm w-100"
                             :disabled="loading"
                             @click="submitPhone"
                         >
@@ -55,11 +56,12 @@
                     <div class="tab-pane fade" id="pills-email" role="tabpanel" aria-labelledby="pills-email-tab">
                         
                         <!-- EMAIL -->
-                        <div class="mb-3">
-                            <label>Email</label>
+                        <div class="mb-3" style="color: var(--neutral-oreo-darker);">
+                            <label class="body-2">Email</label>
                             <input
                             type="email"
-                            class="form-control"
+                            class="form-control body-2"
+                            placeholder="Masukkan email"
                             v-model="email"
                             @keyup.enter="submitEmail"
                             :class="{ 'is-invalid': errorEmail }"
@@ -71,8 +73,8 @@
 
                         <!-- PASSWORD -->
                         <Transition name="fade">
-                            <div class="mb-3" v-if="step === 'password'">
-                                <label>Password</label>
+                            <div class="mb-3 body-2" style="color: var(--neutral-oreo-darker);" v-if="step === 'password'">
+                                <label class="mb-1">Password</label>
                                 <input
                                 type="password"
                                 class="form-control"
@@ -87,7 +89,7 @@
                         </Transition>
 
                         <button 
-                            class="btn btn-primary w-100"
+                            class="btn lg-btn-primary button-lm w-100"
                             :disabled="loading"
                             @click="step === 'email' ? submitEmail() : submitLogin()"
                         >
@@ -107,7 +109,7 @@
                         theme="outline"
                         size="large"
                         text="continue_with"
-                        width="100%"
+                        width="auto"
                         logo_alignment="left"
                         @success="onSuccess"
                         @error="onError"
@@ -124,6 +126,17 @@
     </div>
 </template>
 <style scoped>
+
+.form-control:focus {
+    border: 1px solid var(--primary-light);
+    box-shadow: none;
+}
+
+.btn:hover {
+    color: #FFF;
+    background-color: var(--primary-base);
+}
+
     /* login styling */
     .login-tabs {
         background-color: #ECECEC; /* abu-abu container */
@@ -132,17 +145,15 @@
     }
 
     .login-tabs .nav-link {
-        color: #6b7280; /* abu teks */
+        color: #6c6c6c; /* abu teks */
         background-color: #ECECEC; /* abu-abu container */
         border-radius: 10px;
-        font-weight: 500;
         transition: all 0.2s ease;
     }
 
     .login-tabs .nav-link.active {
         background-color: #FFF; /* putih */
-        color: #111827; /* hitam */
-        box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        color: #333; /* hitam */
     }
     .login-tabs .nav-link {
         position: relative;

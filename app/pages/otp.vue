@@ -39,7 +39,7 @@
                       <div class="mb-3">
                         <span v-if="loading" class="spinner-border spinner-border-sm"></span>
                       </div>
-                      <span v-if="messageError" style="color: red;">{{ messageError }}</span>
+                      <span v-if="messageError" class="button-lm p-2" style="color: #DC2626;">{{ messageError }}</span>
                     </form>
                 </div>
 

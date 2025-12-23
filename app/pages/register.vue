@@ -15,8 +15,8 @@
                     background: var(--surface-info, #E4EAFB);
             ">
                 <!-- ALERT -->
-                <div>
-                    <Icon name="info" size="18" weight="fill" color="#2563EB"/>
+                <div class="d-flex">
+                    <PhInfo weight="fill" size="18" color="#2563EB"/>
                 </div>
                 <p class="body-2 m-0" style="color: var(--neutral-oreo-darker);">Anda belum memiliki akun. Silakan lengkapi data diri Anda untuk mendaftar akun baru</p>
             </div>
@@ -56,17 +56,17 @@
                       <div class="input-group">
                         <input
                           :type="showPassword ? 'text' : 'password'"
-                          class="form-control"
+                          class="form-control body-2"
                           placeholder="Masukkan password"
                           v-model="password"
                         />
                         <button
-                          class="btn btn-outline-secondary"
+                          class="btn icon-password"
                           type="button"
                           @click="showPassword = !showPassword"
                         >
-                          <span v-if="showPassword">🙈</span>
-                          <span v-else>👁️</span>
+                          <span v-if="showPassword"><PhEye size="20" color="#6A9CD2"/></span>
+                          <span v-else><PhEyeSlash size="20" color="#6c6c6c"/></span>
                         </button>
                       </div>
                       
@@ -84,7 +84,7 @@
                         {{ strengthLabel }}
                       </small>
 
-                      <div class="p-2">
+                      <div class="p-0">
                           
                           <p class="body-2 mb-2" style="color: var(--neutral-oreo-base);">Password harus berisi:</p>
 
@@ -223,6 +223,30 @@
     </div>
 </template>
 <style scoped>
+
+  .form-control:focus {
+    border: 1px solid var(--primary-light);
+    box-shadow: none;
+  }
+
+  .icon-password {
+    all: unset;
+    height: 38px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #FFF;
+    border-radius: 0 8px 8px 0;
+    border-top: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .icon-password:focus {
+    outline: none;
+    outline-offset: 2px;
+  }
+
   .custom-logincard {
     display: flex;
     width: 375px;
@@ -255,6 +279,7 @@ import { computed, ref } from "vue";
 import { haveNumber, haveSpecial, haveUppercase, isValidEmail, phoneLength } from "../utils/validify";
 import { useApiRoutes } from "../../composables/useApiRoutes";
 import { useApi } from "../../composables/useApi";
+import { PhEye, PhEyeClosed, PhEyeSlash, PhInfo } from "@phosphor-icons/vue";
 
 const phoneCookies = useCookie('phoneRegis')
 const emailCookies = useCookie('emailRegis')
